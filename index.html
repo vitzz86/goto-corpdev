@@ -20,12 +20,16 @@
 <meta name="twitter:image" content="https://vitzz86.github.io/goto-corpdev/assets/social/goto-corpdev-agentic-v1.jpg">
 <meta name="twitter:image:alt" content="GoTo CorpDev Agentic with an actual corporate development dashboard preview.">
 
+<style>
+.startup-loading{margin:18px 0;min-height:340px}.startup-header{display:flex;align-items:center;gap:18px;margin:24px 0 28px}.startup-header img{width:56px;background:white;border-radius:14px;padding:8px}.startup-header h2{margin:0 0 7px;font-size:24px}.startup-header p{margin:0;color:var(--muted)}.startup-skeleton{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.startup-skeleton i{display:block;height:122px;background:var(--soft);border:1px solid var(--line);border-radius:14px;animation:startup-pulse 1.5s ease-in-out infinite alternate}.startup-skeleton i:last-child{grid-column:1/-1;height:130px}.startup-loading .btn{margin:16px 0}.chart-load-state{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:10px;color:var(--muted);font-size:13px;pointer-events:none}.chart-load-state button{pointer-events:auto}@keyframes startup-pulse{to{opacity:.45}}@media(max-width:700px){.startup-skeleton{grid-template-columns:repeat(2,1fr)}}
+</style>
+<link rel="preload" as="fetch" href="data/startup-195e3492fbf3.json.gz" crossorigin>
 </head><body>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@5.0.9/dist/lightweight-charts.standalone.production.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+
+
 <style>
 /* Layout: fixed left rail of workspaces + scrolling analyst canvas; dense, sourced, decision-first */
 :root{
@@ -204,11 +208,11 @@ footer{margin-top:28px;font-size:11.5px;color:var(--muted)}
 <div class="app">
 <aside class="rail">
   <div class="brand"><div class="mark official"><img src="assets/logos/goto.svg" alt="GoTo logo"></div><div><b>Corp Dev Cockpit</b><small>GoTo · agentic intelligence</small></div></div>
-  <nav class="nav" id="nav"></nav>
+  <nav class="nav" id="nav"><div class="grp">Overview</div><a href="#brief" data-v="brief">Decision brief</a><a href="#markets" data-v="markets">Markets & peers</a><a href="#macro" data-v="macro">Economic indicators</a><div class="grp">GoTo</div><a href="#financials" data-v="financials">Financials</a><a href="#valuation" data-v="valuation">Valuation</a><a href="#actions" data-v="actions">Corporate actions</a><div class="grp">Ecosystem</div><a href="#ecosystem" data-v="ecosystem">Ecosystem map</a><a href="#portfolio" data-v="portfolio">Portfolio & risk</a><a href="#competitors" data-v="competitors">Competitors</a><div class="grp">Deals & research</div><a href="#deals" data-v="deals">Deal sourcing</a><a href="#feed" data-v="feed">Intelligence feed</a><a href="#research" data-v="research">Research library</a><a href="#ir" data-v="ir">IR hub</a><div class="grp">System</div><a href="#system" data-v="system">How the agent works</a></nav>
 </aside>
 <main>
   <div class="top">
-    <div><h1 id="vt">Decision brief</h1><p id="vs"></p></div>
+    <div><h1 id="vt">Decision brief</h1><p id="vs">Market signals, ecosystem intelligence and investment decisions</p></div>
     <div class="status">
       <a class="alert" href="#brief" id="alerts"></a>
       <span class="pill"><span class="dot"></span>Research snapshot · 13 Oct 2026</span>
@@ -218,7 +222,8 @@ footer{margin-top:28px;font-size:11.5px;color:var(--muted)}
   </div>
 
   <div class="ticker" id="ticker"></div>
-  <section class="view" id="v-brief"></section>
+  <div id="startup-loading" class="startup-loading" aria-busy="true"><div class="startup-header"><img src="assets/logos/goto.svg" alt="GoTo"><div><h2>Your corporate development workspace</h2><p id="startup-status" role="status" aria-live="polite">Opening research snapshot…</p></div></div><button id="startup-retry" class="btn" type="button" onclick="location.reload()" hidden>Retry opening dashboard</button><div class="startup-skeleton" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><noscript><p>Enable JavaScript to use the interactive dashboard. <a href="docs/GoTo-CorpDev-Cockpit-Feature-Guide.pdf">Open the PDF feature guide →</a></p></noscript></div>
+<section class="view" id="v-brief"></section>
   <section class="view" id="v-markets"></section>
   <section class="view" id="v-macro"></section>
   <section class="view" id="v-financials"></section>
@@ -238,5 +243,5 @@ footer{margin-top:28px;font-size:11.5px;color:var(--muted)}
 <div class="drawer" id="drawer"><div class="scrim" data-close></div><div class="panel" id="dpanel"></div></div>
 
 
-<link rel="stylesheet" href="assets/cockpit-enhancements.css?v=research-v2"><link rel="stylesheet" href="assets/cockpit-print.css?v=1"><script src="assets/cockpit.js?v=research-v2" defer></script>
+<link rel="stylesheet" href="assets/cockpit-enhancements.css?v=f761512a44c7"><link rel="stylesheet" href="assets/cockpit-print.css?v=1"><script src="assets/cockpit.a4ae200a9f9a.js" defer></script>
 </body></html>

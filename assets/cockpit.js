@@ -1,6 +1,31 @@
 'use strict';
 (async()=>{
-const [D,VERIFIED,WORKBOOK]=await Promise.all(['data/cockpit.json','data/dashboard.json','data/valuation-workbook.json'].map(u=>fetch(u+'?v=research-v2',{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error('Dataset unavailable');return r.json()})));
+const loading=document.querySelector('#startup-status');
+function loadingText(text){if(loading)loading.textContent=text}
+async function startupResponse(url){
+  const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),25000);
+  try{
+    const response=await fetch(url,{signal:controller.signal});
+    if(!response.ok)throw new Error('Snapshot download failed');
+    const size=Number(response.headers.get('content-length'));let loaded=0;
+    if(!response.body)return await response.blob();
+    const reader=response.body.getReader(),chunks=[];
+    while(true){const {done,value}=await reader.read();if(done)break;chunks.push(value);loaded+=value.length;
+      loadingText(size&&loaded<=size?'Opening research snapshot · '+Math.min(99,Math.round(loaded/size*100))+'%':'Opening research snapshot…');}
+    return new Blob(chunks);
+  }finally{clearTimeout(timeout)}
+}
+async function loadStartup(){
+  if('DecompressionStream' in window){
+    const blob=await startupResponse('data/startup-195e3492fbf3.json.gz');
+    try{return JSON.parse(await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text())}
+    catch(error){loadingText('Opening compatible research snapshot…')}
+  }
+  return JSON.parse(await (await startupResponse('data/startup-195e3492fbf3.json')).text());
+}
+const {D,VERIFIED,WORKBOOK}=await loadStartup();
+loadingText('Preparing your decision brief…');
+
 const $ = (s, el=document) => el.querySelector(s);
 const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmt = (v, d=0) => v==null||v===''||isNaN(v) ? '–' : Number(v).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
@@ -390,7 +415,7 @@ function preparePrintSnapshot(){
   const clone=source.cloneNode(true);clone.classList.add('print-content');
   const originals=source.querySelectorAll('canvas');clone.querySelectorAll('canvas').forEach((c,i)=>{
     const img=doc.createElement('img');img.className='print-chart';img.alt='Chart from '+title;
-    try{img.src=originals[i].toDataURL('image/png');c.replaceWith(img)}catch{c.replaceWith(doc.createTextNode('Interactive provider chart: open the live dashboard to view.'))}
+    try{if(chartQueue.has(originals[i].id)){c.replaceWith(doc.createTextNode('Chart is loading. Use Print page / PDF in the dashboard to prepare all charts before exporting.'));return}img.src=originals[i].toDataURL('image/png');c.replaceWith(img)}catch{c.replaceWith(doc.createTextNode('Interactive provider chart: open the live dashboard to view.'))}
   });
   const fields=source.querySelectorAll('input,select,textarea');clone.querySelectorAll('input,select,textarea').forEach((field,i)=>{
     const label=doc.createElement('span');label.className='print-filter';
@@ -401,7 +426,7 @@ function preparePrintSnapshot(){
   const footer=doc.createElement('footer');footer.className='print-footer';footer.innerHTML='Current page / selected tab with current filters. '+link(location.href,'Open this dashboard view')+'<br>Independent public-source analysis. Reviewed evidence, reference research and RSS leads remain distinct. External interactive charts may require the live page.';
   snapshot.append(header,clone,footer);doc.body.append(snapshot);
 }
-function printCurrentView(){preparePrintSnapshot();window.print()}
+async function printCurrentView(){await prepareCurrentCharts();preparePrintSnapshot();window.print()}
 window.addEventListener('beforeprint',()=>{if(!$('#printSnapshot'))preparePrintSnapshot()});
 
 window.addEventListener('afterprint',()=>{const snapshot=$('#printSnapshot');if(snapshot){document.title=snapshot.dataset.originalTitle;snapshot.remove()}Object.values(charts).forEach(c=>c.resize())});
@@ -436,6 +461,54 @@ function addForecastContext(){const rows=D.researchExpansion?.forecastContext||[
 function vMacro(){vMacroBaseline();addForecastContext()}
 
 function vPort(){renderPortfolioWorkspace();restructurePortfolio()}
+// Render charts only when their canvas approaches the viewport. The dashboard
+// can open without downloading a chart library or contacting a third-party CDN.
+let chartLibrary;
+const chartQueue=new Map();
+function loadChartLibrary(){
+  if(window.Chart)return Promise.resolve(window.Chart);
+  if(!chartLibrary)chartLibrary=new Promise((resolve,reject)=>{
+    const script=document.createElement('script');
+    script.src='assets/chart.4.4.1.min.js';script.async=true;
+    script.onload=()=>window.Chart?resolve(window.Chart):reject(new Error('Chart library unavailable'));
+    script.onerror=()=>reject(new Error('Chart download failed'));
+    document.head.appendChild(script);
+  }).catch(error=>{chartLibrary=null;throw error});
+  return chartLibrary;
+}
+async function paintQueuedChart(id){
+  const job=chartQueue.get(id);if(!job||!job.el.isConnected)return;
+  try{
+    await loadChartLibrary();
+    if(chartQueue.get(id)!==job||!job.el.isConnected)return;
+    if(charts[id])charts[id].destroy();
+    job.cfg.options=job.cfg.options||{};job.cfg.options.animation=false;
+    charts[id]=new Chart(job.el,job.cfg);
+    job.el.parentElement.querySelector('.chart-load-state')?.remove();
+    chartQueue.delete(id);
+  }catch(error){
+    if(!job.el.isConnected)return;
+    const state=job.el.parentElement.querySelector('.chart-load-state');
+    if(state){state.textContent='Chart could not load. ';const retry=document.createElement('button');retry.className='btn';retry.textContent='Retry chart';retry.onclick=()=>{state.textContent='Loading chart…';paintQueuedChart(id)};state.appendChild(retry)}
+  }
+}
+const chartObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{
+  for(const entry of entries)if(entry.isIntersecting){chartObserver.unobserve(entry.target);const job=chartQueue.get(entry.target.id);if(job?.el===entry.target)paintQueuedChart(entry.target.id)}
+},{rootMargin:'180px'}):null;
+function chart(id,cfg){
+  const el=document.getElementById(id);if(!el)return;
+  const parent=el.parentElement;parent.style.position='relative';
+  if(!parent.querySelector('.chart-load-state')){const state=document.createElement('div');state.className='chart-load-state';state.setAttribute('role','status');state.textContent='Loading chart…';parent.appendChild(state)}
+  chartQueue.set(id,{el,cfg});
+  if(chartObserver)chartObserver.observe(el);else paintQueuedChart(id);
+}
+
+async function prepareCurrentCharts(){
+  const source=$('#drawer.on #dpanel')||$('section.view.on');
+  await Promise.all([...chartQueue].filter(([,job])=>source?.contains(job.el)).map(([id])=>paintQueuedChart(id)));
+}
+
 go();
 
-})().catch(e=>{document.querySelector('#vs').textContent='Dataset could not load. Refresh the hosted page.';console.error(e)});
+document.querySelector('#startup-loading')?.remove();document.documentElement.dataset.cockpitReady='true';
+})().catch(e=>{document.querySelector('#vs').textContent='The research snapshot could not load.';document.querySelector('#startup-status').textContent='Connection interrupted. Please retry to open the dashboard.';document.querySelector('#startup-retry').hidden=false;document.querySelector('#startup-loading').setAttribute('aria-busy','false');console.error(e)});
