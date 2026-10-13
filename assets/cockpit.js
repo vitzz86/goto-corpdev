@@ -1,6 +1,6 @@
 'use strict';
 (async()=>{
-const [D,VERIFIED,WORKBOOK]=await Promise.all(['data/cockpit.json','data/dashboard.json','data/valuation-workbook.json'].map(u=>fetch(u).then(r=>{if(!r.ok)throw new Error('Dataset unavailable');return r.json()})));
+const [D,VERIFIED,WORKBOOK]=await Promise.all(['data/cockpit.json','data/dashboard.json','data/valuation-workbook.json'].map(u=>fetch(u+'?v=research-v2',{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error('Dataset unavailable');return r.json()})));
 const $ = (s, el=document) => el.querySelector(s);
 const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmt = (v, d=0) => v==null||v===''||isNaN(v) ? '–' : Number(v).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
