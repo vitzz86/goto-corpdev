@@ -1,0 +1,158 @@
+{
+  "asOf": "2026-10-14",
+  "counts": {
+    "macro": {
+      "count": 34,
+      "unit": "Indicators",
+      "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
+    },
+    "policy": {
+      "count": 8,
+      "unit": "Policy records",
+      "definition": "Policy watch entries; effective, proposed and pending statuses remain separate."
+    },
+    "actions": {
+      "count": 92,
+      "unit": "GoTo action records",
+      "definition": "Dated GoTo corporate-action records across the retained history; proposed and completed actions are distinct. Reference entries are not independently verified."
+    },
+    "ecosystem": {
+      "count": 106,
+      "unit": "Position entries",
+      "definition": "Ownership-register entries across legal entities, associates, fund backing and historical positions. This is not the number of active equity holdings or nodes in a selected network view."
+    },
+    "competitors": {
+      "count": 63,
+      "unit": "Tracked peers & benchmarks",
+      "definition": "Unique peer/benchmark IDs: 21 ODS + 44 financial services, less 2 shared entries. Includes partner and regional issuer context; not all are direct rivals."
+    },
+    "sentiment": {
+      "count": 1370230,
+      "unit": "Dated store reviews",
+      "definition": "Collected January–October 2026 written-review records, unique within each app/store. Recent samples are not added again. Includes customer, driver and merchant apps; not unique people, official aggregate ratings or complete store history."
+    },
+    "deals": {
+      "count": 33,
+      "unit": "Screened names",
+      "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
+    },
+    "feed": {
+      "count": 8736,
+      "unit": "2026 signal records",
+      "definition": "638 curated 2026 records + 8,098 additional archive leads. Archive URLs already in curated records are counted once. 82 curated records are source-reviewed; discovery headlines are not verified events."
+    },
+    "research": {
+      "count": 219,
+      "unit": "Library entries",
+      "definition": "Distinct report/source entries after duplicate summaries and report links are reconciled. The count includes unreviewed reference entries, not only reviewed PDFs."
+    }
+  },
+  "reconciliation": {
+    "asOf": "2026-10-14",
+    "segments": {
+      "ods": [
+        "alfagift",
+        "allofresh",
+        "alva",
+        "astro",
+        "blue_bird",
+        "deliveree",
+        "doordash",
+        "grab",
+        "indrive",
+        "klik_indomaret",
+        "lalamove",
+        "maxim",
+        "sayurbox",
+        "sea",
+        "segari",
+        "shopee",
+        "shopeefood",
+        "swap",
+        "uber",
+        "vinfast",
+        "xanh_sm"
+      ],
+      "finance": [
+        "adakami",
+        "advance-ai",
+        "akulaku",
+        "amartha",
+        "atome",
+        "bank_neo",
+        "blu",
+        "dana",
+        "doku",
+        "duitku",
+        "easycash",
+        "faspay",
+        "fazz",
+        "finpay",
+        "grab",
+        "gxbank",
+        "gxs",
+        "indodana",
+        "iseller",
+        "jenius",
+        "julo",
+        "koinworks",
+        "kredit_pintar",
+        "kredivo",
+        "linkaja",
+        "majoo",
+        "mekari",
+        "modalku",
+        "monee",
+        "olsera",
+        "ovo",
+        "pawoon",
+        "privy",
+        "qasir",
+        "sea",
+        "seabank",
+        "shopeepay",
+        "spaylater",
+        "spinjam",
+        "stash",
+        "superbank",
+        "verihubs",
+        "vida",
+        "xendit"
+      ]
+    },
+    "sharedPeers": [
+      "grab",
+      "sea"
+    ],
+    "recentReviewSamples": 4529,
+    "reviewedResearch": 32,
+    "reviewed2026Signals": 82,
+    "changes": [
+      {
+        "collection": "Intelligence feed",
+        "title": "BI policy rate: 5.75 %",
+        "reason": "Same dated signal; stronger evidence retained, alternative source preserved."
+      },
+      {
+        "collection": "Research library",
+        "title": "GoTo Gojek Tokopedia (GOTO IJ) - New Price Floor Today; Fintech Offsets The Take-Rate Hit",
+        "reason": "Duplicate report / source entry; reviewed summary takes precedence."
+      },
+      {
+        "collection": "Research library",
+        "title": "SEA financial services M&A: H1 2026 and Indonesian strategic activity",
+        "reason": "Duplicate report / source entry; reviewed summary takes precedence."
+      },
+      {
+        "collection": "Research library",
+        "title": "8% Ride-Hailing Commission Rate Officially Takes Effect",
+        "reason": "Duplicate report / source entry; reviewed summary takes precedence."
+      },
+      {
+        "collection": "Research library",
+        "title": "Southeast Asia Private Equity Pulse Q1 2026",
+        "reason": "Duplicate report / source entry; reviewed summary takes precedence."
+      }
+    ]
+  }
+}
