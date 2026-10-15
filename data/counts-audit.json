@@ -1,8 +1,8 @@
 {
-  "asOf": "2026-10-14",
+  "asOf": "2026-10-15",
   "counts": {
     "macro": {
-      "count": 31,
+      "count": 38,
       "unit": "Indicators",
       "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
     },
@@ -27,7 +27,7 @@
       "definition": "Unique peer/benchmark IDs: 21 ODS + 44 financial services, less 2 shared entries. Includes partner and regional issuer context; not all are direct rivals."
     },
     "sentiment": {
-      "count": 1376841,
+      "count": 1379293,
       "unit": "Dated store reviews",
       "definition": "Collected January–October 2026 written-review records, unique within each app/store. Recent samples are not added again. Includes customer, driver and merchant apps; not unique people, official aggregate ratings or complete store history."
     },
@@ -37,18 +37,18 @@
       "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
     },
     "feed": {
-      "count": 8861,
+      "count": 8075,
       "unit": "2026 signal records",
-      "definition": "703 curated 2026 records + 8,158 additional archive leads. Archive URLs already in curated records are counted once. 86 curated records are source-reviewed; discovery headlines are not verified events."
+      "definition": "740 curated 2026 records + 7,335 additional archive leads. Archive URLs already in curated records are counted once. 91 curated records are source-reviewed; discovery headlines are not verified events."
     },
     "research": {
-      "count": 221,
+      "count": 225,
       "unit": "Library entries",
       "definition": "Distinct report/source entries after duplicate summaries and report links are reconciled. The count includes unreviewed reference entries, not only reviewed PDFs."
     }
   },
   "reconciliation": {
-    "asOf": "2026-10-14",
+    "asOf": "2026-10-15",
     "segments": {
       "ods": [
         "alfagift",
@@ -124,9 +124,9 @@
       "grab",
       "sea"
     ],
-    "recentReviewSamples": 6092,
-    "reviewedResearch": 34,
-    "reviewed2026Signals": 86,
+    "recentReviewSamples": 7102,
+    "reviewedResearch": 38,
+    "reviewed2026Signals": 91,
     "changes": [
       {
         "collection": "Intelligence feed",
