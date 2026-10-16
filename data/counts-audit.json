@@ -1,6 +1,11 @@
 {
   "asOf": "2026-10-16",
   "counts": {
+    "global": {
+      "count": 270,
+      "unit": "Company, brand & product profiles",
+      "definition": "Global research longlist; includes primary-reviewed profiles, existing cockpit records and candidates. Country links and capital events have separate evidence scopes."
+    },
     "macro": {
       "count": 38,
       "unit": "Indicators",
@@ -37,9 +42,9 @@
       "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
     },
     "feed": {
-      "count": 8234,
+      "count": 7626,
       "unit": "2026 signal records",
-      "definition": "800 curated 2026 records + 7,434 additional archive leads. Archive URLs already in curated records are counted once. 96 curated records are source-reviewed; discovery headlines are not verified events."
+      "definition": "797 curated 2026 records + 6,829 additional archive leads. Archive URLs already in curated records are counted once. 96 curated records are source-reviewed; discovery headlines are not verified events."
     },
     "research": {
       "count": 227,
