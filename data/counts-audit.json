@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-17",
+  "asOf": "2026-10-18",
   "counts": {
     "global": {
       "count": 270,
@@ -7,7 +7,7 @@
       "definition": "Global research longlist; includes primary-reviewed profiles, existing cockpit records and candidates. Country links and capital events have separate evidence scopes."
     },
     "macro": {
-      "count": 38,
+      "count": 56,
       "unit": "Indicators",
       "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
     },
@@ -53,7 +53,7 @@
     }
   },
   "reconciliation": {
-    "asOf": "2026-10-17",
+    "asOf": "2026-10-18",
     "segments": {
       "ods": [
         "alfagift",
