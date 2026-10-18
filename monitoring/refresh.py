@@ -66,7 +66,7 @@ def split_task(parent):
     while start<=end:
         last=min(end,start+dt.timedelta(days=step-1))
         url=search_url(parent['url'],original,start.isoformat(),last.isoformat())
-        child=task(parent['kind'],parent['key'],start.isoformat(),last.isoformat(),url,parent['priority'],parentId=parent['id'],name=parent.get('name',''))
+        child=task(parent['kind'],parent['key'],start.isoformat(),last.isoformat(),url,parent['priority'],parentId=parent['id'],name=parent.get('name',''),workstream=parent.get('workstream',''))
         children.append(child);start=last+dt.timedelta(days=1)
     return children
 
@@ -302,7 +302,7 @@ def save_outputs(output,state,registry,tasks,through):
     (output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');return summary
 
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--from',dest='start',default='2026-01-01');ap.add_argument('--through',default=dt.datetime.now(ZoneInfo('Asia/Jakarta')).date().isoformat());ap.add_argument('--limit',type=int,default=50);ap.add_argument('--kind',choices=['all','entity','topic','publisher','feed'],default='all');ap.add_argument('--output',type=Path,default=HERE/'results');ap.add_argument('--plan-only',action='store_true');ap.add_argument('--balanced-months',action='store_true');ap.add_argument('--workers',type=int,default=6);args=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--from',dest='start',default='2026-01-01');ap.add_argument('--through',default=dt.datetime.now(ZoneInfo('Asia/Jakarta')).date().isoformat());ap.add_argument('--limit',type=int,default=50);ap.add_argument('--kind',choices=['all','entity','topic','publisher','feed'],default='all');ap.add_argument('--output',type=Path,default=HERE/'results');ap.add_argument('--plan-only',action='store_true');ap.add_argument('--balanced-months',action='store_true');ap.add_argument('--workers',type=int,default=6);ap.add_argument('--baseline-only',action='store_true');ap.add_argument('--unsearched-only',action='store_true');ap.add_argument('--checkpoint-every',type=int,default=10);args=ap.parse_args()
     if not 1<=args.limit<=500:ap.error('--limit must be 1–500')
     if not 1<=args.workers<=8:ap.error('--workers must be 1–8')
     if args.start>args.through:ap.error('--from must not follow --through')
@@ -311,8 +311,11 @@ def main():
     registry=read(HERE/'registry.json',{});state=read(args.output/'state.json',{'attempts':{},'records':{},'extraTasks':[]})
     tasks=make_tasks(registry,args.start,args.through);ids={t['id'] for t in tasks}
     tasks.extend(t for t in state.get('extraTasks',[]) if t['id'] not in ids and t['start']>=args.start and t['through']<=args.through)
+    all_tasks=tasks
+    if args.baseline_only:tasks=[t for t in tasks if not t.get('parentId')]
+    eligible_tasks=[t for t in tasks if t['id'] not in state['attempts']] if args.unsearched_only else tasks
     selector=choose_balanced if args.balanced_months else choose
-    jobs=[] if args.plan_only else selector(tasks,state['attempts'],dt.datetime.now(dt.timezone.utc),args.through,args.limit,args.kind)
+    jobs=[] if args.plan_only else selector(eligible_tasks,state['attempts'],dt.datetime.now(dt.timezone.utc),args.through,args.limit,args.kind)
     def retrieve(url):
         try:return parse_feed(fetch(url)),None
         except Exception as error:return [],str(error)[:300]
@@ -335,9 +338,11 @@ def main():
         previous=state['attempts'].get(job['id'],{});attempt['attemptCount']=previous.get('attemptCount',0)+1
         state['attempts'][job['id']]=attempt
         print(f'{i}/{len(jobs)} {job["kind"]} {job["key"]}: {attempt["status"]}',flush=True)
-        # Checkpoint every request so interruption does not erase completed collection.
-        state['extraTasks']=[t for t in tasks if t.get('parentId')]
-        args.output.mkdir(parents=True,exist_ok=True);temp=args.output/'state.tmp';temp.write_text(json.dumps(state,ensure_ascii=False));temp.replace(args.output/'state.json')
+        # Periodic atomic checkpoints bound recovery loss without repeatedly rewriting a growing archive.
+        state['extraTasks']=list({t['id']:t for t in all_tasks+tasks if t.get('parentId')}.values())
+        if i%max(1,args.checkpoint_every)==0 or i==len(jobs):
+            args.output.mkdir(parents=True,exist_ok=True);temp=args.output/'state.tmp';temp.write_text(json.dumps(state,ensure_ascii=False));temp.replace(args.output/'state.json')
     pool.shutdown(wait=True)
+    tasks=list({t['id']:t for t in all_tasks+tasks}.values())
     print(json.dumps(save_outputs(args.output,state,registry,tasks,args.through),indent=2))
 if __name__=='__main__':main()

@@ -15,6 +15,10 @@ on:
         default: all
         type: choice
         options: [all, entity, topic, publisher, feed]
+      full_companies:
+        description: Finish January–cutoff monthly checks for all 358 registry entries
+        default: false
+        type: boolean
       through:
         description: Last publication date, YYYY-MM-DD (blank means today in Jakarta)
         required: false
@@ -46,9 +50,14 @@ jobs:
           REQUEST_LIMIT: ${{ inputs.limit }}
           QUEUE_KIND: ${{ inputs.kind }}
           THROUGH: ${{ inputs.through }}
+          FULL_COMPANIES: ${{ inputs.full_companies }}
         run: |
           if [ -z "$THROUGH" ]; then THROUGH=$(TZ=Asia/Jakarta date +%F); fi
-          python monitoring/refresh.py --limit "$REQUEST_LIMIT" --kind "$QUEUE_KIND" --through "$THROUGH" --balanced-months --workers 6
+          if [ "$FULL_COMPANIES" = "true" ]; then
+            python monitoring/full-company-coverage.py --through "$THROUGH" --workers 6
+          else
+            python monitoring/refresh.py --limit "$REQUEST_LIMIT" --kind "$QUEUE_KIND" --through "$THROUGH" --balanced-months --workers 6
+          fi
       - name: Preserve resumable progress
         if: always()
         uses: actions/cache/save@v4
