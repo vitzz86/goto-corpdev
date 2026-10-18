@@ -1,0 +1,134 @@
+{
+  "updatedAt": "2026-10-18T14:38:41.881113+00:00",
+  "through": "2026-10-18",
+  "sourceResources": 93,
+  "entityRegistryRows": 358,
+  "topicQueries": 44,
+  "plannedSearchAndFeedTasks": 6143,
+  "attemptedTasks": 1018,
+  "notCheckedTasks": 5125,
+  "blockedTasks": 6,
+  "cappedTasks": 0,
+  "unreviewedDiscoveryRecords": 20880,
+  "candidateRecords": 8863,
+  "quarantinedRecords": 12017,
+  "searchesRequiringNarrowerWindows": 105,
+  "publishedAutomatically": 0,
+  "caveat": "Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim.",
+  "months": [
+    {
+      "month": "2026-01",
+      "rawRecords": 1688,
+      "candidateRecords": 646,
+      "quarantinedRecords": 1042,
+      "searchAttempts": 99
+    },
+    {
+      "month": "2026-02",
+      "rawRecords": 1690,
+      "candidateRecords": 713,
+      "quarantinedRecords": 977,
+      "searchAttempts": 99
+    },
+    {
+      "month": "2026-03",
+      "rawRecords": 1903,
+      "candidateRecords": 804,
+      "quarantinedRecords": 1099,
+      "searchAttempts": 99
+    },
+    {
+      "month": "2026-04",
+      "rawRecords": 1885,
+      "candidateRecords": 723,
+      "quarantinedRecords": 1162,
+      "searchAttempts": 99
+    },
+    {
+      "month": "2026-05",
+      "rawRecords": 1964,
+      "candidateRecords": 836,
+      "quarantinedRecords": 1128,
+      "searchAttempts": 99
+    },
+    {
+      "month": "2026-06",
+      "rawRecords": 2056,
+      "candidateRecords": 946,
+      "quarantinedRecords": 1110,
+      "searchAttempts": 99
+    },
+    {
+      "month": "2026-07",
+      "rawRecords": 2050,
+      "candidateRecords": 820,
+      "quarantinedRecords": 1230,
+      "searchAttempts": 98
+    },
+    {
+      "month": "2026-08",
+      "rawRecords": 2285,
+      "candidateRecords": 1017,
+      "quarantinedRecords": 1268,
+      "searchAttempts": 96
+    },
+    {
+      "month": "2026-09",
+      "rawRecords": 2419,
+      "candidateRecords": 1223,
+      "quarantinedRecords": 1196,
+      "searchAttempts": 96
+    },
+    {
+      "month": "2026-10",
+      "rawRecords": 2940,
+      "candidateRecords": 1135,
+      "quarantinedRecords": 1805,
+      "searchAttempts": 110
+    }
+  ],
+  "entityRowsDirectlyQueried": 36,
+  "entityRegistryRowsTotal": 358,
+  "topicsDirectlyQueried": 34,
+  "topicQueriesTotal": 44,
+  "publisherDomainsDirectlyQueried": 19,
+  "publisherDomainsTotal": 40,
+  "sourceReviewedExamples": 7,
+  "blockedSources": [
+    {
+      "resource": "DealStreetAsia",
+      "error": "HTTP Error 503: Service Temporarily Unavailable",
+      "url": "https://www.dealstreetasia.com/feed/"
+    },
+    {
+      "resource": "Tech in Asia",
+      "error": "HTTP Error 403: Forbidden",
+      "url": "https://www.techinasia.com/feed"
+    },
+    {
+      "resource": "Rest of World",
+      "error": "not well-formed (invalid token): line 27, column 124",
+      "url": "https://restofworld.org/feed/"
+    },
+    {
+      "resource": "Entrackr",
+      "error": "HTTP Error 404: Not Found",
+      "url": "https://entrackr.com/feed/"
+    },
+    {
+      "resource": "Contxto",
+      "error": "HTTP Error 404: Not Found",
+      "url": "https://contxto.com/feed/"
+    },
+    {
+      "resource": "PR Newswire",
+      "error": "HTTP Error 502: Bad Gateway",
+      "url": "https://www.prnewswire.com/rss/news-releases-list.rss"
+    }
+  ],
+  "runUrls": [
+    "https://github.com/vitzz86/goto-corpdev/actions/runs/39134982782",
+    "https://github.com/vitzz86/goto-corpdev/actions/runs/39136789966"
+  ],
+  "meaning": "Cumulative URL/date discovery records, not unique events or verified signals. Raw evidence includes 18 earlier distinct checks plus the two 500-request batches. Seven original-source examples were reviewed separately; none were automatically added to the live dashboard."
+}
