@@ -18,7 +18,7 @@ The default date follows Jakarta. Future cutoffs are rejected. The initial Janua
 
 ## Outputs
 
-- `results/state.json`: resumable task attempts and every retained discovery record. No five-headline collection cap. A request cap limits each run, not saved research.
+- `results/state.json`: resumable task attempts and every retained discovery record. Subject and identity mismatches are quarantined, preserved separately from eligible candidates. No five-headline collection cap. A request cap limits each run, not saved research.
 - `results/coverage.csv`: one entity/month row, discovery state, unreviewed leads, unresolved narrower windows and the separately dated baseline reviewed-record count.
 - `results/primary-review-queue.json`: all official/licensed resource tasks and macro-history reconciliation tasks, with access notes and definition guards.
 - `results/summary.json`: actual attempted, blocked, capped and unchecked task counts; no automatic publication.

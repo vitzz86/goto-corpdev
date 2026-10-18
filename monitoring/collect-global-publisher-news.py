@@ -69,6 +69,7 @@ ALIASES={
  'tabby':['Tabby'], 'tamara':['Tamara'], 'tala':['Tala'], 'fairmoney':['FairMoney'], 'nuro':['Nuro'],
 }
 CONTEXT={
+ 'xanh_sm':r'xanh.?sm|green.?sm|vinfast|vingroup|electric.*(?:taxi|vehicle|fleet)|taxi|ride.hail|mobility|giao th[ôo]ng',
  '99':r'\bBrazil|Brasil|brasileir|DiDi|ride.hail|taxi|mobility|99pay|99taxi|99food',
  'electrum':r'gojek|goto|\btbs\b|indonesia|motor listrik|electric motorcycle|battery swap|electric scooter',
  'jenius':r'bank|smbc|btpn|rekening|tabungan|nasabah|saldo|kredit|debit|rupiah|deposit|savings|qris|paylater|flexi',
@@ -211,6 +212,7 @@ def query(p):
  q='('+q+')' if len(aliases)>1 else q
  # These names are ambiguous even before downstream filtering.
  qualifier={
+  'xanh_sm':'(taxi OR "Green SM" OR "Xanh SM" OR VinFast OR mobility)',
   'square':'(payments OR merchant OR POS OR Block OR banking)', 'persona':'(identity OR KYC OR biometric OR verification)', 'linx':'(Brazil OR retail OR software OR TOTVS OR Stone)', 'picnic':'(grocery OR groceries OR supermarket)', 'wonder':'(restaurant OR Grubhub OR \"Marc Lore\" OR \"food hall\")', 'momo':'(Vietnam OR Vietnamese)', 'roam':'(electric OR motorcycle OR Kenya)', 'wing':'(drone OR delivery OR Alphabet)',
   '99':'(Brazil OR Brasil OR DiDi OR 99Pay OR taxi)', 'electrum':'(Gojek OR TBS OR Indonesia OR "electric motorcycle")',
   'jenius':'(bank OR SMBC OR BTPN OR rekening)', 'maxim':'(taxi OR "ride hailing" OR ojek)',

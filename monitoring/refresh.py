@@ -179,11 +179,12 @@ def choose_balanced(tasks,ledger,now,through,limit,kind):
 
 def coverage(registry,tasks,ledger,records):
     baseline={r[0]:r for r in registry['baselineCoverage']}; result=[]
-    byparent={}; recordids={}
+    byparent={}; recordids={}; eligibleids={}
     for t in tasks:
         if t.get('parentId'):byparent.setdefault(t['parentId'],[]).append(t)
     for record in records.values():
         for tid in record['taskIds']:recordids.setdefault(tid,set()).add(record['id'])
+        for tid in record.get('eligibleTaskIds',record['taskIds']):eligibleids.setdefault(tid,set()).add(record['id'])
     def descendants(tid):
         children=byparent.get(tid,[])
         return children+[child for t in children for child in descendants(t['id'])]
@@ -193,18 +194,80 @@ def coverage(registry,tasks,ledger,records):
         pending=sum(1 for t in children if not byparent.get(t['id']) and (t['id'] not in ledger or ledger[t['id']]['status'] in {'source-unavailable','capped'}))
         discovered=set(recordids.get(job['id'],set()))
         for child in children:discovered.update(recordids.get(child['id'],set()))
+        eligible=set(eligibleids.get(job['id'],set()))
+        for child in children:eligible.update(eligibleids.get(child['id'],set()))
         month=int(job['start'][5:7]);row=baseline.get(job['key'],[])
         base=row[6+month] if len(row)>6+month and job['start'].startswith(registry['asOf'][:4]) else ''
         result.append(dict(entityKey=job['key'],name=job['name'],month=job['start'][:7],priority=job['priority'],
             discoveryStatus=saved.get('status','not-checked'),lastAttemptAt=saved.get('checkedAt',''),
             reviewedRecordsAtPlanDate=base,baselineAsOf=registry['asOf'],
-            discoveredRecords=len(discovered),
+            discoveredRecords=len(discovered),candidateRecords=len(eligible),quarantinedRecords=len(discovered-eligible),
             unresolvedSplitWindows=pending,editorialStatus='Needs primary review',
             meaning='Search attempts and indexed records only; never proof of exhaustive coverage or no events.'))
     return result
 
+SECTOR_PATTERN=re.compile(r'ride.hail|robotaxi|autonomous.*(?:car|vehicle|taxi)|driverless|food.delivery|grocery|quick.commerce|parcel|courier|logistic|last.mile|electric.*(?:vehicle|motorcycle|taxi|fleet)|battery.swap|fintech|payment|wallet|digital.bank|banking|BNPL|buy.now.pay|lending|loan|credit|merchant|point.of.sale|QRIS|underwriting|digital.identity|KYC|e.commerce|ojek|taksi|pengiriman|pinjaman|kredit|pembiayaan|pendanaan.*(?:fintech|bank|ojek)|pembayaran|dompet|kasir|产业金融|金融|支付|外卖|网约车|融资|物流|銀行|配達|金融|대출|결제|배달|pinjol|tabungan',re.I)
+TOPIC_PATTERNS={
+ 'T01':r'ride.hail|mobility|taxi|taksi|ojek|trips|pangsa pasar',
+ 'T02':r'food|delivery|restaur|makanan|pesan.antar',
+ 'T03':r'grocery|groceries|quick.commerce|belanja|sembako',
+ 'T04':r'parcel|logistic|courier|delivery|kurir|pengiriman',
+ 'T05':r'merchant|restaur|commission|take.rate|komisi|pedagang',
+ 'T06':r'driver|rider|ojek|pengemudi|komisi|gig.worker|transport',
+ 'T07':r'electric|EV fleet|motor listrik|baterai|battery|charging',
+ 'T08':r'autonomous|robotaxi|driverless|self.driv|otonom|无人驾驶|自动驾驶',
+ 'T09':r'wallet|QRIS|fintech|dompet|pembayaran|GoPay|ShopeePay|payments|transaksi',
+ 'T10':r'BNPL|pay.?later|buy.now.pay|kredit|loan|lending|credit',
+ 'T11':r'loan|lending|credit|pinjaman|penagihan|kredit|pinjol',
+ 'T12':r'bank|deposit|DPK|NIM|tabungan|simpanan',
+ 'T13':r'payment|gateway|settlement|QRIS|pembayaran|merchant',
+ 'T14':r'POS|kasir|merchant|retail.software|point.of.sale',
+ 'T15':r'SME|UMKM|merchant|lending|microfinanc|modal|pinjaman',
+ 'T16':r'identity|KYC|biometric|fraud|cyber|signature|identitas|tanda.tangan|penipuan|data.breach',
+ 'T19':r'IPO|buyback|treasury|listing|repurchase|saham|bursa',
+ 'T20':r'earnings|revenue|EBITDA|GMV|TPV|results|pendapatan|kinerja|laba',
+ 'T22':r'bank|payment|lending|OJK|QRIS|POJK|pinjol|pembayaran|kredit',
+ 'T23':r'tax|pajak|PPh|marketplace|PMK|DJP',
+ 'T24':r'KPPU|antitrust|competition|persaingan|merger|acquisition|akuisisi',
+ 'T25':r'halal|BPJPH|food.safety|consumer|perlindungan|makanan',
+ 'T26':r'MSCI|FTSE|frontier|standalone|market.classification|investability|investabil',
+ 'T27':r'Fitch|Moody|S&P|JCR|Dagong|CCXI|sovereign|rating|peringkat|outlook',
+ 'T28':r'beta|WACC|equity.risk|cost.of.capital|Damodaran|country.risk',
+ 'T29':r'inflation|CPI|consumer.confidence|retail.sales|inflasi|keyakinan.konsumen|eceran|daya.beli',
+ 'T30':r'household|consumer.credit|consumer.spending|rumah.tangga|kredit.konsum|belanja',
+ 'T31':r'Bank.Indonesia|BI.?Rate|interest.rate|JISDOR|rupiah|liquidity|likuid|money.supply|M2|suku.bunga|moneter',
+ 'T32':r'business.activity|capacity.utilization|inventory|industrial|manufactur|produksi|kapasitas|dunia.usaha|persediaan',
+ 'T33':r'tourism|tourist|vehicle|motorcycle|car.sales|wisata|kendaraan|sepeda.motor|mobil',
+ 'T34':r'App.Store|Google.Play|review|rating|ulasan',
+}
+
+def classify_records(state,registry):
+    """Keep raw evidence, quarantine noise and correct stale namesake associations."""
+    bykey={e['key']:e for e in registry['entities']};sources={s['Source ID']:s for s in registry['sources']}
+    for record in state['records'].values():
+        title=record['title'];record['entityKeys']=[key for key in record.get('entityKeys',[]) if key in bykey and matches(bykey[key],title)]
+        accepted=[];rejected=[]
+        for tid in record['taskIds']:
+            job=state['attempts'].get(tid,{})
+            if job.get('kind')=='entity':
+                good=job.get('key') in record['entityKeys']
+            elif job.get('kind')=='topic':
+                pattern=TOPIC_PATTERNS.get(job['key'])
+                good=bool(re.search(pattern,title,re.I)) if pattern else bool(SECTOR_PATTERN.search(title))
+            else:
+                good=bool(record['entityKeys'] or SECTOR_PATTERN.search(title) or job.get('key')=='BIS')
+            (accepted if good else rejected).append(tid)
+            if job.get('kind')=='feed' and not record.get('sourceName'):
+                source=sources.get(job['key'],{})
+                record['sourceName']=source.get('Resource','Unknown source')
+                record['sourceUrl']=source.get('Website / dataset','')
+        record['eligibleTaskIds']=accepted;record['rejectedTaskIds']=rejected
+        record['relevanceStatus']='Candidate — original-source review required' if accepted else 'Quarantined — identity / subject mismatch'
+        record['topicKeys']=sorted({state['attempts'][tid]['key'] for tid in accepted if state['attempts'][tid].get('kind')=='topic'})
+
 def save_outputs(output,state,registry,tasks,through):
     output.mkdir(parents=True,exist_ok=True)
+    classify_records(state,registry)
     state['through']=through;state['updatedAt']=stamp()
     state['extraTasks']=[t for t in tasks if t.get('parentId')]
     temporary=output/'state.tmp';temporary.write_text(json.dumps(state,ensure_ascii=False,indent=2));temporary.replace(output/'state.json')
@@ -230,7 +293,11 @@ def save_outputs(output,state,registry,tasks,through):
         'notCheckedTasks':sum(t['id'] not in state['attempts'] for t in tasks),
         'blockedTasks':sum(a['status']=='source-unavailable' for a in state['attempts'].values()),
         'cappedTasks':sum(a['status']=='capped' for a in state['attempts'].values()),
-        'unreviewedDiscoveryRecords':len(state['records']),'publishedAutomatically':0,
+        'unreviewedDiscoveryRecords':len(state['records']),
+        'candidateRecords':sum(bool(r['eligibleTaskIds']) for r in state['records'].values()),
+        'quarantinedRecords':sum(not r['eligibleTaskIds'] for r in state['records'].values()),
+        'searchesRequiringNarrowerWindows':sum(a['status']=='split' for a in state['attempts'].values()),
+        'publishedAutomatically':0,
         'caveat':'Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim.'}
     (output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');return summary
 

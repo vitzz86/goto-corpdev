@@ -45,6 +45,14 @@ class MonitoringTests(unittest.TestCase):
         ledger={jobs[0]['id']:dict(status='source-unavailable',checkedAt=(now-dt.timedelta(hours=2)).isoformat())}
         self.assertTrue(m.due(jobs[0],ledger,now,'2026-10-18'))
         ledger[jobs[0]['id']]['checkedAt']=now.isoformat();self.assertFalse(m.due(jobs[0],ledger,now,'2026-10-18'))
+    def test_namesakes_and_topic_noise_are_quarantined_without_losing_raw_evidence(self):
+        records={'sport':dict(id='sport',title='Pavel Antipov vs GSM stats game log',entityKeys=['GB:xanh_sm'],taskIds=['a'],topicKeys=[],sourceName='BasketNews'),
+            'mma':dict(id='mma',title='Dana White unveils UFC boxing card',entityKeys=[],taskIds=['b'],topicKeys=['T09'],sourceName='MMA'),
+            'wallet':dict(id='wallet',title='DANA Indonesia wallet expands QRIS payments',entityKeys=['GB:dana'],taskIds=['b'],topicKeys=['T09'],sourceName='Fintech')}
+        state={'records':records,'attempts':{'a':{'kind':'entity','key':'GB:xanh_sm'},'b':{'kind':'topic','key':'T09'}}}
+        m.classify_records(state,REG)
+        self.assertEqual(len(state['records']),3);self.assertEqual(records['sport']['entityKeys'],[])
+        self.assertFalse(records['sport']['eligibleTaskIds']);self.assertFalse(records['mma']['eligibleTaskIds']);self.assertTrue(records['wallet']['eligibleTaskIds'])
     def test_balanced_queue_reaches_every_month_and_subject_family(self):
         tasks=m.make_tasks(REG,'2026-01-01','2026-10-18')
         jobs=m.choose_balanced(tasks,{},dt.datetime.now(dt.timezone.utc),'2026-10-18',200,'all')
