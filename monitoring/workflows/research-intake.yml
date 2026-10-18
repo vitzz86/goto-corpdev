@@ -48,7 +48,7 @@ jobs:
           THROUGH: ${{ inputs.through }}
         run: |
           if [ -z "$THROUGH" ]; then THROUGH=$(TZ=Asia/Jakarta date +%F); fi
-          python monitoring/refresh.py --limit "$REQUEST_LIMIT" --kind "$QUEUE_KIND" --through "$THROUGH"
+          python monitoring/refresh.py --limit "$REQUEST_LIMIT" --kind "$QUEUE_KIND" --through "$THROUGH" --balanced-months --workers 6
       - name: Preserve resumable progress
         if: always()
         uses: actions/cache/save@v4

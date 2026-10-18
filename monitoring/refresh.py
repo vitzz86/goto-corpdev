@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Resumable public-feed discovery and evidence queue. Never publishes facts."""
-import argparse, csv, datetime as dt, hashlib, importlib.util, json, re, time
+import argparse, concurrent.futures, collections, csv, datetime as dt, hashlib, importlib.util, json, re, time
 import urllib.parse, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -144,6 +144,39 @@ def choose(tasks,ledger,now,through,limit,kind):
             if bucket and len(result)<limit:result.append(bucket.pop(0))
     return result
 
+def choose_balanced(tasks,ledger,now,through,limit,kind):
+    """Rotate months and workstreams; one publisher query per domain before its next topic."""
+    families={k:{} for k in ('entity','topic','publisher','feed')}
+    for job in tasks:
+        if (kind=='all' or kind==job['kind']) and due(job,ledger,now,through):
+            month=job['start'][:7] if job['kind']!='feed' else 'snapshot'
+            families[job['kind']].setdefault(month,[]).append(job)
+    rings={}
+    for family,months in families.items():
+        ring=collections.deque()
+        for month,rows in sorted(months.items()):
+            groups={}
+            for job in sorted(rows,key=lambda j:(j['id'] in ledger,j['priority'],j.get('parentId') is None,j['key'])):
+                group=job['key'].rsplit(':',1)[0] if family=='publisher' else job.get('workstream',family)
+                groups.setdefault(group,collections.deque()).append(job)
+            # Publisher order follows the curated source priorities in task generation.
+            if family=='publisher':
+                ranks={t['key'].rsplit(':',1)[0]:i for i,t in reversed(list(enumerate(tasks))) if t['kind']=='publisher'}
+                groups=dict(sorted(groups.items(),key=lambda item:ranks.get(item[0],999999)))
+            ordered=collections.deque()
+            while any(groups.values()):
+                for group in groups.values():
+                    if group:ordered.append(group.popleft())
+            if ordered:ring.append(ordered)
+        rings[family]=ring
+    result=[]
+    while len(result)<limit and any(rings.values()):
+        for ring in rings.values():
+            if not ring or len(result)>=limit:continue
+            queue=ring.popleft();result.append(queue.popleft())
+            if queue:ring.append(queue)
+    return result
+
 def coverage(registry,tasks,ledger,records):
     baseline={r[0]:r for r in registry['baselineCoverage']}; result=[]
     byparent={}; recordids={}
@@ -202,35 +235,42 @@ def save_outputs(output,state,registry,tasks,through):
     (output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');return summary
 
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--from',dest='start',default='2026-01-01');ap.add_argument('--through',default=dt.datetime.now(ZoneInfo('Asia/Jakarta')).date().isoformat());ap.add_argument('--limit',type=int,default=50);ap.add_argument('--kind',choices=['all','entity','topic','publisher','feed'],default='all');ap.add_argument('--output',type=Path,default=HERE/'results');ap.add_argument('--plan-only',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--from',dest='start',default='2026-01-01');ap.add_argument('--through',default=dt.datetime.now(ZoneInfo('Asia/Jakarta')).date().isoformat());ap.add_argument('--limit',type=int,default=50);ap.add_argument('--kind',choices=['all','entity','topic','publisher','feed'],default='all');ap.add_argument('--output',type=Path,default=HERE/'results');ap.add_argument('--plan-only',action='store_true');ap.add_argument('--balanced-months',action='store_true');ap.add_argument('--workers',type=int,default=6);args=ap.parse_args()
     if not 1<=args.limit<=500:ap.error('--limit must be 1–500')
+    if not 1<=args.workers<=8:ap.error('--workers must be 1–8')
     if args.start>args.through:ap.error('--from must not follow --through')
     dt.date.fromisoformat(args.start);dt.date.fromisoformat(args.through)
     if dt.date.fromisoformat(args.through)>dt.datetime.now(ZoneInfo('Asia/Jakarta')).date():ap.error('--through cannot be a future date')
     registry=read(HERE/'registry.json',{});state=read(args.output/'state.json',{'attempts':{},'records':{},'extraTasks':[]})
     tasks=make_tasks(registry,args.start,args.through);ids={t['id'] for t in tasks}
     tasks.extend(t for t in state.get('extraTasks',[]) if t['id'] not in ids and t['start']>=args.start and t['through']<=args.through)
-    jobs=[] if args.plan_only else choose(tasks,state['attempts'],dt.datetime.now(dt.timezone.utc),args.through,args.limit,args.kind)
-    fetched={}
+    selector=choose_balanced if args.balanced_months else choose
+    jobs=[] if args.plan_only else selector(tasks,state['attempts'],dt.datetime.now(dt.timezone.utc),args.through,args.limit,args.kind)
+    def retrieve(url):
+        try:return parse_feed(fetch(url)),None
+        except Exception as error:return [],str(error)[:300]
+    pool=concurrent.futures.ThreadPoolExecutor(max_workers=args.workers)
+    # Fetch identical URLs once, while processing and checkpointing state on one thread.
+    futures={url:pool.submit(retrieve,url) for url in dict.fromkeys(j['url'] for j in jobs)}
     for i,job in enumerate(jobs,1):
         attempt={'checkedAt':stamp(),'url':job['url'],'start':job['start'],'through':job['through'],'kind':job['kind'],'key':job['key']}
-        try:
-            if job['url'] not in fetched:fetched[job['url']]=parse_feed(fetch(job['url']))
-            rows=fetched[job['url']];count=ingest(rows,job,registry,state['records']);children=[]
+        rows,error=futures[job['url']].result()
+        if error:attempt.update(status='source-unavailable',error=error,returned=None,retained=None)
+        else:
+            count=ingest(rows,job,registry,state['records']);children=[]
             if len(rows)>=100 and job['kind']!='feed':children=split_task(job)
             status='split' if children else 'capped' if len(rows)>=100 else 'leads-awaiting-review' if count else 'searched-no-leads'
-            # Native publisher feeds are bounded recent snapshots; do not invent historical completeness.
             if job['kind']=='feed' and len(rows)>=100:status='bounded-feed-snapshot'
             attempt.update(status=status,returned=len(rows),retained=count,potentiallyTruncated=len(rows)>=100,
                 reviewStatus='Unreviewed',historicalCoverage='Bounded discovery; not exhaustive')
             for child in children:
                 if child['id'] not in {t['id'] for t in tasks}:tasks.append(child)
-        except Exception as error:attempt.update(status='source-unavailable',error=str(error)[:300],returned=None,retained=None)
         previous=state['attempts'].get(job['id'],{});attempt['attemptCount']=previous.get('attemptCount',0)+1
         state['attempts'][job['id']]=attempt
         print(f'{i}/{len(jobs)} {job["kind"]} {job["key"]}: {attempt["status"]}',flush=True)
         # Checkpoint every request so interruption does not erase completed collection.
         state['extraTasks']=[t for t in tasks if t.get('parentId')]
         args.output.mkdir(parents=True,exist_ok=True);temp=args.output/'state.tmp';temp.write_text(json.dumps(state,ensure_ascii=False));temp.replace(args.output/'state.json')
+    pool.shutdown(wait=True)
     print(json.dumps(save_outputs(args.output,state,registry,tasks,args.through),indent=2))
 if __name__=='__main__':main()

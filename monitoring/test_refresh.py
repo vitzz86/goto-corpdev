@@ -45,6 +45,13 @@ class MonitoringTests(unittest.TestCase):
         ledger={jobs[0]['id']:dict(status='source-unavailable',checkedAt=(now-dt.timedelta(hours=2)).isoformat())}
         self.assertTrue(m.due(jobs[0],ledger,now,'2026-10-18'))
         ledger[jobs[0]['id']]['checkedAt']=now.isoformat();self.assertFalse(m.due(jobs[0],ledger,now,'2026-10-18'))
+    def test_balanced_queue_reaches_every_month_and_subject_family(self):
+        tasks=m.make_tasks(REG,'2026-01-01','2026-10-18')
+        jobs=m.choose_balanced(tasks,{},dt.datetime.now(dt.timezone.utc),'2026-10-18',200,'all')
+        for family in ('entity','topic','publisher'):
+            self.assertEqual({j['start'][:7] for j in jobs if j['kind']==family},{f'2026-{n:02d}' for n in range(1,11)})
+        publisher_domains={j['key'].rsplit(':',1)[0] for j in jobs if j['kind']=='publisher'}
+        self.assertTrue({'reuters.com','bloomberg.com'}.issubset(publisher_domains))
     def test_nested_split_coverage_and_baseline_are_not_completion(self):
         parent=m.task('entity','GB:jenius','2026-01-01','2026-01-31','https://news.google.com/rss/search?q=Jenius',name='Jenius')
         children=m.split_task(parent);grandchildren=m.split_task(children[0]);tasks=[parent]+children+grandchildren

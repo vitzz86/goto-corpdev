@@ -9,7 +9,7 @@ The versioned registry contains 93 source-resource rows, 358 overlapping entity-
 ```sh
 python3 monitoring/test_refresh.py
 python3 monitoring/refresh.py --through 2026-10-18 --plan-only
-python3 monitoring/refresh.py --through 2026-10-18 --limit 50
+python3 monitoring/refresh.py --through 2026-10-18 --limit 500 --balanced-months --workers 6
 ```
 
 Run the GitHub Action **Research intake and coverage audit** from Actions → Run workflow. Choose `all`, `entity`, `topic`, `publisher` or `feed`. It restores the previous state from the Actions cache and saves the next state plus review/coverage artifacts. A missing/expired cache restarts discovery; it does not invent previous progress. Download artifacts as a durable research backup. Runs are manual; no recurring schedule has been enabled.
@@ -24,6 +24,8 @@ The default date follows Jakarta. Future cutoffs are rejected. The initial Janua
 - `results/summary.json`: actual attempted, blocked, capped and unchecked task counts; no automatic publication.
 
 HTTP failures and invalid/non-feed responses remain **source-unavailable**. Successful zero-result searches become **searched-no-leads**, never “no company news.” A 100-item search is split into seven-day windows, then days; a capped day stays flagged. Native feeds are bounded snapshots, even if they contain fewer than 100 items. Google News date searches and feeds do not provide exhaustive historical coverage. Query match and publisher name are not source verification.
+
+The GitHub workflow uses balanced month selection so every month gets a turn, with workstreams and publisher domains interleaved. It fetches up to six public feeds concurrently; only one thread writes collection state. The default current-first queue remains available locally.
 
 The fair queue alternates entities, topics, publisher-domain searches and feeds. P0/current periods come first within each family. Exact alias, context and namesake exclusions run before entity attribution. Topic and official-feed discoveries without a company match may still enter the internal review queue; they are not assigned to a company. URL tracking parameters are normalized, but syndicated articles and similar headlines still need editorial event deduplication.
 
