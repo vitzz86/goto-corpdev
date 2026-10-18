@@ -1,0 +1,74 @@
+name: Research intake and coverage audit
+
+# Deliberately manual: a cadence proposal is not authorization for a recurring job.
+# Collected headlines remain artifacts for review; this workflow cannot publish facts.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: Maximum public feed/search requests (1–500)
+        default: '50'
+        required: true
+        type: string
+      kind:
+        description: Work queue
+        default: all
+        type: choice
+        options: [all, entity, topic, publisher, feed]
+      through:
+        description: Last publication date, YYYY-MM-DD (blank means today in Jakarta)
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: research-intake
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate collection controls
+        run: python monitoring/test_refresh.py
+      - name: Restore previous collection progress
+        uses: actions/cache/restore@v4
+        with:
+          path: monitoring/results/state.json
+          key: research-intake-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: research-intake-v1-
+      - name: Collect bounded public metadata
+        env:
+          REQUEST_LIMIT: ${{ inputs.limit }}
+          QUEUE_KIND: ${{ inputs.kind }}
+          THROUGH: ${{ inputs.through }}
+        run: |
+          if [ -z "$THROUGH" ]; then THROUGH=$(TZ=Asia/Jakarta date +%F); fi
+          python monitoring/refresh.py --limit "$REQUEST_LIMIT" --kind "$QUEUE_KIND" --through "$THROUGH"
+      - name: Preserve resumable progress
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: monitoring/results/state.json
+          key: research-intake-v1-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Save evidence queue and monthly coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-intake-${{ github.run_id }}
+          path: monitoring/results/
+          retention-days: 90
+      - name: Add run summary
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          s=json.loads(Path('monitoring/results/summary.json').read_text())
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('## Research intake — editorial review required\n\n')
+              for k,v in s.items():f.write(f'- **{k}**: {v}\n')
+          PY
