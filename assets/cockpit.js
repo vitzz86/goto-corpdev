@@ -17,11 +17,10 @@ async function startupResponse(url){
 }
 async function loadStartup(){
   if('DecompressionStream' in window){
-    const blob=await startupResponse('data/startup-d4d885975e13.json.gz');
-    try{return JSON.parse(await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text())}
+    try{const blob=await startupResponse('data/startup-3df7cbfccf3a.json.gz');return JSON.parse(await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text())}
     catch(error){loadingText('Opening compatible research snapshot…')}
   }
-  return JSON.parse(await (await startupResponse('data/startup-d4d885975e13.json')).text());
+  return JSON.parse(await (await startupResponse('data/startup-3df7cbfccf3a.json')).text());
 }
 const {D,VERIFIED,WORKBOOK}=await loadStartup();
 loadingText('Preparing your decision brief…');
@@ -88,7 +87,7 @@ function vBriefBaseline(){
     <div class="card hi-card"><h3>High-severity competitor actions <span class="badge">${D.cact.filter(isHi).length}</span></h3>${D.cact.filter(isHi).slice(0,6).map(a=>`<div class="wrow" data-ent="${compId(a.company)}">${logo(compId(a.company),a.company,1)}<div><b>${esc(a.event)}</b><p><span class="mono">${esc(a.date)}</span> · ${esc(a.company)} · ${esc(a.type)}</p><p style="color:var(--ink)"><b style="display:inline;color:var(--bad)">So what:</b> ${esc(a.implication)}</p></div></div>`).join('')}
       <p class="note"><a href="#competitors">All ${D.cact.length} competitor actions →</a></p></div>
     <div class="card hi-card"><h3>High-severity news <span class="badge">${D.feed.filter(isHi).length}</span></h3>${D.feed.filter(isHi).slice(0,6).map(f=>`<div class="wrow">${logo(compId(f.entity),f.entity,1)}<div><b>${f.url?link(f.url,f.title):esc(f.title)}</b><p><span class="mono">${esc(f.date)}</span> · ${esc(f.category)} · ${esc(f.entity)}</p><p style="color:var(--ink)">${esc(f.implication||'')}</p></div></div>`).join('')}
-      <p class="note"><a href="#feed">Full feed (${D.feed.length}) →</a></p></div>
+      <p class="note"><a href="#feed">Full feed (${D.feedTotal||D.feed.length}) →</a></p></div>
   </div>
   <div class="grid g2" style="margin-top:14px">
     <div class="card"><h3>Decisions for corp dev this week <small>agent-drafted, analyst-owned</small></h3>
@@ -98,7 +97,7 @@ function vBriefBaseline(){
       <div class="decision"><b>4 · SoftBank overhang / anchor investor</b><p>7.65% SVF stake is the largest single overhang. Keep the Danantara SPV option warm; track 5% and 1% ownership filings weekly.</p></div>
       <div class="decision"><b>5 · Fintech funding</b><p>Debt rose to Rp8.2tn with the Rp11.0tn loan book (+58% yoy). Prioritise deposit-funded partners (Bank Jago step-up) before more wholesale debt.</p></div>
     </div>
-    <div class="card"><h3>Latest signals <small>most recent medium/low · ${D.feed.length} total</small></h3>${top.map(feedItem).join('')}
+    <div class="card"><h3>Latest signals <small>most recent medium/low · ${D.feedTotal||D.feed.length} total</small></h3>${top.map(feedItem).join('')}
       <p class="note"><a href="#feed">Open the full intelligence feed →</a></p></div>
   </div>
   <div class="card" style="margin-top:14px"><h3>GOTO vs peers, rebased to Jan-24 = 100 <small>month-end closes</small></h3><div style="height:260px"><canvas id="c-brief"></canvas></div></div>`;
@@ -327,14 +326,15 @@ function vSysBaseline(){
     <tr><td><b>Deal-sourcing agent</b></td><td class="note">Screens targets against the mandate; checks duplication with existing GoTo capability; drafts diligence questions.</td></tr>
     <tr><td><b>Valuation agent</b></td><td class="note">Deterministic models (DCF, comps, SOTP); recomputes when an input changes and logs the delta.</td></tr></tbody></table></div>
    <div class="card"><h3>Guardrails</h3><ul style="margin:0;padding-left:18px"><li>Every number carries a date and a source; reported facts, assumptions and calculations are kept apart.</li><li>Models are deterministic spreadsheets; agents propose input changes, the analyst approves.</li><li>Conflicting sources are shown, not averaged (e.g. 2Q26 profit reported as Rp252bn vs Rp349.5bn attributable).</li><li>Unverified relationships are labelled (e.g. Bintang Kecil, Kopi Kenangan).</li><li>Confidential deal data stays out of public tools.</li></ul>
-   <h3 style="margin-top:14px">This run</h3><p class="note" style="margin:0">Research checked 2026-10-19: ${D.feed.length} signals, ${D.research.length} research items, ${E.length} entities, ${D.macro.indicators.length} indicators, ${D.deals.length}+${D.global.length} sourcing candidates, 10 quarterly filings (1Q24-2Q26) extracted and tied.</p></div>
+   <h3 style="margin-top:14px">This run</h3><p class="note" style="margin:0">Research checked 2026-10-19: ${D.feedTotal||D.feed.length} signals, ${D.research.length} research items, ${E.length} entities, ${D.macro.indicators.length} indicators, ${D.deals.length}+${D.global.length} sourcing candidates, 10 quarterly filings (1Q24-2Q26) extracted and tied.</p></div>
   </div>`;
 }
 
 /* ---------------- router ---------------- */
 const R={global:vGlobalBenchmarks,sentiment:vSentiment,policy:vPolicy,brief:vBrief,markets:vMarkets,macro:vMacro,financials:vFin,valuation:vVal,ecosystem:vEco,portfolio:vPort,competitors:vComp,deals:vDeals,feed:vFeed,actions:vActions,research:vResearch,ir:vIR};
 const T=Object.fromEntries(VIEWS.flatMap(([,i])=>i));
-function go(){ let v=(location.hash||'#brief').slice(1); if(!R[v]) v='brief'; document.querySelectorAll('section.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v)); document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.v===v)); $('#vt').textContent=T[v]; $('#vs').textContent=SUB[v]+' · research checked 2026-10-19'; if(window.lastCockpitView!==v){window.scrollTo(0,0);window.lastCockpitView=v;} const sec=$('#v-'+v); if(!sec.dataset.done){R[v](); sec.dataset.done=1;} try{localStorage.setItem('cdv',v);}catch(e){} }
+let feedRouteGeneration=0;
+async function go(){const generation=++feedRouteGeneration; let v=(location.hash||'#brief').slice(1); if(!R[v]) v='brief'; document.querySelectorAll('section.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v)); document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.v===v)); $('#vt').textContent=T[v]; $('#vs').textContent=SUB[v]+' · research checked 2026-10-19'; if(window.lastCockpitView!==v){window.scrollTo(0,0);window.lastCockpitView=v;} const sec=$('#v-'+v); if(['feed','competitors','ecosystem','portfolio'].includes(v)&&!fullFeedReady){sec.innerHTML='<p role="status">Opening complete signal archive…</p>';try{await ensureFullFeed()}catch(e){if(generation!==feedRouteGeneration)return;sec.innerHTML='<p role="alert">The signal archive could not load.</p><button class="btn" id="retryFeedRoute">Retry archive</button>';$('#retryFeedRoute').onclick=go;return}if(generation!==feedRouteGeneration)return;} if(!sec.dataset.done){R[v](); sec.dataset.done=1;} try{localStorage.setItem('cdv',v);}catch(e){} }
 window.addEventListener('hashchange',go);
 document.addEventListener('click',e=>{ const en=e.target.closest('[data-ent]'); if(en&&!e.target.closest('summary')){openEntity(en.dataset.ent);return;} const dl=e.target.closest('[data-deal]'); if(dl){openDeal(+dl.dataset.deal);return;} if(e.target.closest('[data-close]')) $('#drawer').classList.remove('on'); });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') $('#drawer').classList.remove('on'); });
@@ -1565,6 +1565,44 @@ document.addEventListener('change',e=>{if(e.target.id!=='vsPreset')return;const 
 document.addEventListener('input',e=>{const k=e.target.dataset?.vsInput;if(!k)return;vsState[k]=e.target.value===''?NaN:Number(e.target.value);vsState.preset='custom';$('#vsPreset').value='custom';vsPaint()});
 
 document.addEventListener('click',e=>{const b=e.target.closest('[data-vs-lab]');if(!b)return;const id=b.dataset.vsLab,beta=vbIdx.series[0].observations.at(-1).value,stress={liquidity:100,country:50,debt:50,sovereign:50},relief={liquidity:-50,country:-25,debt:-50,sovereign:-50},shock=id==='relief'?relief:stress,rows=vsCalculate(viData.model,beta,shock),row=rows[id==='technology'?1:['standalone','relief'].includes(id)?2:0];viState.inputs={...row.inputs};viState.growth=viData.model.baseGrowth;viState.preset={workbook:'Workbook assumptions · 13 October',technology:'Technology beta sensitivity · September index reference',standalone:'Macro stress · hypothetical MSCI standalone / funding risk',relief:'Funding relief · illustrative assumptions'}[id];if(['standalone','relief'].includes(id))Object.assign(vsState,shock,{preset:id});viRenderActive()});
+
+// Download discovery leads only when a view or interaction actually needs them.
+let fullFeedReady=false,fullFeedPromise;
+async function ensureFullFeed(){
+  if(fullFeedReady)return D.feed;
+  if(!fullFeedPromise)fullFeedPromise=(async()=>{
+    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),25000);
+    try{
+      const url=D.feedSnapshotUrl;let rows;
+      if('DecompressionStream' in window){
+        try{const r=await fetch(url+'.gz',{signal:controller.signal});if(!r.ok)throw Error('Archive unavailable');rows=JSON.parse(await new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).text())}
+        catch(error){if(controller.signal.aborted)throw error}
+      }
+      if(!rows){const r=await fetch(url,{signal:controller.signal});if(!r.ok)throw Error('Archive unavailable');rows=await r.json()}
+      if(!Array.isArray(rows)||rows.length!==D.feedTotal)throw Error('Archive is incomplete');
+      D.feed=rows;rows.forEach(f=>uxKey('signal',f));fullFeedReady=true;return rows;
+    }finally{clearTimeout(timer)}
+  })().catch(error=>{fullFeedPromise=null;throw error});
+  return fullFeedPromise;
+}
+async function withCompleteFeed(action){
+  if(fullFeedReady)return action();
+  let notice=document.querySelector('#signal-download-notice');
+  if(!notice){notice=document.createElement('div');notice.id='signal-download-notice';notice.className='signal-download-notice';notice.setAttribute('role','status');document.body.appendChild(notice)}
+  notice.textContent='Opening complete signal archive…';
+  try{await ensureFullFeed();notice.remove();return action()}
+  catch(error){notice.textContent='Signal archive could not load. ';const retry=document.createElement('button');retry.className='btn';retry.textContent='Retry';retry.onclick=()=>withCompleteFeed(action);notice.appendChild(retry);const close=document.createElement('button');close.className='btn';close.textContent='Dismiss';close.onclick=()=>notice.remove();notice.appendChild(close)}
+}
+const openEntityWithStartupData=openEntity,openDealWithStartupData=openDeal,searchWithStartupData=uxOpenSearch,handleWithStartupData=uxHandle;
+openEntity=id=>withCompleteFeed(()=>openEntityWithStartupData(id));
+openDeal=id=>withCompleteFeed(()=>openDealWithStartupData(id));
+uxOpenSearch=()=>withCompleteFeed(()=>searchWithStartupData());
+$('#workspaceSearchButton').onclick=uxOpenSearch;
+uxHandle=function(action,key,button){
+  if(['evidence','decision','search-evidence'].includes(action)&&uxResolveEvidence(key))return handleWithStartupData(action,key,button);
+  if(['evidence','decision','search-evidence','company-signals','company-compare','companies'].includes(action))return withCompleteFeed(()=>handleWithStartupData(action,key,button));
+  return handleWithStartupData(action,key,button);
+};
 
 // Render charts only when their canvas approaches the viewport. The dashboard
 // can open without downloading a chart library or contacting a third-party CDN.
