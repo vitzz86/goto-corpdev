@@ -3,6 +3,12 @@ import re
 
 # Search aliases identify products without requiring an invented exact phrase.
 QUERY_ALIASES = {
+ "dhs": 'DHS (logistik OR ekspedisi OR kurir) -homeland -immigration -ICE',
+ "spx": '("SPX Express" OR "SPX Shopee")',
+ "tiki": 'TIKI (kurir OR ekspedisi OR "Titipan Kilat")',
+ "mex": '("MEX Berlian" OR "MEX Express" OR "MEX Cargo")',
+ "bes": '("Blibli Express" OR "BES Blibli")',
+
  "jenius": 'Jenius (SMBC OR BTPN OR bank OR Flexi OR rekening)',
  "gocar": 'GoCar (Gojek OR Indonesia)', "gobox": 'GoBox (Gojek OR Indonesia)',
  "moka": 'Moka (POS OR kasir OR GoTo OR Gojek)',
@@ -57,6 +63,14 @@ def discovery_kind(title, entity_id):
     return "News discovery"
 
 CONTEXT={
+ 'dhs':r'dhs.*(?:logisti|courier|kurir|ekspedisi)|(?:logisti|courier|kurir|ekspedisi).*dhs',
+ 'spx':r'shopee|spx express|spx.*(?:logistics|logistik|kurir|ekspedisi|parcel)',
+ 'tiki':r'tiki.*(?:kurir|ekspedisi|pengiriman|logisti|parcel)|(?:kurir|ekspedisi|pengiriman|logisti|parcel).*tiki|titipan kilat',
+ 'mex':r'mex.*(?:berlian|logisti|cargo|kargo|ekspedisi)|(?:berlian|logisti|cargo|kargo|ekspedisi).*mex',
+ 'bes':r'blibli express|blibli.*bes|bes.*blibli',
+ 'blue_bird':r'indonesia|indonesian|jakarta|taksi|taxi|bali|mybluebird|armada|mobilitas|bandara|blue.?bird.*(?:laba|pendapatan|dividen|rupiah)',
+ 'grab':r'grab holdings|anthon.y? tan|grabfood|grabpay|grabfin|grabmart|grabbike|grab.*(?:singapore|indonesia|malaysia|thai|vietnam|philippines|earnings|revenue|profit|atome|gojek|driver|delivery|fintech|robotaxi)|(?:singapore|atome|gojek).*grab',
+
  'argor':r'capital|ventures',
  'dash-workforce':r'workforce|staffing|singapore|employment',
  'blitz':r'logistics|delivery|indonesia',
@@ -92,8 +106,14 @@ def relevant(record):
  title=record.get('title','');publisher=record.get('source','');body=title.rsplit(' - '+publisher,1)[0] if publisher else title
  if re.search(r'bokep|porn|xxx|onlyfans|leaked.*video|viral.*(?:sex|adult)|university athletics|match highlights|brewery|amity brew',body,re.I):return False
  entity=record.get('entityId');pattern=CONTEXT.get(entity)
+ if entity=='dhs' and re.search(r'homeland|immigration|deport|\bICE\b|detention|ilhan omar',body,re.I):return False
+ if entity=='spx' and re.search(r'spx technologies|s.p.500|shopinx|spx6900',body,re.I):return False
+ if entity=='blue_bird' and re.search(r'school bus|bus sekolah|bluebird bio|blue bird corporation',body,re.I):return False
+ if entity=='grab' and re.search(r'grab (?:your|a |an |the |this |these |some |free |their )|cash grab|land grab|power grab|smash.and.grab',body,re.I):return False
  if entity=='electrum' and re.search(r'bitcoin|electrumsv|cryptocurr|crypto wallet|blockchain|mining|gold deposit|electrum group|electrum capital|silver exploration',body,re.I):return False
  if entity=='astro' and re.search(r'astros|astrophys|astrology|astro malaysia|astro holdings|astro awani|astro television|satellite tv|astro bot|k.pop|moonbin',body,re.I):return False
+ if entity=='dana' and not re.search(r'(?<!\w)DANA(?!\w)',body):return False
+ if re.search(r'saldo dana gratis|dana kaget|game penghasil|aplikasi penghasil uang|slot gacor|\btogel\b|live withdraw',body,re.I):return False
  if entity=='dana' and re.search(r'research funding|dana indonesia raya',body,re.I):return False
  if entity=='shopee' and re.search(r'cup.*\d\s*[-:]\s*\d|group [ab]:|match highlights',body,re.I):return False
  if entity=='jenius' and re.search(r'macross|chogokin|valkyrie|maximilian|toy.people|action figure',body,re.I):return False

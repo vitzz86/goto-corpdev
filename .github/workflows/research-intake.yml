@@ -16,7 +16,7 @@ on:
         type: choice
         options: [all, entity, topic, publisher, feed]
       full_companies:
-        description: Finish January–cutoff monthly checks for all 358 registry entries
+        description: Finish January–cutoff English and local-language checks for every registry entry
         default: false
         type: boolean
       through:

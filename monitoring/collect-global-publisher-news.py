@@ -69,6 +69,13 @@ ALIASES={
  'tabby':['Tabby'], 'tamara':['Tamara'], 'tala':['Tala'], 'fairmoney':['FairMoney'], 'nuro':['Nuro'],
 }
 CONTEXT={
+ 'advance-ai':r'advance\.ai|advance intelligence group|advance ai.*(?:kyc|identity|biometric|fintech|fraud)|(?:kyc|biometric|fintech|fraud).*advance ai',
+ 'ampersand':r'ampersand.*(?:electric|motorcycle|battery|e.mobility)|(?:electric|motorcycle|battery).*ampersand|rwanda|kenya',
+ 'robinhood':r'thailand|thai|purple ventures|scbx|yip in tsoi|robinhood.*(?:food|delivery|restaurant)',
+ 'mollie':r'payment|fintech|merchant|checkout|financial|dutch|netherlands',
+ 'moove':r'fleet|uber|waymo|mobility|driver|vehicle|ride.hail|vehicle.financ',
+ 'prospa':r'australia|australian|new zealand|ASX|business.lend|small.business.loan',
+ 'foody':r'cyprus|cypriot|nicosia|limassol|larnaca',
  'xanh_sm':r'xanh.?sm|green.?sm|vinfast|vingroup|electric.*(?:taxi|vehicle|fleet)|taxi|ride.hail|mobility|giao th[ôo]ng',
  '99':r'\bBrazil|Brasil|brasileir|DiDi|ride.hail|taxi|mobility|99pay|99taxi|99food',
  'electrum':r'gojek|goto|\btbs\b|indonesia|motor listrik|electric motorcycle|battery swap|electric scooter',
@@ -133,9 +140,13 @@ CONTEXT={
  'be':r'vietnam|vietnamese|be.?bike|be.?car|ride.hail|vpbank|be group.*(?:transport|driver|mobility)',
  'go':r'japan|japanese|tokyo|nikkei|waymo|go inc\.',
  'wave':r'africa|african|senegal|senegalese|dakar|ivory coast|côte d.ivoire|mali|burkina|uganda|wave mobile money',
- 'blue_bird':r'indonesia|indonesian|jakarta|taxi|taksi|bali',
+ 'blue_bird':r'indonesia|indonesian|jakarta|taxi|taksi|bali|mybluebird|armada|mobilitas|bandara|blue.?bird.*(?:laba|pendapatan|dividen|rupiah)',
 }
 EXCLUDE={
+ 'blue_bird':r'school bus|bus sekolah|bluebird bio|blue bird corporation',
+ 'ampersand':r'ampersand capital partners|ampersand growth equity|ampersand group|ampersand education|ampersand ai|ampersand ai|ampersand.*digital advertising',
+ 'robinhood':r'robinhood markets|vlad tenev|nasdaq.?hood|stock.trading|brokerage|crypto.trading',
+ 'prospa':r'nigeria|nigerian|lagos',
  'electrum':r'bitcoin|electrumsv|cryptocurr|crypto wallet|blockchain|mining|gold deposit|electrum group|electrum capital|silver exploration',
  'jenius':r'macross|chogokin|valkyrie|maximilian|toy.people|action figure',
  'astro':r'astros|astrophys|astrology|astro malaysia|astro holdings|astro awani|astro television|satellite tv|astro bot|k.pop|moonbin',
@@ -184,7 +195,7 @@ EXCLUDE={
  'privy':r'ethereum|web3|crypto wallet|privy.io|privy wallet|cryptocurrency|stablecoin wallet|stripe.*privy|privy.*stripe',
  '99':r'\b99[%％]|highway 99|route 99|real madrid|football legend|fc 26|\€1[.,]99|accuracy|sexing',
 }
-GLOBAL_EXCLUDE=r'bokep|porn|xxx|onlyfans|university athletics|match highlights|macross|chogokin|valkyrie'
+GLOBAL_EXCLUDE=r'saldo dana gratis|dana kaget|game penghasil|aplikasi penghasil uang|slot gacor|\btogel\b|live withdraw|bokep|porn|xxx|onlyfans|university athletics|match highlights|macross|chogokin|valkyrie'
 
 @functools.lru_cache(maxsize=4096)
 def compiled(pattern,flags=re.I):

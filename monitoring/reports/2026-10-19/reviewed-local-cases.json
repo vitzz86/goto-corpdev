@@ -1,0 +1,306 @@
+{
+  "asOf": "2026-10-19",
+  "events": [
+    {
+      "id": "local-bluebird-20261019-1",
+      "playerIds": [
+        "blue_bird"
+      ],
+      "entityId": "blue_bird",
+      "company": "Bluebird",
+      "date": "2026-05-05",
+      "publishedAt": "2026-05-05",
+      "reportingPeriod": "2026-Q1",
+      "title": "Bluebird Q1 revenue rises 11.6%; MyBluebird users grow 22.4%",
+      "type": "Quarterly results",
+      "category": "Competitor",
+      "topic": "Quarterly results",
+      "summary": "For Q1 2026, Bluebird reported Rp1.45tn revenue, Rp341.8bn EBITDA and Rp157bn net profit. MyBluebird users increased 22.4% and fixed-price usage 29.2% year on year.",
+      "facts": "For Q1 2026, Bluebird reported Rp1.45tn revenue, Rp341.8bn EBITDA and Rp157bn net profit. MyBluebird users increased 22.4% and fixed-price usage 29.2% year on year.",
+      "gotoLesson": "Compare service reliability and fixed-price adoption with GoCar repeat usage; this release does not establish market share.",
+      "implication": "Compare service reliability and fixed-price adoption with GoCar repeat usage; this release does not establish market share.",
+      "nextAction": "Reconcile earnings definitions with the quarterly filing and compare like-for-like periods.",
+      "whatToValidate": "Reconcile earnings definitions with the quarterly filing and compare like-for-like periods.",
+      "sourceUrl": "https://www.bluebirdgroup.com/news/konsistensi-layanan-dorong-kinerja-positif-pendapatan-kuartal-i-bluebird-group-tumbuh-116?lang=id",
+      "publisher": "Bluebird Group",
+      "sourceName": "Bluebird Group",
+      "publisherDomain": "bluebirdgroup.com",
+      "reviewed": true,
+      "verified": true,
+      "sourceCheckedAt": "2026-10-19",
+      "severity": "medium",
+      "status": "Issuer release reviewed; company-reported facts",
+      "evidence": "Original Bluebird page reviewed on 19 October 2026; event and reporting dates retained.",
+      "limitations": "Issuer claims; independent performance verification and GoTo transferability remain separate."
+    },
+    {
+      "id": "local-bluebird-20261019-2",
+      "playerIds": [
+        "blue_bird"
+      ],
+      "entityId": "blue_bird",
+      "company": "Bluebird",
+      "date": "2026-06-18",
+      "publishedAt": "2026-06-18",
+      "reportingPeriod": "FY2025 dividend",
+      "title": "Bluebird shareholders approve Rp166 per-share dividend",
+      "type": "Capital allocation",
+      "category": "Competitor",
+      "topic": "Capital allocation",
+      "summary": "The AGM approved Rp166 per share from FY2025 earnings. The release scheduled payment for 10 July 2026; payment completion is not verified by this announcement.",
+      "facts": "The AGM approved Rp166 per share from FY2025 earnings. The release scheduled payment for 10 July 2026; payment completion is not verified by this announcement.",
+      "gotoLesson": "Consider the balance between fleet investment, cash generation and shareholder distributions when comparing capital intensity.",
+      "implication": "Consider the balance between fleet investment, cash generation and shareholder distributions when comparing capital intensity.",
+      "nextAction": "Check payment completion and the FY2025 attributable-earnings denominator.",
+      "whatToValidate": "Check payment completion and the FY2025 attributable-earnings denominator.",
+      "sourceUrl": "https://www.bluebirdgroup.com/news/bluebird-setujui-dividen-rp166-per-saham-perkuat-fondasi-pertumbuhan-jangka-panjang?lang=en",
+      "publisher": "Bluebird Group",
+      "sourceName": "Bluebird Group",
+      "publisherDomain": "bluebirdgroup.com",
+      "reviewed": true,
+      "verified": true,
+      "sourceCheckedAt": "2026-10-19",
+      "severity": "medium",
+      "status": "Issuer release reviewed; company-reported facts",
+      "evidence": "Original Bluebird page reviewed on 19 October 2026; event and reporting dates retained.",
+      "limitations": "Issuer claims; independent performance verification and GoTo transferability remain separate."
+    },
+    {
+      "id": "local-bluebird-20261019-3",
+      "playerIds": [
+        "blue_bird"
+      ],
+      "entityId": "blue_bird",
+      "company": "Bluebird",
+      "date": "2026-07-16",
+      "publishedAt": "2026-07-16",
+      "reportingPeriod": null,
+      "title": "Bluebird launches Prime with hybrid and electric fleets",
+      "type": "Product & strategy",
+      "category": "Competitor",
+      "topic": "Product & strategy",
+      "summary": "Bluebird announced Prime using Toyota Innova Zenix Hybrid and BYD E6 vehicles, with launch availability in Jakarta and BYD E6 service in Bandung, Surabaya, Medan and Bali.",
+      "facts": "Bluebird announced Prime using Toyota Innova Zenix Hybrid and BYD E6 vehicles, with launch availability in Jakarta and BYD E6 service in Bandung, Surabaya, Medan and Bali.",
+      "gotoLesson": "Test demand for a clearly defined premium ride tier, balancing willingness to pay against fleet and driver costs.",
+      "implication": "Test demand for a clearly defined premium ride tier, balancing willingness to pay against fleet and driver costs.",
+      "nextAction": "Compare incremental contribution, utilisation and cannibalisation against existing GoCar tiers.",
+      "whatToValidate": "Compare incremental contribution, utilisation and cannibalisation against existing GoCar tiers.",
+      "sourceUrl": "https://www.bluebirdgroup.com/news/bluebird-perluas-ekosistem-mobilitas-dengan-hadirkan-bluebird-prime?lang=id",
+      "publisher": "Bluebird Group",
+      "sourceName": "Bluebird Group",
+      "publisherDomain": "bluebirdgroup.com",
+      "reviewed": true,
+      "verified": true,
+      "sourceCheckedAt": "2026-10-19",
+      "severity": "medium",
+      "status": "Issuer release reviewed; company-reported facts",
+      "evidence": "Original Bluebird page reviewed on 19 October 2026; event and reporting dates retained.",
+      "limitations": "Issuer claims; independent performance verification and GoTo transferability remain separate."
+    },
+    {
+      "id": "local-bluebird-20261019-4",
+      "playerIds": [
+        "blue_bird"
+      ],
+      "entityId": "blue_bird",
+      "company": "Bluebird",
+      "date": "2026-09-30",
+      "publishedAt": "2026-09-30",
+      "reportingPeriod": null,
+      "title": "MyBluebird links first-transaction missions to loyalty rewards",
+      "type": "Customer acquisition",
+      "category": "Competitor",
+      "topic": "Customer acquisition",
+      "summary": "Accounts registered from 1 July to 30 September 2026 without a prior transaction could earn a Rp5,000 later-trip code by completing their first transaction during 1–31 October.",
+      "facts": "Accounts registered from 1 July to 30 September 2026 without a prior transaction could earn a Rp5,000 later-trip code by completing their first transaction during 1–31 October.",
+      "gotoLesson": "Test whether a reward earned on a first trip generates a profitable second trip rather than subsidising already-active riders.",
+      "implication": "Test whether a reward earned on a first trip generates a profitable second trip rather than subsidising already-active riders.",
+      "nextAction": "Use a holdout cohort and measure second-trip conversion and contribution after rewards.",
+      "whatToValidate": "Use a holdout cohort and measure second-trip conversion and contribution after rewards.",
+      "sourceUrl": "https://www.bluebirdgroup.com/promo/mission-complete-1st-transaction?lang=id",
+      "publisher": "Bluebird Group",
+      "sourceName": "Bluebird Group",
+      "publisherDomain": "bluebirdgroup.com",
+      "reviewed": true,
+      "verified": true,
+      "sourceCheckedAt": "2026-10-19",
+      "severity": "medium",
+      "status": "Issuer release reviewed; company-reported facts",
+      "evidence": "Original Bluebird page reviewed on 19 October 2026; event and reporting dates retained.",
+      "limitations": "Issuer claims; independent performance verification and GoTo transferability remain separate."
+    },
+    {
+      "id": "local-alfamind-model-20260805",
+      "playerIds": [
+        "alfamind"
+      ],
+      "entityId": "alfamind",
+      "company": "Alfamind / Alfamart",
+      "date": "2026-08-05",
+      "publishedAt": "2026-08-05",
+      "title": "Alfamind coaches agent-led virtual-store selling through local networks",
+      "type": "Distribution & merchant tools",
+      "category": "Competitor",
+      "topic": "Merchant distribution",
+      "facts": "An August Alfamind guide describes virtual-store selling through personal networks and WhatsApp, supported by coaching. The existing operating model is not a new 2026 launch.",
+      "summary": "An August Alfamind guide describes virtual-store selling through personal networks and WhatsApp, supported by coaching. The existing operating model is not a new 2026 launch.",
+      "gotoLesson": "Test whether local agents add incremental profitable demand beyond consumer-app acquisition.",
+      "implication": "Test whether local agents add incremental profitable demand beyond consumer-app acquisition.",
+      "nextAction": "Measure agent activation, repeat orders and contribution after commissions, fulfilment and support.",
+      "whatToValidate": "Measure agent activation, repeat orders and contribution after commissions, fulfilment and support.",
+      "sourceUrl": "https://blog.alfamind.id/merdeka-dari-jualan-sepi-memaksimalkan-transaksi-di-alfamind/",
+      "publisher": "Alfamind official blog",
+      "sourceName": "Alfamind official blog",
+      "publisherDomain": "blog.alfamind.id",
+      "sourceCheckedAt": "2026-10-19",
+      "reviewed": true,
+      "verified": true,
+      "severity": "medium",
+      "status": "Official operating guide reviewed; unit economics not disclosed",
+      "evidence": "Official Indonesian operating guide reviewed; English summary edited on 19 October 2026.",
+      "limitations": "Current active-agent scale and profitability remain unverified."
+    }
+  ],
+  "profileBriefs": [
+    {
+      "playerId": "blue_bird",
+      "description": "Indonesian multimodal mobility operator with Bluebird, Silverbird and Prime tiers, its own booking app and delivery services.",
+      "ownershipFact": "PT Blue Bird Tbk, IDX ticker BIRD; do not confuse with the US school-bus issuer.",
+      "ownershipSourceUrl": "https://www.bluebirdgroup.com/news/bluebird-setujui-dividen-rp166-per-saham-perkuat-fondasi-pertumbuhan-jangka-panjang?lang=en",
+      "businessModel": "Fleet-based mobility with multiple service and payment channels.",
+      "whyWatch": "Direct local mobility competition and distribution partnerships create both competitive and commercial relevance.",
+      "strategicQuestion": "Can differentiated service standards and digital booking produce profitable repeat rides?",
+      "keyFacts": [
+        {
+          "label": "Q1 2026 revenue",
+          "value": "Rp1.45tn; +11.6% YoY",
+          "asOf": "2026-05-05",
+          "sourceUrl": "https://www.bluebirdgroup.com/news/konsistensi-layanan-dorong-kinerja-positif-pendapatan-kuartal-i-bluebird-group-tumbuh-116?lang=id"
+        },
+        {
+          "label": "Dividend approved",
+          "value": "Rp166/share from FY2025 earnings",
+          "asOf": "2026-06-18",
+          "sourceUrl": "https://www.bluebirdgroup.com/news/bluebird-setujui-dividen-rp166-per-saham-perkuat-fondasi-pertumbuhan-jangka-panjang?lang=en"
+        },
+        {
+          "label": "Prime launch",
+          "value": "Hybrid / EV tier; five named cities",
+          "asOf": "2026-07-16",
+          "sourceUrl": "https://www.bluebirdgroup.com/news/bluebird-perluas-ekosistem-mobilitas-dengan-hadirkan-bluebird-prime?lang=id"
+        },
+        {
+          "label": "Acquisition experiment",
+          "value": "October first-transaction loyalty mission",
+          "asOf": "2026-09-30",
+          "sourceUrl": "https://www.bluebirdgroup.com/promo/mission-complete-1st-transaction?lang=id"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.bluebirdgroup.com/news/konsistensi-layanan-dorong-kinerja-positif-pendapatan-kuartal-i-bluebird-group-tumbuh-116?lang=id",
+        "https://www.bluebirdgroup.com/news/bluebird-setujui-dividen-rp166-per-saham-perkuat-fondasi-pertumbuhan-jangka-panjang?lang=en",
+        "https://www.bluebirdgroup.com/news/bluebird-perluas-ekosistem-mobilitas-dengan-hadirkan-bluebird-prime?lang=id",
+        "https://www.bluebirdgroup.com/promo/mission-complete-1st-transaction?lang=id"
+      ],
+      "reviewedDate": "2026-10-19",
+      "countryFacts": [
+        {
+          "country": "Indonesia",
+          "fact": "Prime launch release names Jakarta, Bandung, Surabaya, Medan and Bali. This is the product launch footprint, not every group operating location.",
+          "sourceUrl": "https://www.bluebirdgroup.com/news/bluebird-perluas-ekosistem-mobilitas-dengan-hadirkan-bluebird-prime?lang=id"
+        }
+      ]
+    },
+    {
+      "playerId": "alfamind",
+      "description": "Alfamart-linked virtual storefront for resellers, with catalogue access and coaching; a separate product from Alfagift.",
+      "ownershipFact": "Official terms identify PT Sumber Alfaria Trijaya Tbk working with partners as the service organiser; the app listing identifies Mindstores as developer.",
+      "ownershipSourceUrl": "https://alfamind.id/syarat-dan-ketentuan/",
+      "businessModel": "Agents market products and place orders through a digital storefront. Official materials promote selling without agent-held inventory or shipping.",
+      "whyWatch": "A local model for assisted commerce and merchant acquisition through trusted networks.",
+      "strategicQuestion": "Does agent distribution generate incremental demand after commissions, fulfilment and support costs?",
+      "keyFacts": [
+        {
+          "label": "Model",
+          "value": "Virtual storefront with reseller coaching",
+          "asOf": "2026-10-19",
+          "sourceUrl": "https://alfamind.id/"
+        },
+        {
+          "label": "Agent cash requirement",
+          "value": "Help centre describes a transaction deposit that cannot be withdrawn; no-capital marketing is not proof of zero working capital.",
+          "asOf": "2026-10-19",
+          "sourceUrl": "https://alfamind.id/pusat-bantuan/"
+        },
+        {
+          "label": "Current listing",
+          "value": "Developer listing updated 26 August 2026; Android app",
+          "asOf": "2026-08-26",
+          "sourceUrl": "https://play.google.com/store/apps/details?id=id.meteor.alfamind"
+        }
+      ],
+      "sourceUrls": [
+        "https://alfamind.id/",
+        "https://alfamind.id/pusat-bantuan/",
+        "https://alfamind.id/syarat-dan-ketentuan/",
+        "https://play.google.com/store/apps/details?id=id.meteor.alfamind"
+      ],
+      "reviewedDate": "2026-10-19"
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "local-case-bluebird-prime-20260716",
+      "playerIds": [
+        "blue_bird"
+      ],
+      "date": "2026-07-16",
+      "title": "GoCar: validate a premium tier through service consistency",
+      "facts": "Bluebird launched a hybrid / EV Prime tier with explicit vehicle standards and multiple booking channels.",
+      "gotoLesson": "Define the service promise before scaling a premium product.",
+      "indonesiaTransferability": "Direct local comparison; partner fleets, driver economics and demand may differ.",
+      "proposedPilot": "Run a limited-area test with a comparable rider holdout before expanding supply.",
+      "metrics": [
+        "Repeat bookings",
+        "Incremental contribution per ride",
+        "Vehicle utilisation",
+        "Cancellation rate",
+        "Existing-tier cannibalisation"
+      ],
+      "limitations": "The launch announcement does not prove profitable adoption. This is an analyst experiment.",
+      "sourceUrl": "https://www.bluebirdgroup.com/news/bluebird-perluas-ekosistem-mobilitas-dengan-hadirkan-bluebird-prime?lang=id",
+      "reviewed": true,
+      "status": "Primary facts reviewed; GoTo experiment is a hypothesis",
+      "categories": [
+        "car"
+      ]
+    },
+    {
+      "id": "local-case-alfamind-agent-commerce",
+      "playerIds": [
+        "alfamind"
+      ],
+      "date": "2026-08-05",
+      "title": "Alfamind: test agent-led commerce beyond the consumer app",
+      "facts": "Alfamind combines virtual-store agents, a retail catalogue and sales coaching. Its help centre describes a non-withdrawable transaction deposit.",
+      "gotoLesson": "Evaluate assisted merchant distribution as an acquisition channel with explicit cash and service requirements.",
+      "indonesiaTransferability": "Local analogue for GoPay merchant distribution and GoMart demand aggregation; a GoTo partnership is not established.",
+      "proposedPilot": "Pilot an opt-in agent cohort against a matched acquisition channel, with clear refund and settlement rules.",
+      "metrics": [
+        "Active agents after 30/90 days",
+        "Incremental repeat orders",
+        "Contribution after commission and fulfilment",
+        "Agent cash tied up",
+        "Fill rate and delivery reliability",
+        "Refund and fraud rates"
+      ],
+      "limitations": "Official marketing does not establish active-agent scale, realised margins or profitability. No current GoTo integration is inferred.",
+      "sourceUrl": "https://alfamind.id/pusat-bantuan/",
+      "reviewed": true,
+      "status": "Primary operating facts reviewed; GoTo pilot is analyst interpretation",
+      "categories": [
+        "grocery"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "asOf": "2026-10-18",
+  "asOf": "2026-10-19",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1OtYxCVgk_Wb0m6KFSZtrDZeJpY3Io6NiiHQdbDrDCow/edit",
   "sources": [
     {
@@ -3059,7 +3059,7 @@
       "name": "Bluebird",
       "registry": "Indonesia ecosystem",
       "segment": "ODS",
-      "services": "parcel",
+      "services": "car, parcel",
       "markets": "Indonesia",
       "priority": "P0",
       "workstream": "W2 Indonesia ODS",
@@ -3067,7 +3067,7 @@
       "rssTemplate": "https://news.google.com/rss/search?q=%28Bluebird+OR+%22Blue+Bird%22%29+%28Indonesia+OR+taksi+OR+taxi+OR+BIRD%29+when%3A7d&hl=en-US&gl=ID&ceid=ID%3Aen",
       "website": "https://bluebirdgroup.com",
       "identityGuard": "Blue Bird Corporation US school buses; Bluebird bio; unrelated songs",
-      "registryEvidence": "Existing app registry lead; exact current identity / operating scope needs review"
+      "registryEvidence": "Bluebird official July 2026 Prime release and company product directory; transport and delivery scopes remain distinct."
     },
     {
       "key": "ID:dana",
@@ -8652,6 +8652,22 @@
       "website": "https://zoox.com/",
       "identityGuard": "Require exact name plus matching geography, product, legal entity or official domain; review ambiguous names before accepting.",
       "registryEvidence": "Existing app registry lead; exact current identity / operating scope needs review"
+    },
+    {
+      "key": "GB:alfamind",
+      "id": "alfamind",
+      "name": "Alfamind",
+      "registry": "Global benchmarks",
+      "segment": "ODS",
+      "services": "grocery",
+      "markets": "Indonesia",
+      "priority": "P2",
+      "workstream": "W4 Global ODS",
+      "query": "(Alfamind OR \"Alfa Mind\")",
+      "rssTemplate": "https://news.google.com/rss/search?hl=en-US&gl=ID&ceid=ID:en",
+      "website": "https://alfamind.id/",
+      "identityGuard": "Alfamart-linked virtual-store platform; distinct from Alfagift.",
+      "registryEvidence": "Official Alfamind website, help centre and service terms checked 19 October 2026."
     }
   ],
   "topics": [

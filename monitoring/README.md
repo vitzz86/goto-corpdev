@@ -44,3 +44,8 @@ Reuters/Tech in Asia/DealStreetAsia and subscription resources keep their access
 Update `registry.json` when entities, official sources, aliases, releases or subscriptions change; retain evidence dates. Query and date boundaries determine stable task IDs, so unchanged jobs resume. Keep the packaged `news-relevance.py` and `collect-global-publisher-news.py` identity helpers synchronized with project scripts when changing guard rules; tests cover common namesakes. The full app's global collector now reads the shared 40-publisher registry and only activates native feeds that passed XML validation; other publishers retain search fallback. Public display limits remain separate from the full research store.
 
 This is a public-source research workflow, not a paywall bypass or a licensed data subscription. “Checked” means an auditable attempt; completeness requires primary evidence review and still has source limits.
+
+
+### Language coverage
+
+Company discovery retains English searches and adds the selected operating markets’ local-language news editions. Publication titles stay in the original language; reviewed summaries and GoTo hypotheses are edited in English. Native-script aliases support major Asian brands. This is a selected-market language plan, not a claim to cover every Indian regional language or every operating country. Localized monthly feeds are bounded at the provider’s result limit; capped results are reported as unresolved, never complete archives. English historical search refinements retain their previous daily-window audit.

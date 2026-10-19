@@ -10,6 +10,7 @@ def module(name,path):
     spec=importlib.util.spec_from_file_location(name,path); mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod);return mod
 GLOBAL=module('global_identity',HERE/'collect-global-publisher-news.py')
 LOCAL=module('local_identity',HERE/'news-relevance.py')
+LANGUAGES=module('language_coverage',HERE/'language-coverage.py')
 
 def stamp():return dt.datetime.now(dt.timezone.utc).isoformat()
 def digest(value):return hashlib.sha256(value.encode()).hexdigest()[:24]
@@ -39,7 +40,19 @@ def make_tasks(registry,start,through):
         for row in rows:
             for first,last in windows(start,through):
                 key=row.get('key',row.get('id'));url=search_url(row['rssTemplate'],row['query'],first,last)
-                tasks.append(task(kind,key,first,last,url,row.get('priority','P1'),workstream=row.get('workstream',''),name=row['name']))
+                base=task(kind,key,first,last,url,row.get('priority','P1'),workstream=row.get('workstream',''),name=row['name'])
+                tasks.append(base)
+                # Retain English plus relevant local-language editions for selected markets.
+                if kind=='entity':
+                    for edition in LANGUAGES.targets(row):
+                        local_query=LOCAL.QUERY_ALIASES.get(row['id'],row['query']) if edition['language']=='Indonesian' else row['query']
+                        native=LANGUAGES.NATIVE_ALIASES.get(row['id'],[])
+                        if native:local_query='('+local_query+' OR '+' OR '.join('"'+a+'"' for a in native)+')'
+                        ceid_language={'pt-BR':'pt-419','es-419':'es-419','zh-CN':'zh-Hans','zh-TW':'zh-Hant','zh-HK':'zh-Hant'}.get(edition['hl'],edition['hl'].split('-')[0])
+                        template='https://news.google.com/rss/search?'+urllib.parse.urlencode(dict(hl=edition['hl'],gl=edition['gl'],ceid=edition['gl']+':'+ceid_language))
+                        local_url=search_url(template,local_query,first,last)
+                        tasks.append(task(kind,key,first,last,local_url,row.get('priority','P1'),parentId=base['id'],
+                            workstream=row.get('workstream',''),name=row['name'],language=edition['language'],market=edition['market'],searchPurpose='Local-language coverage'))
     groups=['(ride-hailing OR "food delivery" OR robotaxi OR "quick commerce" OR "electric motorcycle")',
         '(fintech OR payments OR "digital bank" OR BNPL OR "digital identity")',
         '(funding OR acquisition OR investment OR IPO) (delivery OR mobility OR fintech)',
@@ -97,8 +110,18 @@ def fetch(url):
 
 def matches(entity,title):
     identity={'id':entity['id'],'name':entity['name']}
-    if entity['key'].startswith('GB:'):return GLOBAL.hit(identity,title)
+    if entity['key'].startswith('GB:'):
+        native=LANGUAGES.NATIVE_ALIASES.get(entity['id'],[])
+        if any(alias in title for alias in native):
+            if entity['id'] in ('talabat','jahez','tamara','tabby'):return bool(re.search(r'شركة|منصة|تطبيق|توصيل|تقسيط|مدفوعات|تمويل|أرباح|استحواذ|أسهم',title))
+            if entity['id']=='ola':return bool(re.search(r'इलेक्ट्रिक|स्कूटर|टैक्सी|कैब|अग्रवाल|मोबिलिटी',title))
+            if entity['id']=='porter':return bool(re.search(r'लॉजिस्टिक|डिलीवरी|कार्गो|ट्रक|स्टार्टअप',title))
+            if entity['id']=='robinhood':return bool(re.search(r'อาหาร|เดลิเวอรี|ส่งอาหาร|แอป',title))
+            return not bool(re.search(GLOBAL.GLOBAL_EXCLUDE,title,re.I))
+        return GLOBAL.hit(identity,title)
     return LOCAL.entity_matches(identity,title) and LOCAL.relevant({'entityId':identity['id'],'title':title})
+
+_IDENTITY_CACHE={}
 
 def ingest(rows,job,registry,records):
     retained=0
@@ -108,7 +131,11 @@ def ingest(rows,job,registry,records):
         title=row['title']; suffix=' - '+row.get('sourceName','')
         if row.get('sourceName') and title.endswith(suffix):title=title[:-len(suffix)]
         if job['kind']=='entity' and not matches(bykey[job['key']],title):continue
-        identities=[e['key'] for e in registry['entities'] if matches(e,title)]
+        identities=_IDENTITY_CACHE.get(title)
+        if identities is None:
+            identities=[e['key'] for e in registry['entities'] if matches(e,title)]
+            if len(_IDENTITY_CACHE)>50000:_IDENTITY_CACHE.clear()
+            _IDENTITY_CACHE[title]=identities
         # Topic/feed leads may be relevant to macro or policy without a company mention.
         # Keep them in research only; company attribution still requires an identity match.
         key=digest(canonical(row['url'])+'|'+row['date'])
@@ -156,7 +183,7 @@ def choose_balanced(tasks,ledger,now,through,limit,kind):
         ring=collections.deque()
         for month,rows in sorted(months.items()):
             groups={}
-            for job in sorted(rows,key=lambda j:(j['id'] in ledger,j['priority'],j.get('parentId') is None,j['key'])):
+            for job in sorted(rows,key=lambda j:(j['id'] in ledger,not bool(j.get('searchPurpose')),j['priority'],j.get('parentId') is None,j['key'])):
                 group=job['key'].rsplit(':',1)[0] if family=='publisher' else job.get('workstream',family)
                 groups.setdefault(group,collections.deque()).append(job)
             # Publisher order follows the curated source priorities in task generation.
@@ -302,7 +329,7 @@ def save_outputs(output,state,registry,tasks,through):
     (output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');return summary
 
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--from',dest='start',default='2026-01-01');ap.add_argument('--through',default=dt.datetime.now(ZoneInfo('Asia/Jakarta')).date().isoformat());ap.add_argument('--limit',type=int,default=50);ap.add_argument('--kind',choices=['all','entity','topic','publisher','feed'],default='all');ap.add_argument('--output',type=Path,default=HERE/'results');ap.add_argument('--plan-only',action='store_true');ap.add_argument('--balanced-months',action='store_true');ap.add_argument('--workers',type=int,default=6);ap.add_argument('--baseline-only',action='store_true');ap.add_argument('--unsearched-only',action='store_true');ap.add_argument('--checkpoint-every',type=int,default=10);args=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--from',dest='start',default='2026-01-01');ap.add_argument('--through',default=dt.datetime.now(ZoneInfo('Asia/Jakarta')).date().isoformat());ap.add_argument('--limit',type=int,default=50);ap.add_argument('--kind',choices=['all','entity','topic','publisher','feed'],default='all');ap.add_argument('--output',type=Path,default=HERE/'results');ap.add_argument('--plan-only',action='store_true');ap.add_argument('--balanced-months',action='store_true');ap.add_argument('--workers',type=int,default=6);ap.add_argument('--baseline-only',action='store_true');ap.add_argument('--unsearched-only',action='store_true');ap.add_argument('--checkpoint-every',type=int,default=50);args=ap.parse_args()
     if not 1<=args.limit<=500:ap.error('--limit must be 1–500')
     if not 1<=args.workers<=8:ap.error('--workers must be 1–8')
     if args.start>args.through:ap.error('--from must not follow --through')
@@ -328,7 +355,11 @@ def main():
         if error:attempt.update(status='source-unavailable',error=error,returned=None,retained=None)
         else:
             count=ingest(rows,job,registry,state['records']);children=[]
-            if len(rows)>=100 and job['kind']!='feed':children=split_task(job)
+            if len(rows)>=100 and job['kind']!='feed':
+                edition=dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(job['url']).query)).get('hl','en-US')
+                # Complete language breadth before unlimited deepening of high-volume feeds.
+                # A capped localized result remains an explicit unresolved access limit.
+                if edition=='en-US':children=split_task(job)
             status='split' if children else 'capped' if len(rows)>=100 else 'leads-awaiting-review' if count else 'searched-no-leads'
             if job['kind']=='feed' and len(rows)>=100:status='bounded-feed-snapshot'
             attempt.update(status=status,returned=len(rows),retained=count,potentiallyTruncated=len(rows)>=100,

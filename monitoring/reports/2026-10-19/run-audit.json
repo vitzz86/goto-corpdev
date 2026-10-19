@@ -1,0 +1,43 @@
+{
+  "originalRun": "https://github.com/vitzz86/goto-corpdev/actions/runs/39146868675",
+  "supplement": "19 October local-language editions and native-script alias searches; bounded public-feed metadata",
+  "summary": {
+    "updatedAt": "2026-10-19T00:03:46.255660+00:00",
+    "through": "2026-10-19",
+    "sourceResources": 93,
+    "entityRegistryRows": 359,
+    "topicQueries": 44,
+    "plannedSearchAndFeedTasks": 16319,
+    "attemptedTasks": 14901,
+    "notCheckedTasks": 1870,
+    "blockedTasks": 52,
+    "cappedTasks": 725,
+    "unreviewedDiscoveryRecords": 126552,
+    "candidateRecords": 101054,
+    "quarantinedRecords": 25498,
+    "searchesRequiringNarrowerWindows": 1213,
+    "publishedAutomatically": 0,
+    "caveat": "Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim."
+  },
+  "coverage": {
+    "asOf": "2026-10-19T00:03:46.255660+00:00",
+    "fromDate": "2026-01-01",
+    "through": "2026-10-19",
+    "registryRows": 359,
+    "distinctRegistryKeys": 359,
+    "expectedCompanyMonths": 3590,
+    "attemptedCompanyMonths": 3590,
+    "companiesWithAllMonthsAttempted": 359,
+    "companiesWithCandidates": 304,
+    "companiesWithoutIndexedCandidates": 55,
+    "expectedLocalLanguageChecks": 3450,
+    "attemptedLocalLanguageChecks": 3450,
+    "statusCounts": {
+      "Candidates await source review": 237,
+      "Searched; no relevant indexed lead": 52,
+      "Access or feed limit unresolved": 70
+    },
+    "caveat": "359 overlapping company, brand and product registry rows; not distinct legal entities. Search completion is not proof of exhaustive event coverage."
+  },
+  "publishedDiscoverySample": 4461
+}

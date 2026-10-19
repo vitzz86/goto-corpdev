@@ -7,7 +7,7 @@ spec=importlib.util.spec_from_file_location('refresh',Path(__file__).with_name('
 REG=json.loads(Path(__file__).with_name('registry.json').read_text())
 class MonitoringTests(unittest.TestCase):
     def test_registry_and_no_unverified_feed_claim(self):
-        self.assertEqual((len(REG['sources']),len(REG['entities']),len(REG['topics']),len(REG['macro'])),(93,358,44,57))
+        self.assertEqual((len(REG['sources']),len(REG['entities']),len(REG['topics']),len(REG['macro'])),(93,359,44,57))
         self.assertEqual(len(m.GLOBAL.PUBLISHERS),40)
         self.assertIsNone(next(p[2] for p in m.GLOBAL.PUBLISHERS if p[0]=='Reuters'))
     def test_calendar_query_removes_rolling_window(self):
@@ -53,6 +53,28 @@ class MonitoringTests(unittest.TestCase):
         m.classify_records(state,REG)
         self.assertEqual(len(state['records']),3);self.assertEqual(records['sport']['entityKeys'],[])
         self.assertFalse(records['sport']['eligibleTaskIds']);self.assertFalse(records['mma']['eligibleTaskIds']);self.assertTrue(records['wallet']['eligibleTaskIds'])
+    def test_ev_and_thai_delivery_names_do_not_inherit_unrelated_finance_news(self):
+        cases=[('ampersand','Ampersand Capital Partners invests in healthcare software',False),('ampersand','Ampersand expands electric motorcycle battery swapping in Kenya',True),('robinhood','Robinhood Markets adds stock trading and crypto products',False),('robinhood','Robinhood Thailand food delivery expands restaurant network',True),('mollie','Mollie wins school sports championship',False)]
+        for key,title,want in cases:
+            entity=next(e for e in REG['entities'] if e['key']=='GB:'+key)
+            self.assertEqual(m.matches(entity,title),want)
+    def test_indonesia_logistics_abbreviations_need_the_correct_business(self):
+        cases=[('dhs','DHS immigration detention facilities update',False),('dhs','DHS ekspedisi tambah layanan logistik',True),('spx','SPX Technologies stock target rises',False),('spx','SPX Express expands Shopee parcel logistics',True),('tiki','Tiki patio fire pit discount',False),('tiki','TIKI perluas layanan pengiriman paket',True),('bes','Foothills forum bes photo contest',False),('bes','BES Blibli Express tingkatkan pengiriman',True),('mex','Tex Mex restaurants open',False),('mex','MEX Berlian Express expands cargo service',True),('blue_bird','Blue Bird school bus battery recall',False),('blue_bird','Bluebird Indonesia taxi fleet expands',True)]
+        for key,title,want in cases:
+            entity=next(e for e in REG['entities'] if e['key']=='ID:'+key)
+            self.assertEqual(m.matches(entity,title),want,(key,title))
+        company=next(e for e in REG['entities'] if e['key']=='GB:advance-ai')
+        self.assertFalse(m.matches(company,'IndiGo invests in Sarvam to advance AI in aviation'))
+        self.assertTrue(m.matches(company,'ADVANCE.AI expands identity verification in Indonesia'))
+    def test_language_editions_and_native_names_are_explicit(self):
+        tasks=m.make_tasks(REG,'2026-01-01','2026-01-31')
+        for key,language in [('GB:nu','Portuguese'),('GB:phonepe','Hindi'),('ID:blue_bird','Indonesian')]:
+            self.assertTrue(any(t['key']==key and t.get('language')==language and t.get('parentId') for t in tasks))
+        entity=next(e for e in REG['entities'] if e['key']=='GB:meituan')
+        self.assertTrue(m.matches(entity,'美团发布季度业绩并扩大配送服务'))
+        for title in ['Klaim Saldo DANA Gratis Hari Ini','Wakil Menteri Transaksi Dana Suap']:
+            entity=next(e for e in REG['entities'] if e['key']=='ID:dana')
+            self.assertFalse(m.matches(entity,title))
     def test_balanced_queue_reaches_every_month_and_subject_family(self):
         tasks=m.make_tasks(REG,'2026-01-01','2026-10-18')
         jobs=m.choose_balanced(tasks,{},dt.datetime.now(dt.timezone.utc),'2026-10-18',200,'all')
