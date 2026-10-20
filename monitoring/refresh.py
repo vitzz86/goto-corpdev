@@ -331,7 +331,7 @@ def save_outputs(output,state,registry,tasks,through):
     (output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');return summary
 
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--from',dest='start',default='2026-01-01');ap.add_argument('--through',default=dt.datetime.now(ZoneInfo('Asia/Jakarta')).date().isoformat());ap.add_argument('--limit',type=int,default=50);ap.add_argument('--kind',choices=['all','entity','topic','publisher','feed'],default='all');ap.add_argument('--output',type=Path,default=HERE/'results');ap.add_argument('--plan-only',action='store_true');ap.add_argument('--balanced-months',action='store_true');ap.add_argument('--workers',type=int,default=6);ap.add_argument('--baseline-only',action='store_true');ap.add_argument('--unsearched-only',action='store_true');ap.add_argument('--checkpoint-every',type=int,default=50);args=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--from',dest='start',default='2026-01-01');ap.add_argument('--through',default=dt.datetime.now(ZoneInfo('Asia/Jakarta')).date().isoformat());ap.add_argument('--limit',type=int,default=50);ap.add_argument('--kind',choices=['all','entity','topic','publisher','feed'],default='all');ap.add_argument('--output',type=Path,default=HERE/'results');ap.add_argument('--plan-only',action='store_true');ap.add_argument('--balanced-months',action='store_true');ap.add_argument('--workers',type=int,default=6);ap.add_argument('--baseline-only',action='store_true');ap.add_argument('--current-window-only',action='store_true',help='Refresh current cutoff-window searches and live feeds before older successful windows');ap.add_argument('--unsearched-only',action='store_true');ap.add_argument('--checkpoint-every',type=int,default=50);args=ap.parse_args()
     if not 1<=args.limit<=500:ap.error('--limit must be 1–500')
     if not 1<=args.workers<=8:ap.error('--workers must be 1–8')
     if args.start>args.through:ap.error('--from must not follow --through')
@@ -342,6 +342,7 @@ def main():
     tasks.extend(t for t in state.get('extraTasks',[]) if t['id'] not in ids and t['start']>=args.start and t['through']<=args.through)
     all_tasks=tasks
     if args.baseline_only:tasks=[t for t in tasks if not t.get('parentId')]
+    if args.current_window_only:tasks=[t for t in tasks if t['through']==args.through or t['kind']=='feed']
     eligible_tasks=[t for t in tasks if t['id'] not in state['attempts']] if args.unsearched_only else tasks
     selector=choose_balanced if args.balanced_months else choose
     jobs=[] if args.plan_only else selector(eligible_tasks,state['attempts'],dt.datetime.now(dt.timezone.utc),args.through,args.limit,args.kind)

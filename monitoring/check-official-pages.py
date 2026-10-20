@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Audit registry website leads; retrieval never becomes verified news."""
-import concurrent.futures,datetime as dt,hashlib,json,urllib.request,urllib.parse
+import argparse,concurrent.futures,datetime as dt,hashlib,json,urllib.request,urllib.parse
+from zoneinfo import ZoneInfo
 from html.parser import HTMLParser
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
@@ -31,11 +32,13 @@ def fetch(url):
     except Exception as error:result.update(status='unavailable',error=str(error)[:300])
     return result
 def main():
-    registry=json.loads((HERE/'registry.json').read_text());output=ROOT/'research/official-page-checks-20261019-private.json'
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--refresh',action='store_true');args=parser.parse_args()
+    day=dt.datetime.now(ZoneInfo('Asia/Jakarta')).date().isoformat();tag=day.replace('-','')
+    registry=json.loads((HERE/'registry.json').read_text());output=ROOT/('research/official-page-checks-'+tag+'-private.json')
     previous=json.loads(output.read_text()).get('pages',{}) if output.exists() else {}
     urls=sorted({e.get('website') for e in registry['entities'] if isinstance(e.get('website'),str) and e['website'].startswith('https://')})
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
-        futures={pool.submit(fetch,url):url for url in urls if url not in previous}
+        futures={pool.submit(fetch,url):url for url in urls if args.refresh or url not in previous}
         for i,future in enumerate(concurrent.futures.as_completed(futures),1):
             url=futures[future];previous[url]=future.result();print(i,len(futures),url,previous[url]['status'],flush=True)
             if i%25==0:output.write_text(json.dumps({'pages':previous},ensure_ascii=False))
@@ -44,7 +47,7 @@ def main():
         page=previous.get(e.get('website'),{})
         rows.append({'key':e['key'],'website':e.get('website'),'status':page.get('status','identity-unresolved'),'checkedAt':page.get('checkedAt'),'title':page.get('title'),'publicationDate':None,'reviewed':False,'meaning':'Website retrieval audit only; not verified company news or a dated event.'})
     output.write_text(json.dumps({'pages':previous,'registryRows':rows},ensure_ascii=False))
-    public={'asOf':'2026-10-19','registryRows':len(rows),'websiteLeads':len(urls),'checks':rows,'meaning':'Known website leads checked directly. Readable pages still require entity and content review. Missing URLs remain unresolved identities, not no-news conclusions.'}
-    (ROOT/'research/official-source-audit-20261019.json').write_text(json.dumps(public,ensure_ascii=False,separators=(',',':')))
+    public={'asOf':day,'registryRows':len(rows),'websiteLeads':len(urls),'checks':rows,'meaning':'Known website leads checked directly. Readable pages still require entity and content review. Missing URLs remain unresolved identities, not no-news conclusions.'}
+    (ROOT/('research/official-source-audit-'+tag+'.json')).write_text(json.dumps(public,ensure_ascii=False,separators=(',',':')))
     print('Saved official website audit for',len(rows),'registry entries.',flush=True)
 if __name__=='__main__':main()

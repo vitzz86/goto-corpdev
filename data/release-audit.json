@@ -1,31 +1,46 @@
 {
-  "checkedAt": "2026-10-20T00:08:37.842266+00:00",
+  "checkedAt": "2026-10-20T17:07:38.398358+00:00",
   "cutoff": "2026-10-20",
-  "applicationAsset": "assets/cockpit.413b9b3efd5f.js",
-  "openingDataGzipBytes": 644334,
+  "applicationAsset": "assets/cockpit.242af9e7a612.js",
+  "openingDataGzipBytes": 651331,
   "registryRows": 359,
   "companyMonthsChecked": 3590,
   "localLanguageChecks": 3450,
   "entriesWithHeadlineCandidates": 307,
   "entriesWithoutIndexedCandidates": 52,
   "collection": {
-    "updatedAt": "2026-10-20T00:04:39.631705+00:00",
+    "updatedAt": "2026-10-20T17:06:13.494894+00:00",
     "through": "2026-10-20",
     "sourceResources": 93,
     "entityRegistryRows": 359,
     "topicQueries": 44,
-    "plannedSearchAndFeedTasks": 18905,
-    "attemptedTasks": 18905,
+    "plannedSearchAndFeedTasks": 19016,
+    "attemptedTasks": 19016,
     "retainedHistoricalAttempts": 972,
     "notCheckedTasks": 0,
-    "blockedTasks": 52,
-    "cappedTasks": 938,
-    "unreviewedDiscoveryRecords": 192112,
-    "candidateRecords": 108080,
-    "quarantinedRecords": 84032,
-    "searchesRequiringNarrowerWindows": 1568,
+    "blockedTasks": 10,
+    "cappedTasks": 898,
+    "unreviewedDiscoveryRecords": 195332,
+    "candidateRecords": 110227,
+    "quarantinedRecords": 85105,
+    "searchesRequiringNarrowerWindows": 1590,
     "publishedAutomatically": 0,
     "caveat": "Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim."
+  },
+  "officialWebsiteChecks": {
+    "retrieved-awaiting-review": 242,
+    "unavailable": 89,
+    "identity-unresolved": 6,
+    "insufficient-readable-content": 22
+  },
+  "storeRefresh": {
+    "checkedAt": "2026-10-20T21:50:39+07:00",
+    "appStoreEntries": 104,
+    "freshRatings": 99,
+    "unresolvedLatestRatings": 5,
+    "newUniqueComments": 2386,
+    "retainedDatedReviews": 1386621,
+    "scope": "Bounded recent sample merged with retained history. Missing past months remain gaps; latest sample is not a complete historical recrawl."
   },
   "publicCounts": {
     "global": {
@@ -34,7 +49,7 @@
       "definition": "Global research longlist; includes primary-reviewed profiles, existing cockpit records and candidates. Country links and capital events have separate evidence scopes."
     },
     "macro": {
-      "count": 58,
+      "count": 59,
       "unit": "Indicators",
       "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
     },
@@ -59,9 +74,9 @@
       "definition": "Unique peer/benchmark IDs: 21 ODS + 44 financial services, less 2 shared entries. Includes partner and regional issuer context; not all are direct rivals."
     },
     "sentiment": {
-      "count": 1384235,
+      "count": 1386621,
       "unit": "Dated store reviews",
-      "definition": "Collected January–October 2026 written-review records, unique within each app/store. Recent samples are not added again. Includes customer, driver and merchant apps; not unique people, official aggregate ratings or complete store history."
+      "definition": "Collected January\u2013October 2026 written-review records, unique within each app/store. Recent samples are not added again. Includes customer, driver and merchant apps; not unique people, official aggregate ratings or complete store history."
     },
     "deals": {
       "count": 33,
@@ -69,32 +84,35 @@
       "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
     },
     "feed": {
-      "count": 8180,
+      "count": 8187,
       "unit": "2026 signal records",
-      "definition": "2,037 curated 2026 records + 6,143 additional archive leads. Archive URLs already in curated records are counted once. 115 curated records are source-reviewed; discovery headlines are not verified events."
+      "definition": "2,043 curated 2026 records + 6,144 additional archive leads. Archive URLs already in curated records are counted once. 118 curated records are source-reviewed; discovery headlines are not verified events."
     },
     "research": {
-      "count": 245,
+      "count": 248,
       "unit": "Library entries",
       "definition": "Distinct report/source entries after duplicate summaries and report links are reconciled. The count includes unreviewed reference entries, not only reviewed PDFs."
     }
   },
+  "reviewedAdditions": [
+    "gcash-mynt-listing-20261020",
+    "grab-th-openai-academy-20261014",
+    "bi-jisdor-20261020"
+  ],
   "validation": {
-    "pythonSuites": 10,
+    "pythonSuites": 11,
     "monitoringTests": 18,
-    "browserChecks": [
-      "Q3 business activity and capacity: seven quarters each",
-      "OVO reviewed English summary, unknown publication date retained",
-      "Coverage directory shows 18,905 requests, zero unchecked, and source limitations"
-    ],
     "javascriptChecks": [
-      "Application syntax",
-      "Coverage page syntax",
-      "Browser archive merge equals sidebar count",
-      "Lazy feed lossless hydration and retry",
-      "Valuation formulas and scenario boundaries"
-    ]
+      "test-coverage-counts.js",
+      "test-lazy-signal-feed.js",
+      "test-valuation-inputs.js",
+      "Application JavaScript syntax",
+      "Coverage JavaScript syntax"
+    ],
+    "browserChecks": [],
+    "browserCheckScope": "This release changes data and removes duplicate featured events; no new visual browser walkthrough was performed.",
+    "allChecksPassed": true
   },
-  "scope": "A completed collection pass, not an exhaustive or fully editorially verified archive. Source limits and 52 entries without indexed candidates remain visible. No missing macro observations were invented.",
+  "scope": "Completed active-plan collection and refreshed due current-window searches, not an exhaustive or fully editorially verified archive. Source limits and entries without indexed candidates remain visible. Workbook assumptions, historical beta vintages and missing macro observations are not fabricated.",
   "buildStatus": "validated"
 }
