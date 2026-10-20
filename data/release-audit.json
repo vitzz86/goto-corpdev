@@ -1,0 +1,100 @@
+{
+  "checkedAt": "2026-10-20T00:08:37.842266+00:00",
+  "cutoff": "2026-10-20",
+  "applicationAsset": "assets/cockpit.413b9b3efd5f.js",
+  "openingDataGzipBytes": 644334,
+  "registryRows": 359,
+  "companyMonthsChecked": 3590,
+  "localLanguageChecks": 3450,
+  "entriesWithHeadlineCandidates": 307,
+  "entriesWithoutIndexedCandidates": 52,
+  "collection": {
+    "updatedAt": "2026-10-20T00:04:39.631705+00:00",
+    "through": "2026-10-20",
+    "sourceResources": 93,
+    "entityRegistryRows": 359,
+    "topicQueries": 44,
+    "plannedSearchAndFeedTasks": 18905,
+    "attemptedTasks": 18905,
+    "retainedHistoricalAttempts": 972,
+    "notCheckedTasks": 0,
+    "blockedTasks": 52,
+    "cappedTasks": 938,
+    "unreviewedDiscoveryRecords": 192112,
+    "candidateRecords": 108080,
+    "quarantinedRecords": 84032,
+    "searchesRequiringNarrowerWindows": 1568,
+    "publishedAutomatically": 0,
+    "caveat": "Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim."
+  },
+  "publicCounts": {
+    "global": {
+      "count": 271,
+      "unit": "Company, brand & product profiles",
+      "definition": "Global research longlist; includes primary-reviewed profiles, existing cockpit records and candidates. Country links and capital events have separate evidence scopes."
+    },
+    "macro": {
+      "count": 58,
+      "unit": "Indicators",
+      "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
+    },
+    "policy": {
+      "count": 13,
+      "unit": "Policy records",
+      "definition": "Policy watch entries; effective, proposed and pending statuses remain separate."
+    },
+    "actions": {
+      "count": 92,
+      "unit": "GoTo action records",
+      "definition": "Dated GoTo corporate-action records across the retained history; proposed and completed actions are distinct. Reference entries are not independently verified."
+    },
+    "ecosystem": {
+      "count": 106,
+      "unit": "Position entries",
+      "definition": "Ownership-register entries across legal entities, associates, fund backing and historical positions. This is not the number of active equity holdings or nodes in a selected network view."
+    },
+    "competitors": {
+      "count": 63,
+      "unit": "Tracked peers & benchmarks",
+      "definition": "Unique peer/benchmark IDs: 21 ODS + 44 financial services, less 2 shared entries. Includes partner and regional issuer context; not all are direct rivals."
+    },
+    "sentiment": {
+      "count": 1384235,
+      "unit": "Dated store reviews",
+      "definition": "Collected January–October 2026 written-review records, unique within each app/store. Recent samples are not added again. Includes customer, driver and merchant apps; not unique people, official aggregate ratings or complete store history."
+    },
+    "deals": {
+      "count": 33,
+      "unit": "Screened names",
+      "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
+    },
+    "feed": {
+      "count": 8180,
+      "unit": "2026 signal records",
+      "definition": "2,037 curated 2026 records + 6,143 additional archive leads. Archive URLs already in curated records are counted once. 115 curated records are source-reviewed; discovery headlines are not verified events."
+    },
+    "research": {
+      "count": 245,
+      "unit": "Library entries",
+      "definition": "Distinct report/source entries after duplicate summaries and report links are reconciled. The count includes unreviewed reference entries, not only reviewed PDFs."
+    }
+  },
+  "validation": {
+    "pythonSuites": 10,
+    "monitoringTests": 18,
+    "browserChecks": [
+      "Q3 business activity and capacity: seven quarters each",
+      "OVO reviewed English summary, unknown publication date retained",
+      "Coverage directory shows 18,905 requests, zero unchecked, and source limitations"
+    ],
+    "javascriptChecks": [
+      "Application syntax",
+      "Coverage page syntax",
+      "Browser archive merge equals sidebar count",
+      "Lazy feed lossless hydration and retry",
+      "Valuation formulas and scenario boundaries"
+    ]
+  },
+  "scope": "A completed collection pass, not an exhaustive or fully editorially verified archive. Source limits and 52 entries without indexed candidates remain visible. No missing macro observations were invented.",
+  "buildStatus": "validated"
+}

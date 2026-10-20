@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-19",
+  "asOf": "2026-10-20",
   "counts": {
     "global": {
       "count": 271,
@@ -7,7 +7,7 @@
       "definition": "Global research longlist; includes primary-reviewed profiles, existing cockpit records and candidates. Country links and capital events have separate evidence scopes."
     },
     "macro": {
-      "count": 57,
+      "count": 58,
       "unit": "Indicators",
       "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
     },
@@ -42,18 +42,18 @@
       "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
     },
     "feed": {
-      "count": 8629,
+      "count": 8180,
       "unit": "2026 signal records",
-      "definition": "2,128 curated 2026 records + 6,501 additional archive leads. Archive URLs already in curated records are counted once. 110 curated records are source-reviewed; discovery headlines are not verified events."
+      "definition": "2,037 curated 2026 records + 6,143 additional archive leads. Archive URLs already in curated records are counted once. 115 curated records are source-reviewed; discovery headlines are not verified events."
     },
     "research": {
-      "count": 240,
+      "count": 245,
       "unit": "Library entries",
       "definition": "Distinct report/source entries after duplicate summaries and report links are reconciled. The count includes unreviewed reference entries, not only reviewed PDFs."
     }
   },
   "reconciliation": {
-    "asOf": "2026-10-19",
+    "asOf": "2026-10-20",
     "segments": {
       "ods": [
         "alfagift",
@@ -130,8 +130,8 @@
       "sea"
     ],
     "recentReviewSamples": 8591,
-    "reviewedResearch": 53,
-    "reviewed2026Signals": 110,
+    "reviewedResearch": 58,
+    "reviewed2026Signals": 115,
     "changes": [
       {
         "collection": "Intelligence feed",

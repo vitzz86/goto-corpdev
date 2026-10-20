@@ -1,0 +1,19 @@
+{
+  "updatedAt": "2026-10-20T00:04:39.631705+00:00",
+  "through": "2026-10-20",
+  "sourceResources": 93,
+  "entityRegistryRows": 359,
+  "topicQueries": 44,
+  "plannedSearchAndFeedTasks": 18905,
+  "attemptedTasks": 18905,
+  "retainedHistoricalAttempts": 972,
+  "notCheckedTasks": 0,
+  "blockedTasks": 52,
+  "cappedTasks": 938,
+  "unreviewedDiscoveryRecords": 192112,
+  "candidateRecords": 108080,
+  "quarantinedRecords": 84032,
+  "searchesRequiringNarrowerWindows": 1568,
+  "publishedAutomatically": 0,
+  "caveat": "Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim."
+}

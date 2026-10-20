@@ -314,16 +314,18 @@ def save_outputs(output,state,registry,tasks,through):
             'status':'Needs primary time-series reconciliation','latestPeriodAtPlanDate':m['latestPeriod'],
             'target':m['target'],'scopeGuard':m['scopeGuard']})
     (output/'primary-review-queue.json').write_text(json.dumps(manual,ensure_ascii=False,indent=2))
+    active_ids={t['id'] for t in tasks}
+    active_attempts={k:v for k,v in state['attempts'].items() if k in active_ids}
     summary={'updatedAt':state['updatedAt'],'through':through,'sourceResources':len(registry['sources']),
         'entityRegistryRows':len(registry['entities']),'topicQueries':len(registry['topics']),
-        'plannedSearchAndFeedTasks':len(tasks),'attemptedTasks':len(state['attempts']),
+        'plannedSearchAndFeedTasks':len(tasks),'attemptedTasks':len(active_attempts),'retainedHistoricalAttempts':len(state['attempts'])-len(active_attempts),
         'notCheckedTasks':sum(t['id'] not in state['attempts'] for t in tasks),
-        'blockedTasks':sum(a['status']=='source-unavailable' for a in state['attempts'].values()),
-        'cappedTasks':sum(a['status']=='capped' for a in state['attempts'].values()),
+        'blockedTasks':sum(a['status']=='source-unavailable' for a in active_attempts.values()),
+        'cappedTasks':sum(a['status']=='capped' for a in active_attempts.values()),
         'unreviewedDiscoveryRecords':len(state['records']),
         'candidateRecords':sum(bool(r['eligibleTaskIds']) for r in state['records'].values()),
         'quarantinedRecords':sum(not r['eligibleTaskIds'] for r in state['records'].values()),
-        'searchesRequiringNarrowerWindows':sum(a['status']=='split' for a in state['attempts'].values()),
+        'searchesRequiringNarrowerWindows':sum(a['status']=='split' for a in active_attempts.values()),
         'publishedAutomatically':0,
         'caveat':'Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim.'}
     (output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');return summary

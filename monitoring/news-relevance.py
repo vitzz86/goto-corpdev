@@ -63,6 +63,8 @@ def discovery_kind(title, entity_id):
     return "News discovery"
 
 CONTEXT={
+ 'ovo':r'indonesia|wallet|fintech|grab|nabung|superbank|pembayaran|transaksi|judol|dompet|qris|gopay|dana',
+ 'wahana':r'logisti|kurir|courier|ekspedisi|pengiriman|paket|express|prestasi|parcel',
  'dhs':r'dhs.*(?:logisti|courier|kurir|ekspedisi)|(?:logisti|courier|kurir|ekspedisi).*dhs',
  'spx':r'shopee|spx express|spx.*(?:logistics|logistik|kurir|ekspedisi|parcel)',
  'tiki':r'tiki.*(?:kurir|ekspedisi|pengiriman|logisti|parcel)|(?:kurir|ekspedisi|pengiriman|logisti|parcel).*tiki|titipan kilat',
@@ -106,6 +108,9 @@ def relevant(record):
  title=record.get('title','');publisher=record.get('source','');body=title.rsplit(' - '+publisher,1)[0] if publisher else title
  if re.search(r'bokep|porn|xxx|onlyfans|leaked.*video|viral.*(?:sex|adult)|university athletics|match highlights|brewery|amity brew',body,re.I):return False
  entity=record.get('entityId');pattern=CONTEXT.get(entity)
+ if entity=='ovo' and re.search(r'ovo energy|drake|ovo sound|ovo arena|october.s very own',body,re.I):return False
+ if entity=='wahana' and re.search(r'dopamine.?land|amusement|taman bermain|wahana wisata',body,re.I):return False
+ if entity=='garena' and re.search(r'redeem.?code|kode redeem|free fire.*(?:reward|hadiah|kode)',body,re.I):return False
  if entity=='dhs' and re.search(r'homeland|immigration|deport|\bICE\b|detention|ilhan omar',body,re.I):return False
  if entity=='spx' and re.search(r'spx technologies|s.p.500|shopinx|spx6900',body,re.I):return False
  if entity=='blue_bird' and re.search(r'school bus|bus sekolah|bluebird bio|blue bird corporation',body,re.I):return False

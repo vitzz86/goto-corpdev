@@ -3,6 +3,7 @@ import importlib.util
 import json
 from pathlib import Path
 import unittest
+import tempfile
 spec=importlib.util.spec_from_file_location('refresh',Path(__file__).with_name('refresh.py'));m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 REG=json.loads(Path(__file__).with_name('registry.json').read_text())
 class MonitoringTests(unittest.TestCase):
@@ -66,6 +67,12 @@ class MonitoringTests(unittest.TestCase):
         company=next(e for e in REG['entities'] if e['key']=='GB:advance-ai')
         self.assertFalse(m.matches(company,'IndiGo invests in Sarvam to advance AI in aviation'))
         self.assertTrue(m.matches(company,'ADVANCE.AI expands identity verification in Indonesia'))
+    def test_ovo_local_product_and_wahana_namesakes(self):
+        for title,want in [('OVO Nabung by Superbank expands payments',True),('OVO Energy raises electricity prices',False),('Drake OVO Sound announces music release',False)]:
+            for registry in ['GB:','ID:']:
+                entity=next(e for e in REG['entities'] if e['key']==registry+'ovo');self.assertEqual(m.matches(entity,title),want)
+        for title,want in [('Wahana DopamineLand opens attraction',False),('Wahana perluas pengiriman paket',True)]:
+            self.assertEqual(m.LOCAL.relevant({'entityId':'wahana','title':title}),want)
     def test_language_editions_and_native_names_are_explicit(self):
         tasks=m.make_tasks(REG,'2026-01-01','2026-01-31')
         for key,language in [('GB:nu','Portuguese'),('GB:phonepe','Hindi'),('ID:blue_bird','Indonesian')]:
@@ -82,6 +89,12 @@ class MonitoringTests(unittest.TestCase):
             self.assertEqual({j['start'][:7] for j in jobs if j['kind']==family},{f'2026-{n:02d}' for n in range(1,11)})
         publisher_domains={j['key'].rsplit(':',1)[0] for j in jobs if j['kind']=='publisher'}
         self.assertTrue({'reuters.com','bloomberg.com'}.issubset(publisher_domains))
+    def test_summary_counts_only_active_tasks(self):
+        tasks=[m.task('entity','GB:jenius','2026-01-01','2026-01-31','https://example.org/feed',name='Jenius',priority='high')]
+        state={'attempts':{'old':dict(kind='entity',key='GB:jenius',status='capped',checkedAt='2026-10-18')},'records':{},'extraTasks':[]}
+        with tempfile.TemporaryDirectory() as d:summary=m.save_outputs(Path(d),state,REG,tasks,'2026-10-19')
+        self.assertEqual(summary['attemptedTasks']+summary['notCheckedTasks'],summary['plannedSearchAndFeedTasks'])
+        self.assertEqual(summary['retainedHistoricalAttempts'],1);self.assertEqual(summary['cappedTasks'],0)
     def test_nested_split_coverage_and_baseline_are_not_completion(self):
         parent=m.task('entity','GB:jenius','2026-01-01','2026-01-31','https://news.google.com/rss/search?q=Jenius',name='Jenius')
         children=m.split_task(parent);grandchildren=m.split_task(children[0]);tasks=[parent]+children+grandchildren

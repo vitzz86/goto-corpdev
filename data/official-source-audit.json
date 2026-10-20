@@ -1,0 +1,3598 @@
+{
+  "asOf": "2026-10-19",
+  "registryRows": 359,
+  "websiteLeads": 321,
+  "checks": [
+    {
+      "key": "ID:akulaku",
+      "website": "https://akulaku.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:24.868546+00:00",
+      "title": "Belanja dengan Mudah: Pembayaran Cicilan dan Pinjaman Tunai | Teknologi Finansial Akulaku",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:anteraja",
+      "website": "https://anteraja.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:27.697052+00:00",
+      "title": "Anteraja Jasa Pengiriman Barang Online Terbaik",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:bank_jago",
+      "website": "https://jago.com",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:59.070783+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:bes",
+      "website": "https://about.blibli.com/id/business/our-operation",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:24.189561+00:00",
+      "title": "Informasi Mengenai Operasional dan Distribusi Kami",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:blibli",
+      "website": "https://www.blibli.com",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:05.454766+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:blibli-pocket",
+      "website": "https://www.blibli.com/faq/blipay/blibli-pocket-by-blu/tentang-blibli-pocket-by-blu/blibli-pocket-by-blu/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:05.725712+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:blitz",
+      "website": "https://rideblitz.com",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:33.832273+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:blu",
+      "website": "https://blubybcadigital.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:32.132951+00:00",
+      "title": "blu | Mulai Langkahmu",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:blue_bird",
+      "website": "https://bluebirdgroup.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:32.542023+00:00",
+      "title": "Bluebird Group - Solusi Semua Perjalanan",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:dana",
+      "website": "https://dana.id",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:34.572324+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:deliveree",
+      "website": "https://www.deliveree.com/id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:06.770027+00:00",
+      "title": "Deliveree Layanan Ekspedisi & Truk Indonesia",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:dhs",
+      "website": null,
+      "status": "identity-unresolved",
+      "checkedAt": null,
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:tiktok-gmv-max",
+      "website": "https://www.tokopedia.com/integrasi-seller",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:39.166043+00:00",
+      "title": "Integrasi Tokopedia & TikTok Shop",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:gobox",
+      "website": "https://gojek.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.530535+00:00",
+      "title": "Gojek Super App",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:gocar",
+      "website": "https://gojek.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.530535+00:00",
+      "title": "Gojek Super App",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:gofood",
+      "website": "https://gojek.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.530535+00:00",
+      "title": "Gojek Super App",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:gomart",
+      "website": "https://gojek.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.530535+00:00",
+      "title": "Gojek Super App",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:gopay",
+      "website": "https://gopay.co.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.845669+00:00",
+      "title": "GoPay - Aplikasi Ringan untuk Transfer & Bayar angle-down angle-down angle-down angle-down",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:gopay_merchant",
+      "website": "https://gopay.co.id/merchant",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:51.308818+00:00",
+      "title": "GoPay Merchant - Terima Transaksi QRIS, Gratis Potongan angle-down angle-down angle-down angle-down",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:gopay_pinjam",
+      "website": "https://gopay.co.id/pinjam",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:51.332770+00:00",
+      "title": "Pinjaman GoPay - Tunai & cicilan tanpa biaya tersembunyi angle-down angle-down angle-down angle-down",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:gopay-pinjam-modal",
+      "website": "https://gopay.co.id/bantuan-merchant/gomodal",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:51.251894+00:00",
+      "title": "GoPay Pinjam Modal angle-down angle-down angle-down angle-down",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:gopaylater",
+      "website": "https://gopay.co.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.845669+00:00",
+      "title": "GoPay - Aplikasi Ringan untuk Transfer & Bayar angle-down angle-down angle-down angle-down",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:goride",
+      "website": "https://gojek.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.530535+00:00",
+      "title": "Gojek Super App",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:gosend",
+      "website": "https://gojek.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.530535+00:00",
+      "title": "Gojek Super App",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:goto",
+      "website": "https://www.gotocompany.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:12.020648+00:00",
+      "title": "GoTo: Go Together, Go Far",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:grab",
+      "website": "https://www.grab.com/id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:12.195295+00:00",
+      "title": "Grab. Satu aplikasi semua bisa",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:grab-ads",
+      "website": "https://www.grab.com/id/business/ads/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:12.320285+00:00",
+      "title": "GrabAds | Grab ID",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:grab-bike",
+      "website": "https://www.grab.com/id/express/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:12.779172+00:00",
+      "title": "Kirim Barang & Antar Dokumen Instant dan Murah | GrabExpress",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:grab-car",
+      "website": "https://www.grab.com/id/express/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:12.779172+00:00",
+      "title": "Kirim Barang & Antar Dokumen Instant dan Murah | GrabExpress",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:grab-express",
+      "website": "https://www.grab.com/id/express/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:12.779172+00:00",
+      "title": "Kirim Barang & Antar Dokumen Instant dan Murah | GrabExpress",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:grab-food",
+      "website": "https://www.grab.com/id/express/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:12.779172+00:00",
+      "title": "Kirim Barang & Antar Dokumen Instant dan Murah | GrabExpress",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:grab-mart",
+      "website": "https://www.grab.com/id/express/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:12.779172+00:00",
+      "title": "Kirim Barang & Antar Dokumen Instant dan Murah | GrabExpress",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:grab-merchant",
+      "website": "https://merchant.grab.com/id-id/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:09.806002+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:grabmodal-narik",
+      "website": "https://help.grab.com/driver/id-id/360025531211",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:41:51.990557+00:00",
+      "title": "Grab Help Centre",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:halodoc",
+      "website": "https://www.halodoc.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:13.312858+00:00",
+      "title": "Halodoc - Beli Obat, Tanya Dokter, Cek Lab Terpercaya",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:id-express",
+      "website": "https://idexpress.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:52.695140+00:00",
+      "title": "ID Express",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:indah-cargo",
+      "website": "https://indahonline.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:56.181140+00:00",
+      "title": "Beranda | Indah Logistik",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:indodana",
+      "website": "https://indodana.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:56.191013+00:00",
+      "title": "Indodana PayLater | Beli Sekarang Bayar Nanti",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:indopaket",
+      "website": "https://www.indopaket.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:13.698920+00:00",
+      "title": "INDOPAKET | Kirim Paket via Indomaret Indopaket",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:jt-cargo",
+      "website": "https://www.jtcargo.id/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:43:14.447236+00:00",
+      "title": "网站防火墙",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:jt-express",
+      "website": "https://www.jet.co.id/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:14.050021+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:jne",
+      "website": "https://www.jne.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:14.050751+00:00",
+      "title": "JNE Menyambung Kebahagiaan Dari Generasi ke Generasi",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:julo",
+      "website": "https://www.julo.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:14.521303+00:00",
+      "title": "Aplikasi Kredit Digital Cepat Cair dan Aman | JULO",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:kredivo",
+      "website": "https://kredivo.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:04.419965+00:00",
+      "title": "Kredivo Paylater - Cicilan 0% hingga 24 Bulan - Kredivo",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:laku6",
+      "website": "https://press.carousell.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:28.453662+00:00",
+      "title": "Carousell Press Create a website or blog at WordPress.com",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:lalamove",
+      "website": "https://lalamove.com",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:42:05.050341+00:00",
+      "title": "Same Day Delivery & Courier丨Van & Truck Hire Services",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:lazada",
+      "website": "https://www.lazada.co.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:15.781044+00:00",
+      "title": "Lazada Indonesia | Toko Online, Diskon Terbaik Setiap Hari",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:lazada-logistics",
+      "website": "https://www.lazada.co.id/about/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:16.026109+00:00",
+      "title": "About Lazada",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:lazada-sponsored-solutions",
+      "website": "https://www.lazadasolutions.com/id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:16.631715+00:00",
+      "title": "Lazada Sponsored Solutions : Lazada Sponsored Solutions",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:lazpaylater",
+      "website": "https://pages.lazada.co.id/wow/i/id/basic-poplayer/general-paylater-t-and-c?hybrid=1",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:20.714505+00:00",
+      "title": "PayLater Terms and Conditions",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:lion-parcel",
+      "website": "https://lionparcel.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:06.143309+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:mex",
+      "website": null,
+      "status": "identity-unresolved",
+      "checkedAt": null,
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:midtrans",
+      "website": "https://midtrans.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:10.795682+00:00",
+      "title": "Midtrans | Solusi Payment Gateway Indonesia Terlengkap",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:moka",
+      "website": "https://www.mokapos.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:22.774110+00:00",
+      "title": "Sistem Aplikasi Kasir Online Berbasis Cloud Terbaik di Indonesia - Moka POS Arrow Arrow",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:mfab",
+      "website": "https://gopay.co.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.845669+00:00",
+      "title": "GoPay - Aplikasi Ringan untuk Transfer & Bayar angle-down angle-down angle-down angle-down",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:ninja-xpress",
+      "website": "https://www.ninjaxpress.co/id-id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:24.089111+00:00",
+      "title": "Layanan Pengiriman Barang | Ninja Xpress Indonesia",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:ondelivery",
+      "website": "https://ondelivery.id/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:42:19.634252+00:00",
+      "title": "ONDELIVERY | Qualified Delivery Service",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:ovo",
+      "website": "https://ovo.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:20.229335+00:00",
+      "title": "OVO | Join the rOVOlution in Payment, Points & Priority!",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:paxel",
+      "website": "https://paxel.co/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:22.229870+00:00",
+      "title": "Kirim Paket Sameday Delivery - Kirim Paket Berat - Paxel",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:pos-indonesia",
+      "website": "https://www.posindonesia.co.id/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:28.895989+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:commerce-finance",
+      "website": "https://help.shopee.co.id/portal/4/article/191150",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:52.417800+00:00",
+      "title": "[SPayLater]  Informasi terkait Layanan Keuangan | Pusat Bantuan Shopee ID",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:lentera-dana-nusantara",
+      "website": "https://www.lenteradana.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:16.848253+00:00",
+      "title": "Lentera Dana Nusantara - Pinjaman daring OJK tanpa agunan terpercaya",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:mapan_reksa",
+      "website": "https://www.findaya.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:07.866074+00:00",
+      "title": "Findaya",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:ramajaya",
+      "website": null,
+      "status": "identity-unresolved",
+      "checkedAt": null,
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:sap-express",
+      "website": "https://www.sapx.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:34.545105+00:00",
+      "title": "Perusahaan Logistik dan Ekspedisi Terbesar di Indonesia | SAPX",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:seabank",
+      "website": "https://seabank.co.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:37.116134+00:00",
+      "title": "Simple, Untung, untuk Semua | PT Bank Seabank Indonesia",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:sentral-cargo",
+      "website": "https://sentralcargo.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:39.564464+00:00",
+      "title": "Sentral Cargo - Perusahaan Ekspedisi & Jasa Pengiriman Barang",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:sfid",
+      "website": null,
+      "status": "identity-unresolved",
+      "checkedAt": null,
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:shopee",
+      "website": "https://shopee.co.id",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:42:39.739468+00:00",
+      "title": "",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:shopee-partner",
+      "website": "https://partner.shopee.co.id/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:42:21.251881+00:00",
+      "title": "Shopee Partner",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:shopeefood",
+      "website": "https://help.shopee.co.id/portal/4/article/177533-%5BMerchant-ShopeeFood%5D-Apa-itu-fitur-Iklan-ShopeeFood",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:52.319017+00:00",
+      "title": "[Merchant ShopeeFood] Apa itu fitur Iklan ShopeeFood? | Pusat Bantuan Shopee ID",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:shopeefood-ads",
+      "website": "https://help.shopee.co.id/portal/4/article/177533-%5BMerchant-ShopeeFood%5D-Apa-itu-fitur-Iklan-ShopeeFood",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:52.319017+00:00",
+      "title": "[Merchant ShopeeFood] Apa itu fitur Iklan ShopeeFood? | Pusat Bantuan Shopee ID",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:shopeepay",
+      "website": null,
+      "status": "identity-unresolved",
+      "checkedAt": null,
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:sicepat",
+      "website": "https://www.sicepat.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:35.120507+00:00",
+      "title": "SiCepat | Layanan Kirim Paket Ekspres No.1 di Indonesia Toggle Layanan submenu Toggle Perusahaan submenu",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:spaylater",
+      "website": "https://help.shopee.co.id/portal/4/article/191150",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:52.417800+00:00",
+      "title": "[SPayLater]  Informasi terkait Layanan Keuangan | Pusat Bantuan Shopee ID",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:spinjam",
+      "website": "https://help.shopee.co.id/portal/11/article/155212-%5BSPinjam%5D-Bagaimana-cara-agar-pengajuan-SPinjam-saya-disetujui",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:52.109642+00:00",
+      "title": "[SPinjam] - Bagaimana cara agar pengajuan SPinjam saya disetujui? | Pusat Bantuan Shopee ID",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:spx",
+      "website": "https://help.shopee.co.id/portal/4/article/73115",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:52.472151+00:00",
+      "title": "[Jasa Kirim] Apa itu Jasa Kirim yang Didukung Shopee & Tidak Didukung Shopee? | Pusat Bantuan Shopee ID",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:superbank",
+      "website": "https://superbank.id",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:45.864531+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:tiki",
+      "website": "https://www.tiki.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:38.130871+00:00",
+      "title": "TIKI Lebih Mudah Kirim Paket",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:tiktok-live-commerce",
+      "website": "https://www.tokopedia.com/integrasi-seller",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:39.166043+00:00",
+      "title": "Integrasi Tokopedia & TikTok Shop",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:tiktok-affiliate",
+      "website": "https://www.tokopedia.com/integrasi-seller",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:39.166043+00:00",
+      "title": "Integrasi Tokopedia & TikTok Shop",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:tiktok-shop",
+      "website": "https://www.tokopedia.com/integrasi-seller",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:39.166043+00:00",
+      "title": "Integrasi Tokopedia & TikTok Shop",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:tokopedia-seller-center",
+      "website": "https://www.tokopedia.com/integrasi-seller",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:39.166043+00:00",
+      "title": "Integrasi Tokopedia & TikTok Shop",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:tokopedia",
+      "website": "https://www.tokopedia.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:38.739974+00:00",
+      "title": "Situs Jual Beli Online Terlengkap, Mudah & Aman | Tokopedia",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:tokopedia-marketplace",
+      "website": "https://www.tokopedia.com/integrasi-seller",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:39.166043+00:00",
+      "title": "Integrasi Tokopedia & TikTok Shop",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:tokopedia-plus",
+      "website": "https://www.tokopedia.com/integrasi-seller",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:39.166043+00:00",
+      "title": "Integrasi Tokopedia & TikTok Shop",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:union-logistics",
+      "website": null,
+      "status": "identity-unresolved",
+      "checkedAt": null,
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "ID:wahana",
+      "website": "https://www.wahana.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:40.570864+00:00",
+      "title": "Beranda - Wahana Prestasi Logistik | Wahana.com",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:13cabs",
+      "website": "https://www.13cabs.com.au/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:01.121698+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:99",
+      "website": "https://99app.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:24.188625+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:99food",
+      "website": "https://99app.com/99food/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:24.189396+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:adakami",
+      "website": "https://adakami.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:24.189686+00:00",
+      "title": "Pinjaman Uang Daring Cepat, Aman & Berizin OJK | AdaKami",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:addi",
+      "website": "https://co.addi.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:34.277011+00:00",
+      "title": "Paga a cuotas sin papeleos ni tarjeta de crédito con Addi",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:advance-ai",
+      "website": "https://advance.ai/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:24.189807+00:00",
+      "title": "Digital, Anti-fraud, Automated with AI - ADVANCE AI",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:adyen",
+      "website": "https://adyen.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:24.189921+00:00",
+      "title": "Adyen: Fintech platform for enterprises - Adyen Adyen Logo Adyen Logo",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:affirm",
+      "website": "https://affirm.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:24.190060+00:00",
+      "title": "Affirm | Pay over time with flexible payment plans and no fees",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:afterpay",
+      "website": "https://afterpay.com/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:41:24.190200+00:00",
+      "title": "Buy now pay later with Afterpay",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:airwallex",
+      "website": "https://airwallex.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:24.694078+00:00",
+      "title": "Airwallex: Trusted Global Payments & Financial Platform",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:akulaku",
+      "website": "https://akulaku.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:24.877680+00:00",
+      "title": "Belanja dengan Mudah: Pembayaran Cicilan dan Pinjaman Tunai | Teknologi Finansial Akulaku",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:alfagift",
+      "website": "https://alfagift.id",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:41:25.375825+00:00",
+      "title": "",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:alipay",
+      "website": "https://alipay.com/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:41:26.713653+00:00",
+      "title": "支付宝",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:allofresh",
+      "website": "https://allofresh.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:26.926539+00:00",
+      "title": "Allofresh: Belanja Online Kebutuhan Rumah Tangga Murah Lebay Allofresh",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:alva",
+      "website": "https://www.alvaauto.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:01.700972+00:00",
+      "title": "ALVA - Change The Game",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:amartha",
+      "website": "https://amartha.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:27.432362+00:00",
+      "title": "Platform Fintech Indonesia untuk Pendanaan UMKM & Investasi Usaha Mikro | Amartha | Amartha.com",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:ampersand",
+      "website": "https://www.ampersand.energy/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:01.890789+00:00",
+      "title": "HOME | AMPERSAND",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:astro",
+      "website": "https://astronauts.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:28.658122+00:00",
+      "title": "Belanja Kebutuhan Harian Sampai dalam Hitungan Menit | ASTRO",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:atome",
+      "website": "https://atome.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:28.713135+00:00",
+      "title": "Atome ID - Shop Smart, Earn More",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:baemin",
+      "website": "https://www.baemin.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:02.434626+00:00",
+      "title": "배달의민족 - 배달팁 무료 배민클럽",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:bank_jago_gopay_tabungan",
+      "website": "https://www.jago.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:13.808844+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:bank_neo",
+      "website": "https://bankneocommerce.co.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:29.718608+00:00",
+      "title": "neobank | Bank Layanan Digital Terbaik",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:basigo",
+      "website": "https://www.basi-go.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:04.357969+00:00",
+      "title": "BasiGo",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:battery_smart",
+      "website": "https://www.batterysmart.in/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:04.943475+00:00",
+      "title": "Battery Swapping Network | Battery Smart India",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:be",
+      "website": "https://be.com.vn/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:31.763431+00:00",
+      "title": "Be – Tự hào là một công ty công nghệ Việt, Be mong muốn trở thành cầu nối giữa mọi khách hàng và người cung cấp dịch vụ",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:blablacar",
+      "website": "https://www.blablacar.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:05.356724+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:blinkit",
+      "website": "https://blinkit.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:32.042734+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:blu",
+      "website": "https://blubybcadigital.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:32.132951+00:00",
+      "title": "blu | Mulai Langkahmu",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:blue_bird",
+      "website": "https://bluebirdgroup.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:32.542023+00:00",
+      "title": "Bluebird Group - Solusi Semua Perjalanan",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:bolt",
+      "website": "https://bolt.eu/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:32.782745+00:00",
+      "title": "Explore Bolt services | The all-in-one mobility app | Bolt",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:cabify",
+      "website": "https://cabify.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:33.250405+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:careem",
+      "website": "https://www.careem.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:05.839956+00:00",
+      "title": "The everything app | Careem",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:cash_app",
+      "website": "https://cash.app/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:33.521589+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:checkers_sixty60",
+      "website": "https://www.sixty60.co.za/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:35.558539+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:chime",
+      "website": "https://chime.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:34.096359+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:chowdeck",
+      "website": "https://chowdeck.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:34.134133+00:00",
+      "title": "Food, Groceries & Local Markets Delivery Near You | Chowdeck",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:coupang_eats",
+      "website": "https://www.coupangeats.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:05.925001+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:dana",
+      "website": "https://dana.id/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:34.572458+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:delivereasy",
+      "website": "https://www.delivereasy.co.nz/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:05.958597+00:00",
+      "title": "Delivereasy — Leave a better taste in your mouth",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:deliveree",
+      "website": "https://www.deliveree.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:06.597883+00:00",
+      "title": "Deliveree Layanan Ekspedisi & Truk Indonesia",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:deliveroo",
+      "website": "https://deliveroo.co.uk/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:34.845554+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:demae_can",
+      "website": "https://demae-can.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:35.047681+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:didi",
+      "website": "https://www.didiglobal.com/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:43:07.281284+00:00",
+      "title": "首页-滴滴官网",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:didi_food",
+      "website": "https://www.didi-food.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:06.984058+00:00",
+      "title": "DiDi Food: Enjoy Great Food Anytime, Anywhere",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:doku",
+      "website": "https://doku.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:35.164319+00:00",
+      "title": "DOKU | Perusahaan Teknologi Pembayaran, Pionir Payment Gateway",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:doordash",
+      "website": "https://www.doordash.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:07.699555+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:duitku",
+      "website": "https://duitku.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:35.311586+00:00",
+      "title": "Duitku: Payment Gateway Indonesia Dengan Service Terbaik",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:easycash",
+      "website": "https://easycash.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:35.955503+00:00",
+      "title": "Pinjaman Online Cepat, Bunga Rendah & Resmi OJK - Easycash",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:efood",
+      "website": "https://www.e-food.gr/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:07.719517+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:electrum",
+      "website": "https://electrum.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:38.101606+00:00",
+      "title": "Electrum: Merk Motor Listrik No. 1 di Indonesia",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:fairmoney",
+      "website": "https://fairmoney.ng/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:38.201433+00:00",
+      "title": "FairMoney - Own Your Financial Journey",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:fantuan",
+      "website": "https://www.fantuan.ca/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:43:07.795681+00:00",
+      "title": "title | Fantuan Delivery the Best Asian Food Delivery",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:faspay",
+      "website": "https://faspay.co.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:39.902770+00:00",
+      "title": "Faspay I Payment Gateway Indonesia Terbaik dan Terlengkap",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:fazz",
+      "website": "https://fazz.com/id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:40.512872+00:00",
+      "title": "Building Payment Infrastructure for Borderless Finance",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:finpay",
+      "website": "https://finpay.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:41.921391+00:00",
+      "title": "Payment Gateway Indonesia Terbaik Terlengkap - Finpay",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:flexport",
+      "website": "https://www.flexport.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:08.310007+00:00",
+      "title": "Freight Forwarding & Supply Chain Platform | Flexport | Flexport Flexport Flexport",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:flink",
+      "website": "https://www.goflink.com/en",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:10.530837+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:flutterwave",
+      "website": "https://flutterwave.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:42.868477+00:00",
+      "title": "Endless possibilities for every business - Flutterwave",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:foodics",
+      "website": "https://foodics.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:45.045229+00:00",
+      "title": "POS Point of Sale & Restaurant Management System RMS",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:foodora",
+      "website": "https://www.foodora.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:09.826634+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:foodpanda",
+      "website": "https://www.foodpanda.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:09.899572+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:foody",
+      "website": "https://www.foody.com.cy/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:10.036221+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:frankieone",
+      "website": "https://frankieone.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:45.541984+00:00",
+      "title": "KYC, AML & Identity Verification Platform | FrankieOne Open main menu Close main menu Open the submenu Open the submenu Open the submenu Open the submenu Open the submenu Follow us on LinkedIn",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:freenow",
+      "website": "https://www.free-now.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:10.347374+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:frete_com",
+      "website": "https://frete.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:46.343673+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:funding_societies",
+      "website": "https://fundingsocieties.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:46.963783+00:00",
+      "title": "Southeast Asia’s Largest SME Digital Financing Platform | Funding Societies SG",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gcash",
+      "website": "https://gcash.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:47.336114+00:00",
+      "title": "GCash - #1 Finance Super App",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:glovo",
+      "website": "https://glovoapp.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:48.053108+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:go",
+      "website": "https://go.goinc.jp/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.268653+00:00",
+      "title": "GO 《ゴー》 │ タクシーが呼べるアプリGO 《ゴー》 │ GO株式会社",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gobox",
+      "website": "https://www.gojek.com/id-id/products/gobox",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:10.676731+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gocar",
+      "website": "https://www.gojek.com/id-id/products/gocar",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:10.923807+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gofood",
+      "website": "https://gofood.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:49.480444+00:00",
+      "title": "Cicipin macam-macam resto paling top - GoFood",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gogoro",
+      "website": "https://www.gogoro.com/gogoro-network/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:10.605075+00:00",
+      "title": "World's Largest Battery Swapping Network",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gomart",
+      "website": "https://www.gojek.com/id-id/products/gomart",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:11.084102+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gopay",
+      "website": "https://gopay.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:50.782665+00:00",
+      "title": "GoPay - Aplikasi Ringan untuk Transfer & Bayar angle-down angle-down angle-down angle-down",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gopay_merchant",
+      "website": "https://gopay.co.id/merchant",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:51.308818+00:00",
+      "title": "GoPay Merchant - Terima Transaksi QRIS, Gratis Potongan angle-down angle-down angle-down angle-down",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gopay_pinjam",
+      "website": "https://gopay.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:50.782665+00:00",
+      "title": "GoPay - Aplikasi Ringan untuk Transfer & Bayar angle-down angle-down angle-down angle-down",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gopay_tabungan_by_jago",
+      "website": "https://jago.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:59.736304+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gopaylater",
+      "website": "https://gopay.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:50.782665+00:00",
+      "title": "GoPay - Aplikasi Ringan untuk Transfer & Bayar angle-down angle-down angle-down angle-down",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gopuff",
+      "website": "https://www.gopuff.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:12.011043+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:goride",
+      "website": "https://www.gojek.com/id-id/products/goride",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:11.483500+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gosend",
+      "website": "https://www.gojek.com/id-id/products/gosend",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:11.981434+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:gozem",
+      "website": "https://website.gozem.co/en/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:58.596367+00:00",
+      "title": "Gozem – Gozem – Africa’s Super App",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:grab",
+      "website": "https://www.grab.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:12.029605+00:00",
+      "title": "Grab. Satu aplikasi semua bisa",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:grubhub",
+      "website": "https://www.grubhub.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:13.142940+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:xanh_sm",
+      "website": "https://www.greensm.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:13.135395+00:00",
+      "title": "Green SM - Layanan Taksi Listrik Ramah Lingkungan",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:hungerstation",
+      "website": "https://hungerstation.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:52.629527+00:00",
+      "title": "اطلب الأكل والبقالة والمقاضي أونلاين في السعودية | هنقرستيشن",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:hungrypanda",
+      "website": "https://www.hungrypanda.co/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:13.584546+00:00",
+      "title": "HungryPanda熊猫外卖 – Leading Asian Food Delivery Platform",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:idnow",
+      "website": "https://idnow.io/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:52.754336+00:00",
+      "title": "IDnow: Transforming KYC to TYC",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:ifood",
+      "website": "https://institucional.ifood.com.br/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:57.051193+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:iidentifii",
+      "website": "https://iidentifii.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:53.530184+00:00",
+      "title": "iiDENTIFii: Leading Biometric Identity Solutions for Fraud Prevention",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:indodana",
+      "website": "https://indodana.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:56.191013+00:00",
+      "title": "Indodana PayLater | Beli Sekarang Bayar Nanti",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:indrive",
+      "website": "https://indrive.com",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:56.645613+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:instacart",
+      "website": "https://company.instacart.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:34.543612+00:00",
+      "title": "Instacart Company | Home",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:instashop",
+      "website": "https://instashop.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:56.700385+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:iseller",
+      "website": "https://isellercommerce.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:58.356159+00:00",
+      "title": "Welcome to iSeller – Selling made easy anytime, anywhere, any channels.",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:iwoca",
+      "website": "https://iwoca.co.uk/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:58.849824+00:00",
+      "title": "Business Loans - Flexible Funding from £1K to £1,000,000",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:jahez",
+      "website": "https://jahez.net/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:00.165150+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:jd_food_delivery",
+      "website": "https://ir.jd.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:57.304659+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:jenius",
+      "website": "https://jenius.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:00.400288+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:julo",
+      "website": "https://julo.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:01.318785+00:00",
+      "title": "Aplikasi Kredit Digital Cepat Cair dan Aman | JULO",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:just_eat",
+      "website": "https://www.just-eat.co.uk/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:14.675620+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:kakao_pay",
+      "website": "https://kakaopay.com/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:42:01.326986+00:00",
+      "title": "카카오페이 | 마음 놓고 금융하다",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:kakao_t",
+      "website": "https://www.kakaomobility.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:14.727509+00:00",
+      "title": "카카오모빌리티",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:kaspi_kz",
+      "website": "https://ir.kaspi.kz/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:57.305406+00:00",
+      "title": "Kaspi.kz - Investor Relations",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:keeta",
+      "website": "https://www.keeta-global.com/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:43:14.841049+00:00",
+      "title": "Keeta - Food Delivery",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:klarna",
+      "website": "https://klarna.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:02.097264+00:00",
+      "title": "Klarna International | Safe & easy-to-use payment solutions",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:klik_indomaret",
+      "website": "https://klikindomaret.com",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:02.328490+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:koinworks",
+      "website": "https://koinworks.com",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:03.311029+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:kredit_pintar",
+      "website": "https://kreditpintar.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:03.760051+00:00",
+      "title": "Aplikasi Instan Pinjaman Online Tunai | KreditPintar",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:kredivo",
+      "website": "https://kredivo.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:04.370575+00:00",
+      "title": "Kredivo Paylater - Cicilan 0% hingga 24 Bulan - Kredivo",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:lalamove",
+      "website": "https://www.lalamove.com/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:43:15.669407+00:00",
+      "title": "Same Day Delivery & Courier丨Van & Truck Hire Services",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:lendingclub",
+      "website": "https://lendingclub.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:05.245068+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:lieferando",
+      "website": "https://www.lieferando.de/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:17.202134+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:lightspeed",
+      "website": "https://lightspeedhq.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:05.482058+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:line_man",
+      "website": "https://lmwn.com/lineman/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:06.232434+00:00",
+      "title": "LINE MAN - LMWN",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:linkaja",
+      "website": "https://linkaja.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:05.492460+00:00",
+      "title": "Semua kebutuhan pembayaran, dalam satu aplikasi — LinkAja",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:linx",
+      "website": "https://linx.com.br/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:05.991580+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:loggi",
+      "website": "https://www.loggi.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:18.751224+00:00",
+      "title": "Loggi | Melhores fretes, envios rápidos, entregas em todo Brasil",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:lori_systems",
+      "website": "https://www.lorisystems.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:20.022185+00:00",
+      "title": "Lori Systems | Transforming African Logistics Through Technology",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:lulalend",
+      "website": "https://lulalend.co.za/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:06.397297+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:lyft",
+      "website": "https://www.lyft.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:20.275450+00:00",
+      "title": "Ride or drive with Lyft",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:m_pesa",
+      "website": "https://safaricom.co.ke/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:34.119519+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:magicpin",
+      "website": "https://magicpin.in/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:06.462938+00:00",
+      "title": "magicpin | India's #1 Savings App",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:mainfreight",
+      "website": "https://www.mainfreight.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:20.469095+00:00",
+      "title": "We are your total supply chain partner",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:majoo",
+      "website": "https://majoo.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:07.056099+00:00",
+      "title": "Aplikasi POS Lengkap Pendukung UMKM Lebih Maju",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:maxim",
+      "website": "https://taximaxim.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:47.242002+00:00",
+      "title": "Please select your country and language",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:maya",
+      "website": "https://maya.ph/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:07.391788+00:00",
+      "title": "Maya –  E-Wallet, Savings, Loans, Credit Cards",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:maya_bank",
+      "website": "https://mayabank.ph/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:08.201839+00:00",
+      "title": "Maya Bank: Leading Digital Bank Regulated by BSP",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:meituan",
+      "website": "https://www.meituan.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:21.145622+00:00",
+      "title": "美团 - 帮大家吃得更好，生活更好",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:mekari",
+      "website": "https://mekari.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:08.428744+00:00",
+      "title": "Mekari - Ekosistem SaaS Terpadu #1 di Indonesia",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:menu",
+      "website": "https://app.menu.jp/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:41:28.388508+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:mercado_libre_mercado_envios",
+      "website": "https://investor.mercadolibre.com/about-meli",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:57.180213+00:00",
+      "title": "About MELI | Mercado Libre",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:mercado_pago",
+      "website": "https://mercadopago.com.br/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:09.740685+00:00",
+      "title": "Mercado Pago Brasil | Banco Digital",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:midtrans",
+      "website": "https://midtrans.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:11.165808+00:00",
+      "title": "Midtrans | Solusi Payment Gateway Indonesia Terlengkap",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:milkrun",
+      "website": "https://www.milkrun.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:22.457348+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:modalku",
+      "website": "https://modalku.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:11.416309+00:00",
+      "title": "Modalku | Pinjaman Tanpa Agunan & Modal Usaha Online",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:moka",
+      "website": "https://mokapos.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:11.421350+00:00",
+      "title": "Sistem Aplikasi Kasir Online Berbasis Cloud Terbaik di Indonesia - Moka POS Arrow Arrow",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:mollie",
+      "website": "https://mollie.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:11.497099+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:momo",
+      "website": "https://momo.vn/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:11.899292+00:00",
+      "title": "MoMo - Ứng dụng Tài chính Asset 1",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:moneyme",
+      "website": "https://moneyme.com.au/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:12.093248+00:00",
+      "title": "Bank-beating personal loans and credit cards | MONEYME",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:moniepoint",
+      "website": "https://moniepoint.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:13.176986+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:monzo",
+      "website": "https://monzo.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:13.228502+00:00",
+      "title": "Monzo | Open a Free Account Monzo Logo",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:moove",
+      "website": "https://www.moove.io/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:23.104965+00:00",
+      "title": "Moove | The Future of Mobility",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:mr_d",
+      "website": "https://www.mrd.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:23.375293+00:00",
+      "title": "Food Delivery & Grocery Delivery | Order Online w/ MRD.com",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:n26",
+      "website": "https://n26.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:14.099425+00:00",
+      "title": "Love your bank | Spend, save, and invest in one app N26 Logo",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:nequi",
+      "website": "https://nequi.com.co/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:19.003003+00:00",
+      "title": "Nequi - Usa tu plata sin cuota de manejo desde el celu",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:ninja_van",
+      "website": "https://www.ninjavan.co/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:43:23.760013+00:00",
+      "title": "Leading Courier Company In Southeast Asia | Ninja Van",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:noon_food",
+      "website": "https://www.noon.com/uae-en/food/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:24.525253+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:nu",
+      "website": "https://nu.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:19.143453+00:00",
+      "title": "Nu: International Digital Account",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:nuro",
+      "website": "https://www.nuro.ai/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:25.003333+00:00",
+      "title": "Nuro—Autonomy for all. All roads, all rides. | Nuro",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:ofload",
+      "website": "https://www.ofload.com.au/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:26.571919+00:00",
+      "title": "Ofload | Making Australian Freight Smart",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:ola",
+      "website": "https://www.olacabs.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:26.801669+00:00",
+      "title": "Book Cabs Nearby at Best Price | Hire Taxi Nearby Online at Olacabs.com",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:olsera",
+      "website": "https://olsera.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:19.156762+00:00",
+      "title": "Aplikasi Kasir POS (Point of Sale) - Olsera.com",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:opay",
+      "website": "https://opayweb.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:20.212737+00:00",
+      "title": "OPay ｜ We are Beyond Banking",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:ovo",
+      "website": "https://ovo.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:20.536438+00:00",
+      "title": "OVO | Join the rOVOlution in Payment, Points & Priority!",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:pagbank",
+      "website": "https://pagbank.com.br/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:20.608176+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:pandamart",
+      "website": "https://www.foodpanda.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:09.899572+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:pargo",
+      "website": "https://pargo.co.za/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:20.744083+00:00",
+      "title": "Pargo – Click & Collect Delivery",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:pathao",
+      "website": "https://pathao.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:21.278572+00:00",
+      "title": "Pathao - #1 Super App in Bangladesh - Ridesharing and More!",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:pawoon",
+      "website": "https://pawoon.com",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:21.415630+00:00",
+      "title": "Pawoon - Aplikasi Kasir #1 | Fitur Terlengkap Untuk Seluruh Bisnis",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:payjustnow",
+      "website": "https://payjustnow.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:23.237747+00:00",
+      "title": "Home - PayJustNow",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:paypal",
+      "website": "https://paypal.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:23.600847+00:00",
+      "title": "Kirim & Minta Pembayaran, Belanja, Kelola Transaksi & Lainnya | PayPal ID",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:paypay",
+      "website": "https://paypay.ne.jp/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:24.157263+00:00",
+      "title": "PayPay - QRコードで支払うキャッシュレス決済のスマホアプリ",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:paystack",
+      "website": "https://paystack.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:25.767887+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:pedidosya",
+      "website": "https://www.pedidosya.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:27.175279+00:00",
+      "title": "Delivery de Comida Online - Elegí, Pedí y Ya | PedidosYa",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:persona",
+      "website": "https://withpersona.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:00.036993+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:phonepe",
+      "website": "https://phonepe.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:26.197671+00:00",
+      "title": "PhonePe: UPI Payments, Investment, Insurance, Recharges, DTH & More",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:picnic",
+      "website": "https://picnic.app/nl/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:26.422722+00:00",
+      "title": "Picnic | Supermarkt op wielen | Online boodschappen bestellen | Gratis bezorgd",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:picpay",
+      "website": "https://picpay.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:26.568548+00:00",
+      "title": "Para Empresas",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:pine_labs",
+      "website": "https://pinelabs.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:26.746399+00:00",
+      "title": "POS Machine, Payment Gateway & Fintech Solutions | Pine Labs",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:pony_ai",
+      "website": "https://www.pony.ai/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:27.958471+00:00",
+      "title": "Pony.ai",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:porter",
+      "website": "https://porter.in/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:28.103029+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:privy",
+      "website": "https://privy.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:29.054098+00:00",
+      "title": "Digital Identity & e-Signature Platform Indonesia | Privy",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:prospa",
+      "website": "https://prospa.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:30.037906+00:00",
+      "title": "Business Loan Specialist | Business Loans and a Business Account | Prospa",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:qasir",
+      "website": "https://qasir.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:30.641424+00:00",
+      "title": "Qasir | Aplikasi Kasir Lengkap Paling Terjangkau untuk Semua Jenis Usaha",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:rapido",
+      "website": "https://www.rapido.bike/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:29.083472+00:00",
+      "title": "Rapido - Bike taxi, Auto & Cab app",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:rappi",
+      "website": "https://www.rappi.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:30.108671+00:00",
+      "title": "Pide Comida a Domicilio y el Súper en línea - Rappi México",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:razorpay",
+      "website": "https://razorpay.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:32.375904+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:redmart",
+      "website": "https://www.lazada.sg/redmart/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:16.254685+00:00",
+      "title": "Lazada Singapore | Always The Better Price & Free Shipping",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:revolut",
+      "website": "https://revolut.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:33.560938+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:revolut_bank_uab",
+      "website": "https://revolut.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:33.560938+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:roadie",
+      "website": "https://www.roadie.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:31.752638+00:00",
+      "title": "Reliable Local Delivery Partner for Same-Day Last-Mile Needs | Roadie",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:roam",
+      "website": "https://www.roam-electric.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:31.882530+00:00",
+      "title": "Welcome to Roam Electric",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:robinhood",
+      "website": "https://www.robinhood.co.th/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:33.204709+00:00",
+      "title": "Robinhood - ทางเลือกใหม่ของฟู้ดเดลิเวอรี่ไทย",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:safeboda",
+      "website": "https://www.safeboda.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:33.442605+00:00",
+      "title": "NBO Home Screen",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:sayurbox",
+      "website": "https://sayurbox.com",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:42:35.286971+00:00",
+      "title": "Grocery Semakin Mudah dan Hemat | Sayurbox Grocery Semakin Mudah dan Hemat | Sayurbox",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:seabank",
+      "website": "https://seabank.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:37.693263+00:00",
+      "title": "Simple, Untung, untuk Semua | PT Bank Seabank Indonesia",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:segari",
+      "website": "https://segari.id",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:39.530128+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:sennder",
+      "website": "https://www.sennder.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:34.653266+00:00",
+      "title": "Digital Freight Forwarder | sennder Technologies GmbH",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:serve_robotics",
+      "website": "https://www.serverobotics.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:34.704122+00:00",
+      "title": "Serve Robotics",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:shopeefood",
+      "website": "https://shopee.co.id",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:42:39.739468+00:00",
+      "title": "",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:shopeepay",
+      "website": "https://shopeepay.co.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:39.793098+00:00",
+      "title": "ShopeePay App | Aplikasi E-wallet #1 Belanja Online",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:shopify",
+      "website": "https://shopify.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:40.447862+00:00",
+      "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:skip",
+      "website": "https://www.skipthedishes.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:35.925029+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:smile_id",
+      "website": "https://smile.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:41.026490+00:00",
+      "title": "AI-powered Identity Verification for the Next Billion Users",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:socure",
+      "website": "https://socure.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:41.096340+00:00",
+      "title": "Identity Verification Platform for AI Risk Decisioning | Socure",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:sofi",
+      "website": "https://sofi.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:42.179834+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:spaylater",
+      "website": "https://shopee.co.id/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:42:39.778952+00:00",
+      "title": "",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:spinjam",
+      "website": "https://shopee.co.id",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:42:39.739468+00:00",
+      "title": "",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:splend",
+      "website": "https://www.splend.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:35.957065+00:00",
+      "title": "Splend | Car Ownership for Rideshare Drivers in Australia",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:square",
+      "website": "https://squareup.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:43.652889+00:00",
+      "title": "Power your entire business | Square",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:starling_bank",
+      "website": "https://starlingbank.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:43.664806+00:00",
+      "title": "Starling | Award-winning bank accounts",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:starship_technologies",
+      "website": "https://www.starship.xyz/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:36.117971+00:00",
+      "title": "Home - Starship Technologies: Autonomous robot delivery - The future of delivery - today!",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:stone",
+      "website": "https://stone.com.br/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:44.328100+00:00",
+      "title": "Stone: O Banco pra Quem Empreende | Stone",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:stripe",
+      "website": "https://stripe.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:44.351484+00:00",
+      "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:stuart",
+      "website": "https://stuart.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:44.443783+00:00",
+      "title": "Last-Mile Delivery Platform | Stuart Link Quotes Wave featured Eye Close Star Doublequotes Arrow right Arrow left Arrow up Arrow down Wave inverted Wave YouTube Instagram LinkedIn Facebook Twitter Check Logo Stuart",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:sumsub",
+      "website": "https://sumsub.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:44.999435+00:00",
+      "title": "Leading Identity Verification Service - 2025 G2’s Top Pick | Sumsub Sumsub logo Sumsub logo",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:sumup",
+      "website": "https://sumup.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:45.059844+00:00",
+      "title": "Best Payment Solutions For Small Business | SumUp",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:sun_mobility",
+      "website": "https://www.sunmobility.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:36.258280+00:00",
+      "title": "SUN Mobility Group 4 LKCMADS1080ppi",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:superbank",
+      "website": "https://superbank.id/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:46.147279+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:swap",
+      "website": "https://www.swap.id",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:36.337953+00:00",
+      "title": "Home | Swap",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:swiggy",
+      "website": "https://www.swiggy.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:36.667739+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:swiggy_instamart",
+      "website": "https://www.swiggy.com/instamart",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:43:36.952077+00:00",
+      "title": "",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:tabby",
+      "website": "https://tabby.ai/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:46.158488+00:00",
+      "title": "Spend, send, save and boss money around with Tabby",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:tala",
+      "website": "https://tala.co.ke/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:46.270356+00:00",
+      "title": "Tala Loan App Kenya | Apply in 5 mins for Fast Loans up to KSh 50,000",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:talabat",
+      "website": "https://www.talabat.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:37.382016+00:00",
+      "title": "Food delivery from your nearest restaurants in UAE | Talabat",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:tamara",
+      "website": "https://tamara.co/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:46.282899+00:00",
+      "title": "Buy now pay over 24 months in Saudi Arabia (BNPL) | Tamara",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:taobao_instant_commerce",
+      "website": "https://home.alibabagroup.com/en-US/about-alibaba-businesses-1894256634985709568",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:52.503476+00:00",
+      "title": "Taobao Instant Commerce-Alibaba Group",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:thuisbezorgd",
+      "website": "https://www.thuisbezorgd.nl/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:38.072190+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:toast",
+      "website": "https://pos.toasttab.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:28.103189+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:transportify",
+      "website": "https://www.transportify.com.ph/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:39.322504+00:00",
+      "title": "Logistics Company in the Philippines for Same Day Delivery Service",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:trendyol_go",
+      "website": "https://www.trendyol.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:39.334661+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:truemoney",
+      "website": "https://truemoney.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:47.916267+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:trulioo",
+      "website": "https://trulioo.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:47.980633+00:00",
+      "title": "Global Identity Verification and Risk Intelligence | Trulioo",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:tymebank",
+      "website": "https://tymebank.co.za/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:48.033098+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:tyro",
+      "website": "https://tyro.com/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:42:50.064543+00:00",
+      "title": "",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:ual",
+      "website": "https://uala.com.ar/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:50.787791+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:ubank",
+      "website": "https://ubank.com.au/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:51.280321+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:uber",
+      "website": "https://www.uber.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:39.346208+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:uber_direct",
+      "website": "https://www.uber.com/us/en/business/solutions/direct/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:40.249561+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:uber_eats",
+      "website": "https://www.ubereats.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:40.328505+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:uber_freight",
+      "website": "https://www.uberfreight.com/en-US",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:40.555471+00:00",
+      "title": "Transportation & logistics solutions | Uber Freight Loading Loading",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:unico",
+      "website": "https://unico.io/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:42:51.281176+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:up",
+      "website": "https://up.com.au/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:51.487150+00:00",
+      "title": "Up - Upgrade Your Banking",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:uzum",
+      "website": "https://uzum.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:52.230634+00:00",
+      "title": "Main Page - Uzum",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:uzum_bank",
+      "website": "https://uzum.com/en/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:52.297848+00:00",
+      "title": "Main Page - Uzum",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:uzum_business",
+      "website": "https://uzum.com/en/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:52.297848+00:00",
+      "title": "Main Page - Uzum",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:uzum_nasiya",
+      "website": "https://uzum.com/en/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:52.297848+00:00",
+      "title": "Main Page - Uzum",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:uzum_tezkor",
+      "website": "https://uzum.com/en/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:52.297848+00:00",
+      "title": "Main Page - Uzum",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:v_green",
+      "website": "https://vgreen.net/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:56.228948+00:00",
+      "title": "Trang chủ | V-Green",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:veho",
+      "website": "https://www.shipveho.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:35.094006+00:00",
+      "title": "Last-Mile Delivery and E-commerce Shipping | Veho",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:venmo",
+      "website": "https://venmo.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:52.430622+00:00",
+      "title": "Pay Friends | Payments App | Venmo",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:veriff",
+      "website": "https://veriff.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:53.178956+00:00",
+      "title": "The Global Leader in Identity Verification Software - Veriff",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:verihubs",
+      "website": "https://verihubs.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:55.689361+00:00",
+      "title": "Verihubs | KYC Verification Indonesia - Solusi Verifikasi Identitas AI | Verihubs",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:vida",
+      "website": "https://vida.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:56.747212+00:00",
+      "title": "HOME | VIDA DIGITAL IDENTITY",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:vinfast",
+      "website": "https://vinfastauto.us/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:57.423465+00:00",
+      "title": "Premier New Electric Car Company | VinFast",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:wave",
+      "website": "https://wave.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:57.871220+00:00",
+      "title": "Wave",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:waymo",
+      "website": "https://waymo.com/about/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:57.999275+00:00",
+      "title": "Autonomous Driving Technology - Learn more about us - Waymo",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:wechat_pay",
+      "website": "https://pay.weixin.qq.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:22.576373+00:00",
+      "title": "微信支付 - 中国领先的第三方支付平台 ｜ 微信支付提供安全快捷的支付方式",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:weride",
+      "website": "https://www.weride.ai/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:40.656917+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:wing",
+      "website": "https://wing.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:59.143799+00:00",
+      "title": "Wing Drone Delivery. The Future of Delivery is Here.",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:wolt",
+      "website": "https://wolt.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:00.426581+00:00",
+      "title": "Wolt Delivery | Food, Groceries and more in 30 minutes – Wolt",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:wonder",
+      "website": "https://www.wonder.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:40.948313+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:xendit",
+      "website": "https://xendit.co/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:42.183086+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:yango",
+      "website": "https://yango.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:44.534128+00:00",
+      "title": "Yango Group - Innovation in technology for Regional Communities",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:yape",
+      "website": "https://yape.com.pe/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:44.831336+00:00",
+      "title": "Yape, tu app para transferir dinero, pedir un préstamo y ¡mucho más! | Yape",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:yassir",
+      "website": "https://yassir.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:46.085146+00:00",
+      "title": "Yassir - Ride, Eat & Shop. the All In One Super App",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:yemeksepeti",
+      "website": "https://www.yemeksepeti.com/",
+      "status": "unavailable",
+      "checkedAt": "2026-10-19T16:43:41.430909+00:00",
+      "title": null,
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:yoco",
+      "website": "https://yoco.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:46.232630+00:00",
+      "title": "Yoco | POS, Payments & Business Tools South Africa",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:yogiyo",
+      "website": "https://www.yogiyo.co.kr/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:41.485036+00:00",
+      "title": "요기요",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:youlend",
+      "website": "https://youlend.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:46.729106+00:00",
+      "title": "YouLend | Global Embedded Financing Platform",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:zalopay",
+      "website": "https://zalopay.vn/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:47.181180+00:00",
+      "title": "Zalopay - Ứng dụng thanh toán tích thưởng",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:zeller",
+      "website": "https://myzeller.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:42:13.509741+00:00",
+      "title": "Zeller | EFTPOS, Invoices, POS, Business Accounts & Cards",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:zepto",
+      "website": "https://www.zepto.com/",
+      "status": "insufficient-readable-content",
+      "checkedAt": "2026-10-19T16:43:41.494445+00:00",
+      "title": "",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:zip",
+      "website": "https://zip.co/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:48.002559+00:00",
+      "title": "Where to Pay Later with Zip",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:zipline",
+      "website": "https://www.flyzipline.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:08.440615+00:00",
+      "title": "Drone Delivery for Food, Groceries, and Medicine | Zipline",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:zomato",
+      "website": "https://www.zomato.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:41.798543+00:00",
+      "title": "Zomato",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:zoom2u",
+      "website": "https://www.zoom2u.com.au/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:41.815115+00:00",
+      "title": "Zoom2u | Same-day and interstate courier delivery across Australia",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:zoox",
+      "website": "https://zoox.com/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:43:48.002721+00:00",
+      "title": "Zoox: It's Not a Car | Autonomous Ride-Hailing | Robotaxi Service",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    },
+    {
+      "key": "GB:alfamind",
+      "website": "https://alfamind.id/",
+      "status": "retrieved-awaiting-review",
+      "checkedAt": "2026-10-19T16:41:25.747577+00:00",
+      "title": "Home - Alfamind",
+      "publicationDate": null,
+      "reviewed": false,
+      "meaning": "Website retrieval audit only; not verified company news or a dated event."
+    }
+  ],
+  "meaning": "Known website leads checked directly. Readable pages still require entity and content review. Missing URLs remain unresolved identities, not no-news conclusions."
+}
