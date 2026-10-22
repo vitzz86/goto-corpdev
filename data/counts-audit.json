@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-20",
+  "asOf": "2026-10-22",
   "counts": {
     "global": {
       "count": 271,
@@ -7,12 +7,12 @@
       "definition": "Global research longlist; includes primary-reviewed profiles, existing cockpit records and candidates. Country links and capital events have separate evidence scopes."
     },
     "macro": {
-      "count": 59,
+      "count": 61,
       "unit": "Indicators",
       "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
     },
     "policy": {
-      "count": 13,
+      "count": 14,
       "unit": "Policy records",
       "definition": "Policy watch entries; effective, proposed and pending statuses remain separate."
     },
@@ -32,7 +32,7 @@
       "definition": "Unique peer/benchmark IDs: 21 ODS + 44 financial services, less 2 shared entries. Includes partner and regional issuer context; not all are direct rivals."
     },
     "sentiment": {
-      "count": 1386621,
+      "count": 1388180,
       "unit": "Dated store reviews",
       "definition": "Collected January–October 2026 written-review records, unique within each app/store. Recent samples are not added again. Includes customer, driver and merchant apps; not unique people, official aggregate ratings or complete store history."
     },
@@ -42,18 +42,18 @@
       "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
     },
     "feed": {
-      "count": 8187,
+      "count": 8202,
       "unit": "2026 signal records",
-      "definition": "2,043 curated 2026 records + 6,144 additional archive leads. Archive URLs already in curated records are counted once. 118 curated records are source-reviewed; discovery headlines are not verified events."
+      "definition": "2,056 curated 2026 records + 6,146 additional archive leads. Archive URLs already in curated records are counted once. 122 curated records are source-reviewed; discovery headlines are not verified events."
     },
     "research": {
-      "count": 248,
+      "count": 251,
       "unit": "Library entries",
       "definition": "Distinct report/source entries after duplicate summaries and report links are reconciled. The count includes unreviewed reference entries, not only reviewed PDFs."
     }
   },
   "reconciliation": {
-    "asOf": "2026-10-20",
+    "asOf": "2026-10-22",
     "segments": {
       "ods": [
         "alfagift",
@@ -129,15 +129,10 @@
       "grab",
       "sea"
     ],
-    "recentReviewSamples": 11073,
-    "reviewedResearch": 61,
-    "reviewed2026Signals": 118,
+    "recentReviewSamples": 12683,
+    "reviewedResearch": 64,
+    "reviewed2026Signals": 122,
     "changes": [
-      {
-        "collection": "Intelligence feed",
-        "title": "BI policy rate: 5.75 %",
-        "reason": "Same dated signal; stronger evidence retained, alternative source preserved."
-      },
       {
         "collection": "Research library",
         "title": "GoTo Gojek Tokopedia (GOTO IJ) - New Price Floor Today; Fintech Offsets The Take-Rate Hit",

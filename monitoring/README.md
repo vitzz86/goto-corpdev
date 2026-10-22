@@ -56,4 +56,4 @@ The 19 October audit checks 321 unique HTTPS website leads across all 359 regist
 
 ### Latest completed discovery pass
 
-The refresh through 20 October 2026 has attempted all 19,016 active-plan requests cumulatively, including English and selected local-language company-month searches, publisher searches, topics, feeds and narrower historical windows. No requests remain unchecked. There are still 10 unavailable requests and 898 capped requests; attempted collection is not verified or exhaustive evidence. Historical attempts from prior cutoff plans are reported separately. Original-source review and macro release lags remain necessary.
+The refresh through 22 October 2026 has attempted all 19,580 active-plan requests cumulatively, including English and selected local-language company-month searches, publisher searches, topics, feeds and narrower historical windows. No requests remain unchecked. There are still 10 unavailable requests and 949 capped requests; attempted collection is not verified or exhaustive evidence. Historical attempts from prior cutoff plans are reported separately. Original-source review and macro release lags remain necessary.
