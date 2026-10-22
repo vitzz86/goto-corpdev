@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-22T02:49:57.107319+00:00",
+  "checkedAt": "2026-10-22T07:49:51.639696+00:00",
   "cutoff": "2026-10-22",
-  "applicationAsset": "assets/cockpit.0db2f38700dd.js",
+  "applicationAsset": "assets/cockpit.ef109d8fc26a.js",
   "openingDataGzipBytes": 661934,
   "registryRows": 359,
   "companyMonthsChecked": 3590,
@@ -114,5 +114,15 @@
     "allChecksPassed": true
   },
   "scope": "Refreshed due October searches and completed active-plan collection, not an exhaustive or fully editorially verified archive. Source limits remain visible. The latest displayed BI fixing is 21 October; no 22 October fixing or missing statistical observations invented. Historical workbook and beta assumptions retain their dates.",
-  "buildStatus": "validated"
+  "buildStatus": "validated",
+  "uiUpdate": {
+    "change": "News & updates is the first and default Global benchmarks tab. Explicit globalView links retain their selected destination.",
+    "dataRefreshed": false,
+    "validation": [
+      "Application JavaScript syntax",
+      "Default Global benchmarks view is updates",
+      "News & updates is first among all six tabs",
+      "Explicit map, capital and learn links retain their destination"
+    ]
+  }
 }
