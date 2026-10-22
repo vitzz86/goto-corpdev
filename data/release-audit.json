@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-22T07:49:51.639696+00:00",
+  "checkedAt": "2026-10-22T08:19:35.067313+00:00",
   "cutoff": "2026-10-22",
-  "applicationAsset": "assets/cockpit.ef109d8fc26a.js",
-  "openingDataGzipBytes": 661934,
+  "applicationAsset": "assets/cockpit.253793b84cd5.js",
+  "openingDataGzipBytes": 665432,
   "registryRows": 359,
   "companyMonthsChecked": 3590,
   "localLanguageChecks": 3450,
@@ -123,6 +123,22 @@
       "Default Global benchmarks view is updates",
       "News & updates is first among all six tabs",
       "Explicit map, capital and learn links retain their destination"
-    ]
+    ],
+    "globalBrief": {
+      "change": "Reviewed Global watch appears immediately after performance charts in Decision brief, with news, capital and GoTo lesson previews. Brief scope/date filters apply. Full records load only when opened.",
+      "previewCounts": {
+        "updates": 6,
+        "capital": 6,
+        "cases": 6
+      },
+      "validation": [
+        "Desktop dark and 390px mobile light visual review",
+        "News/capital/lesson tabs and on-demand details",
+        "Duplicate event suppression and reviewed-only snapshots",
+        "Brief scope and date filters",
+        "No initial download of global archives",
+        "Startup, lazy-feed and navigation reconciliation checks"
+      ]
+    }
   }
 }
