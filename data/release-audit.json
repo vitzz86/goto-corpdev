@@ -1,7 +1,7 @@
 {
   "checkedAt": "2026-10-23T15:13:28.742656+07:00",
   "cutoff": "2026-10-23",
-  "applicationAsset": "assets/cockpit.5683afc863f4.js",
+  "applicationAsset": "assets/cockpit.226ca3b9fb08.js",
   "openingDataGzipBytes": 687941,
   "registryRows": 359,
   "companyMonthsChecked": 3590,
@@ -117,6 +117,27 @@
       "newGotoCases": 3,
       "sourceNetworkUrl": "source-network.html",
       "evidenceRule": "Discovery is not verification; source access limits and historical publication dates remain explicit."
+    },
+    "researchNavigation": {
+      "checkedAt": "2026-10-23T09:37:20.687516+00:00",
+      "dataRefreshed": false,
+      "changes": [
+        "One filter bar: company/topic search, event period and business segment",
+        "Secondary geography, event, evidence and capital filters collapse into More filters",
+        "Active filter chips, Clear all and exact matching-result counts",
+        "News and GoTo lesson text included in search",
+        "Last seven and thirty days, bounded by research snapshot date",
+        "Superseded updates hidden by default, available on request",
+        "Publisher archive only downloaded when explicitly selected",
+        "Filtered URLs and provenance-labelled CSV export",
+        "Compact phone Tools menu and shorter table previews"
+      ],
+      "validatedOn": [
+        "1440px desktop dark",
+        "390px mobile light"
+      ],
+      "initialPublisherArchiveRequests": 0,
+      "pageErrors": []
     }
   },
   "todayRefresh": {
