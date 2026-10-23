@@ -359,6 +359,7 @@ def main():
     dt.date.fromisoformat(args.start);dt.date.fromisoformat(args.through)
     if dt.date.fromisoformat(args.through)>dt.datetime.now(ZoneInfo('Asia/Jakarta')).date():ap.error('--through cannot be a future date')
     registry=read(HERE/'registry.json',{});state=read(args.output/'state.json',{'attempts':{},'records':{},'extraTasks':[]})
+    retained_extra_tasks=state.get('extraTasks',[])
     tasks=make_tasks(registry,args.start,args.through);ids={t['id'] for t in tasks}
     tasks.extend(t for t in state.get('extraTasks',[]) if t['id'] not in ids and t['start']>=args.start and t['through']<=args.through)
     all_tasks=tasks
@@ -394,7 +395,8 @@ def main():
         state['attempts'][job['id']]=attempt
         print(f'{i}/{len(jobs)} {job["kind"]} {job["key"]}: {attempt["status"]}',flush=True)
         # Periodic atomic checkpoints bound recovery loss without repeatedly rewriting a growing archive.
-        state['extraTasks']=list({t['id']:t for t in all_tasks+tasks if t.get('parentId')}.values())
+        # A narrow daily refresh must retain earlier historical refinements.
+        state['extraTasks']=list({t['id']:t for t in retained_extra_tasks+all_tasks+tasks if t.get('parentId')}.values())
         if i%max(1,args.checkpoint_every)==0 or i==len(jobs):
             args.output.mkdir(parents=True,exist_ok=True);temp=args.output/'state.tmp';temp.write_text(json.dumps(state,ensure_ascii=False));temp.replace(args.output/'state.json')
     pool.shutdown(wait=True)

@@ -12,7 +12,7 @@
       "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
     },
     "policy": {
-      "count": 14,
+      "count": 15,
       "unit": "Policy records",
       "definition": "Policy watch entries; effective, proposed and pending statuses remain separate."
     },
@@ -42,12 +42,12 @@
       "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
     },
     "feed": {
-      "count": 8524,
+      "count": 8529,
       "unit": "2026 signal records",
-      "definition": "2,351 curated 2026 records + 6,173 additional archive leads. Archive URLs already in curated records are counted once. 129 curated records are source-reviewed; discovery headlines are not verified events."
+      "definition": "2,355 curated 2026 records + 6,174 additional archive leads. Archive URLs already in curated records are counted once. 133 curated records are source-reviewed; discovery headlines are not verified events."
     },
     "research": {
-      "count": 258,
+      "count": 262,
       "unit": "Library entries",
       "definition": "Distinct report/source entries after duplicate summaries and report links are reconciled. The count includes unreviewed reference entries, not only reviewed PDFs."
     }
@@ -130,8 +130,8 @@
       "sea"
     ],
     "recentReviewSamples": 12683,
-    "reviewedResearch": 71,
-    "reviewed2026Signals": 129,
+    "reviewedResearch": 75,
+    "reviewed2026Signals": 133,
     "changes": [
       {
         "collection": "Research library",

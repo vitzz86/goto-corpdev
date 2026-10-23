@@ -1,29 +1,29 @@
 {
-  "checkedAt": "2026-10-23T03:50:20.399192+00:00",
-  "cutoff": "2026-10-22",
-  "applicationAsset": "assets/cockpit.46de2250e63c.js",
-  "openingDataGzipBytes": 677978,
+  "checkedAt": "2026-10-23T15:13:28.742656+07:00",
+  "cutoff": "2026-10-23",
+  "applicationAsset": "assets/cockpit.5683afc863f4.js",
+  "openingDataGzipBytes": 687941,
   "registryRows": 359,
   "companyMonthsChecked": 3590,
   "localLanguageChecks": 3450,
-  "entriesWithHeadlineCandidates": 307,
-  "entriesWithoutIndexedCandidates": 52,
+  "entriesWithHeadlineCandidates": 323,
+  "entriesWithoutIndexedCandidates": 36,
   "collection": {
-    "updatedAt": "2026-10-22T02:46:47.647608+00:00",
-    "through": "2026-10-22",
-    "sourceResources": 93,
+    "updatedAt": "2026-10-23T08:10:52.020706+00:00",
+    "through": "2026-10-23",
+    "sourceResources": 144,
     "entityRegistryRows": 359,
-    "topicQueries": 44,
-    "plannedSearchAndFeedTasks": 19580,
-    "attemptedTasks": 19580,
-    "retainedHistoricalAttempts": 1559,
+    "topicQueries": 56,
+    "plannedSearchAndFeedTasks": 30906,
+    "attemptedTasks": 30906,
+    "retainedHistoricalAttempts": 5477,
     "notCheckedTasks": 0,
-    "blockedTasks": 10,
-    "cappedTasks": 949,
-    "unreviewedDiscoveryRecords": 199864,
-    "candidateRecords": 112811,
-    "quarantinedRecords": 87053,
-    "searchesRequiringNarrowerWindows": 1627,
+    "blockedTasks": 92,
+    "cappedTasks": 2168,
+    "unreviewedDiscoveryRecords": 340228,
+    "candidateRecords": 149471,
+    "quarantinedRecords": 190757,
+    "searchesRequiringNarrowerWindows": 2572,
     "publishedAutomatically": 0,
     "caveat": "Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim."
   },
@@ -43,77 +43,35 @@
     "scope": "Bounded recent samples merged into preserved history; missing periods remain gaps."
   },
   "publicCounts": {
-    "global": {
-      "count": 271,
-      "unit": "Company, brand & product profiles",
-      "definition": "Global research longlist; includes primary-reviewed profiles, existing cockpit records and candidates. Country links and capital events have separate evidence scopes."
-    },
-    "macro": {
-      "count": 61,
-      "unit": "Indicators",
-      "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
-    },
-    "policy": {
-      "count": 14,
-      "unit": "Policy records",
-      "definition": "Policy watch entries; effective, proposed and pending statuses remain separate."
-    },
-    "actions": {
-      "count": 92,
-      "unit": "GoTo action records",
-      "definition": "Dated GoTo corporate-action records across the retained history; proposed and completed actions are distinct. Reference entries are not independently verified."
-    },
-    "ecosystem": {
-      "count": 106,
-      "unit": "Position entries",
-      "definition": "Ownership-register entries across legal entities, associates, fund backing and historical positions. This is not the number of active equity holdings or nodes in a selected network view."
-    },
-    "competitors": {
-      "count": 63,
-      "unit": "Tracked peers & benchmarks",
-      "definition": "Unique peer/benchmark IDs: 21 ODS + 44 financial services, less 2 shared entries. Includes partner and regional issuer context; not all are direct rivals."
-    },
-    "sentiment": {
-      "count": 1388180,
-      "unit": "Dated store reviews",
-      "definition": "Collected January\u2013October 2026 written-review records, unique within each app/store. Recent samples are not added again. Includes customer, driver and merchant apps; not unique people, official aggregate ratings or complete store history."
-    },
-    "deals": {
-      "count": 33,
-      "unit": "Screened names",
-      "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
-    },
-    "feed": {
-      "count": 8202,
-      "unit": "2026 signal records",
-      "definition": "2,056 curated 2026 records + 6,146 additional archive leads. Archive URLs already in curated records are counted once. 122 curated records are source-reviewed; discovery headlines are not verified events."
-    },
-    "research": {
-      "count": 251,
-      "unit": "Library entries",
-      "definition": "Distinct report/source entries after duplicate summaries and report links are reconciled. The count includes unreviewed reference entries, not only reviewed PDFs."
-    }
+    "global": 271,
+    "macro": 61,
+    "policy": 15,
+    "actions": 92,
+    "ecosystem": 106,
+    "competitors": 63,
+    "sentiment": 1388180,
+    "deals": 33,
+    "feed": 8529,
+    "research": 262
   },
-  "reviewedAdditions": [
-    "bi-october-decision-20261021",
-    "grab-foodpanda-taiwan-blocked-20261021",
-    "sea-monee-cloud-memo-20261020"
-  ],
+  "reviewedAdditions": {
+    "date": "2026-10-23",
+    "newThisRefresh": [
+      "qashier-gm-launch-20261023",
+      "pine-labs-webxpay-20261022",
+      "airwallex-boost-b2b-20261022",
+      "ojk-reform-implementation-20261022"
+    ]
+  },
   "validation": {
-    "pythonSuites": 11,
-    "monitoringTests": 18,
-    "javascriptChecks": [
-      "test-coverage-counts.js",
-      "test-lazy-signal-feed.js",
-      "test-valuation-inputs.js",
-      "Application JavaScript syntax",
-      "Coverage JavaScript syntax"
-    ],
-    "browserChecks": [],
-    "browserCheckScope": "Data refresh and dated-status reconciliation; no new visual browser walkthrough performed.",
-    "allChecksPassed": true
+    "pythonSuitesPassed": 9,
+    "browserChecksPassed": true,
+    "coverageCountsReconciled": true,
+    "startupBudgetPassed": true,
+    "valuationReplayPassed": true,
+    "newDataProvenanceChecked": true
   },
-  "scope": "Refreshed due October searches and completed active-plan collection, not an exhaustive or fully editorially verified archive. Source limits remain visible. The latest displayed BI fixing is 21 October; no 22 October fixing or missing statistical observations invented. Historical workbook and beta assumptions retain their dates.",
+  "scope": "Fresh 22–23 October discovery sweep plus selected source-page reviews. Indexed headlines remain unreviewed. Source failures and caps remain visible. Latest official JISDOR displayed is 22 October; 23 October equity/FX quotes are dated intraday snapshots. Workbook, beta and store-review vintages retain their dates.",
   "buildStatus": "validated",
   "uiUpdate": {
     "change": "News & updates is the first and default Global benchmarks tab. Explicit globalView links retain their selected destination.",
@@ -160,5 +118,27 @@
       "sourceNetworkUrl": "source-network.html",
       "evidenceRule": "Discovery is not verification; source access limits and historical publication dates remain explicit."
     }
+  },
+  "todayRefresh": {
+    "date": "2026-10-23",
+    "discoveryWindow": [
+      "2026-10-22",
+      "2026-10-23"
+    ],
+    "searchAndFeedRequests": 1430,
+    "additionalDueRequests": 16,
+    "marketObservations": 14,
+    "newReviewedDevelopments": 4,
+    "newGotoCaseStudies": 1,
+    "officialJisdor": {
+      "date": "2026-10-22",
+      "value": 18047,
+      "unit": "IDR per USD"
+    },
+    "workbookChanged": false,
+    "betaHistoryChanged": false,
+    "storeReviewsRecollected": false,
+    "retainedHistoricalAttemptRecords": 5477,
+    "evidenceLimit": "Reviewing four original releases/articles does not verify every discovered headline or every company profile."
   }
 }

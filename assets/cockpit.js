@@ -17,10 +17,10 @@ async function startupResponse(url){
 }
 async function loadStartup(){
   if('DecompressionStream' in window){
-    try{const blob=await startupResponse('data/startup-5f55d7613c11.json.gz');return JSON.parse(await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text())}
+    try{const blob=await startupResponse('data/startup-c2c5e3991fac.json.gz');return JSON.parse(await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text())}
     catch(error){loadingText('Opening compatible research snapshot…')}
   }
-  return JSON.parse(await (await startupResponse('data/startup-5f55d7613c11.json')).text());
+  return JSON.parse(await (await startupResponse('data/startup-c2c5e3991fac.json')).text());
 }
 const {D,VERIFIED,WORKBOOK}=await loadStartup();
 loadingText('Preparing your decision brief…');
