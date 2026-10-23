@@ -11,6 +11,7 @@ def module(name,path):
 GLOBAL=module('global_identity',HERE/'collect-global-publisher-news.py')
 LOCAL=module('local_identity',HERE/'news-relevance.py')
 LANGUAGES=module('language_coverage',HERE/'language-coverage.py')
+ROUTES=module('coverage_routes',HERE/'coverage-routes.py')
 
 def stamp():return dt.datetime.now(dt.timezone.utc).isoformat()
 def digest(value):return hashlib.sha256(value.encode()).hexdigest()[:24]
@@ -42,6 +43,10 @@ def make_tasks(registry,start,through):
                 key=row.get('key',row.get('id'));url=search_url(row['rssTemplate'],row['query'],first,last)
                 base=task(kind,key,first,last,url,row.get('priority','P1'),workstream=row.get('workstream',''),name=row['name'])
                 tasks.append(base)
+                if kind=='entity' and ROUTES.official_host(row):
+                    official_query='site:'+ROUTES.official_host(row)+' '+row['query']
+                    official_url=search_url(row['rssTemplate'],official_query,first,last)
+                    tasks.append(task(kind,key,first,last,official_url,row.get('priority','P1'),parentId=base['id'],officialFallback=True,searchPurpose='Official-domain discovery',workstream=row.get('workstream',''),name=row['name']))
                 # Retain English plus relevant local-language editions for selected markets.
                 if kind=='entity':
                     for edition in LANGUAGES.targets(row):
@@ -63,6 +68,10 @@ def make_tasks(registry,start,through):
             for first,last in windows(start,through):
                 url=search_url('https://news.google.com/rss/search?hl=en-US&gl=ID&ceid=ID:en',query,first,last)
                 tasks.append(task('publisher',publisher['domain']+':'+str(index),first,last,url,publisher['priority'],name=publisher['name']))
+        for lane in ROUTES.localized_publisher_queries(publisher):
+            for first,last in windows(start,through):
+                url=search_url(lane['template'],lane['query'],first,last)
+                tasks.append(task('publisher',lane['key'],first,last,url,publisher['priority'],name=publisher['name'],language=lane['language'],searchPurpose='Local-language publisher discovery'))
     # Feeds are checked again at run time. A historical XML check is not an uptime guarantee.
     for source in registry['sources']:
         feed=source.get('Feed URL') or ''
@@ -233,8 +242,20 @@ def coverage(registry,tasks,ledger,records):
             meaning='Search attempts and indexed records only; never proof of exhaustive coverage or no events.'))
     return result
 
-SECTOR_PATTERN=re.compile(r'ride.hail|robotaxi|autonomous.*(?:car|vehicle|taxi)|driverless|food.delivery|grocery|quick.commerce|parcel|courier|logistic|last.mile|electric.*(?:vehicle|motorcycle|taxi|fleet)|battery.swap|fintech|payment|wallet|digital.bank|banking|BNPL|buy.now.pay|lending|loan|credit|merchant|point.of.sale|QRIS|underwriting|digital.identity|KYC|e.commerce|ojek|taksi|pengiriman|pinjaman|kredit|pembiayaan|pendanaan.*(?:fintech|bank|ojek)|pembayaran|dompet|kasir|产业金融|金融|支付|外卖|网约车|融资|物流|銀行|配達|金融|대출|결제|배달|pinjol|tabungan',re.I)
+SECTOR_PATTERN=re.compile(ROUTES.MULTILINGUAL_SECTOR+r'|ride.hail|robotaxi|autonomous.*(?:car|vehicle|taxi)|driverless|food.delivery|grocery|quick.commerce|parcel|courier|logistic|last.mile|electric.*(?:vehicle|motorcycle|taxi|fleet)|battery.swap|fintech|payment|wallet|digital.bank|banking|BNPL|buy.now.pay|lending|loan|credit|merchant|point.of.sale|QRIS|underwriting|digital.identity|KYC|e.commerce|ojek|taksi|pengiriman|pinjaman|kredit|pembiayaan|pendanaan.*(?:fintech|bank|ojek)|pembayaran|dompet|kasir|产业金融|金融|支付|外卖|网约车|融资|物流|銀行|配達|金融|대출|결제|배달|pinjol|tabungan',re.I)
 TOPIC_PATTERNS={
+ 'T45':r'airport|bandara|fleet|armada|taksi|taxi',
+ 'T46':r'alfamind|alfagift|mitra.bukalapak|mitra.tokopedia|mitra.shopee',
+ 'T47':r'logisti|courier|kurir|parcel|fulfil|pengiriman|jne|j.t|sicepat',
+ 'T48':r'commerce.finance|lentera.dana|multifinance.anak|findaya|mapan.global',
+ 'T49':r'settlement|pencairan|qris|merchant|pembayaran|payment',
+ 'T50':r'ojol|pinjol|merger|qris|bnpl|pembayaran|kredit|persaingan',
+ 'T51':r'upah|pengangguran|konsumsi|kredit|pendapatan|tenaga.kerja',
+ 'T52':r'indonesia|rupiah|likuiditas|rating|sovereign',
+ 'T53':r'shutdown|market.exit|cease.operations|liquidat|insolven',
+ 'T54':r'ai.agent|automation|fraud|underwriting|advertis',
+ 'T55':r'credit.facility|securiti[sz]|warehouse.facility|refinanc',
+ 'T56':r'licen[cs]e|cross.border|market.entry|permit',
  'T01':r'ride.hail|mobility|taxi|taksi|ojek|trips|pangsa pasar',
  'T02':r'food|delivery|restaur|makanan|pesan.antar',
  'T03':r'grocery|groceries|quick.commerce|belanja|sembako',
@@ -332,7 +353,7 @@ def save_outputs(output,state,registry,tasks,through):
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--from',dest='start',default='2026-01-01');ap.add_argument('--through',default=dt.datetime.now(ZoneInfo('Asia/Jakarta')).date().isoformat());ap.add_argument('--limit',type=int,default=50);ap.add_argument('--kind',choices=['all','entity','topic','publisher','feed'],default='all');ap.add_argument('--output',type=Path,default=HERE/'results');ap.add_argument('--plan-only',action='store_true');ap.add_argument('--balanced-months',action='store_true');ap.add_argument('--workers',type=int,default=6);ap.add_argument('--baseline-only',action='store_true');ap.add_argument('--current-window-only',action='store_true',help='Refresh current cutoff-window searches and live feeds before older successful windows');ap.add_argument('--unsearched-only',action='store_true');ap.add_argument('--checkpoint-every',type=int,default=50);args=ap.parse_args()
-    if not 1<=args.limit<=500:ap.error('--limit must be 1–500')
+    if not 1<=args.limit<=5000:ap.error('--limit must be 1–5000')
     if not 1<=args.workers<=8:ap.error('--workers must be 1–8')
     if args.start>args.through:ap.error('--from must not follow --through')
     dt.date.fromisoformat(args.start);dt.date.fromisoformat(args.through)

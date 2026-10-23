@@ -3,6 +3,15 @@ import re
 
 # Search aliases identify products without requiring an invented exact phrase.
 QUERY_ALIASES = {
+ "tokopedia-marketplace": 'Tokopedia (marketplace OR ecommerce OR "e-commerce" OR transaksi)',
+ "tokopedia-seller-center": '(Tokopedia OR "TikTok Shop") ("Seller Center" OR "Seller Centre" OR penjual OR seller)',
+ "commerce-finance": '"Commerce Finance" (Shopee OR SPayLater OR pembiayaan OR OJK)',
+ "lentera-dana-nusantara": '"Lentera Dana Nusantara"',
+ "mapan_reksa": '("Mapan Global Reksa" OR Findaya)',
+ "id-express": '("ID Express" OR "IDExpress") (logistik OR kurir OR paket OR Indonesia)',
+ "sap-express": '("SAP Express" OR "Satria Antaran Prima")',
+ "blibli-pocket": '("Blibli Pocket" OR "Blibli blu" OR "Blibli BCA Digital")',
+
  "dhs": 'DHS (logistik OR ekspedisi OR kurir) -homeland -immigration -ICE',
  "spx": '("SPX Express" OR "SPX Shopee")',
  "tiki": 'TIKI (kurir OR ekspedisi OR "Titipan Kilat")',
@@ -41,7 +50,7 @@ QUERY_ALIASES = {
  "food-market-hub": '"Food Market Hub"', "safeboda": 'SafeBoda',
  "dash-workforce": 'Dash (workforce OR staffing OR employment)',
 }
-IDENTITY_ALIASES = {"blue_bird": ["bluebird", "blue bird"], "bank_jago": ["bank jago"],
+IDENTITY_ALIASES = {"tokopedia-marketplace":["Tokopedia"],"tokopedia-seller-center":["Tokopedia","TikTok Shop"],"commerce-finance":["Commerce Finance"],"mapan_reksa":["Mapan Global Reksa","Findaya"],"id-express":["ID Express","IDExpress"],"sap-express":["SAP Express","Satria Antaran Prima"],"blibli-pocket":["Blibli Pocket","Blibli blu","Blibli BCA Digital"],"blue_bird": ["bluebird", "blue bird"], "bank_jago": ["bank jago"],
  "jenius": ["jenius"], "gocar": ["gocar"], "astro": ["astro"], "maxim": ["maxim"],
  "moka": ["moka"], "skuad": ["skuad", "payoneer workforce management"],
  "gojek_sg": ["gojek"], "electrum": ["electrum"]}
@@ -63,6 +72,11 @@ def discovery_kind(title, entity_id):
     return "News discovery"
 
 CONTEXT={
+ 'tokopedia-marketplace':r'marketplace|e.commerce|seller|merchant|transaksi|belanja|penjual|tiktok',
+ 'tokopedia-seller-center':r'seller|penjual|merchant|pedagang|pusat.penjualan',
+ 'commerce-finance':r'shopee|spaylater|pembiayaan|ojk|paylater',
+ 'mapan_reksa':r'findaya|gopay|pinjam|ojk|lending|pembiayaan|kredit',
+
  'ovo':r'indonesia|wallet|fintech|grab|nabung|superbank|pembayaran|transaksi|judol|dompet|qris|gopay|dana',
  'wahana':r'logisti|kurir|courier|ekspedisi|pengiriman|paket|express|prestasi|parcel',
  'dhs':r'dhs.*(?:logisti|courier|kurir|ekspedisi)|(?:logisti|courier|kurir|ekspedisi).*dhs',

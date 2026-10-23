@@ -2,7 +2,7 @@
 
 This applies the [monitoring workbook](https://docs.google.com/spreadsheets/d/1OtYxCVgk_Wb0m6KFSZtrDZeJpY3Io6NiiHQdbDrDCow/edit) to repeatable collection. It does not certify that the dashboard is complete.
 
-The versioned registry contains 93 source-resource rows, 359 overlapping entity-registry rows (271 global / 88 Indonesia), 44 topic searches, 57 macro records, nine workstreams, 18 validation rules and the field dictionary. Its initial evidence and reviewed-record baseline is dated **18 October 2026**. Registry rows are not unique corporations. Source-resource rows are not working RSS feeds.
+The versioned registry contains 144 source-resource rows, 359 overlapping entity-registry rows (271 global / 88 Indonesia), 56 topic searches, 61 macro records, nine workstreams, 18 validation rules and the field dictionary. Its initial evidence and reviewed-record baseline is dated **18 October 2026**. Registry rows are not unique corporations. Source-resource rows are not working RSS feeds.
 
 ## Run and resume
 
@@ -37,11 +37,11 @@ The fair queue alternates entities, topics, publisher-domain searches and feeds.
 4. Reconcile macro histories with BI/BPS/OJK/other original tables, including publication lags and revisions. A reviewed news item is not a complete numeric time series. Obtain permitted historical data for gaps; never interpolate missing actuals to simulate coverage.
 5. After evidence review, update the project's existing curated research files, run the domain validation and build checks, then publish the reviewed app release. This intake action has read-only repository permissions and cannot push changes to the dashboard. Empty cards and backend collection failures stay out of the public UI.
 
-Reuters/Tech in Asia/DealStreetAsia and subscription resources keep their access limitations. Feed failures are not bypassed. The 40 publisher domains also have indexed search fallbacks through the global publisher collector; the intake topic/entity searches provide broader discovery. Apple/Google developer review APIs require authorized apps and do not grant a public competitor archive. X/Twitter stays excluded.
+Reuters/Tech in Asia/DealStreetAsia and subscription resources keep their access limitations. Feed failures are not bypassed. The 91 publisher domains also have indexed search fallbacks through the global publisher collector; the intake topic/entity searches provide broader discovery. Apple/Google developer review APIs require authorized apps and do not grant a public competitor archive. X/Twitter stays excluded.
 
 ## Maintaining the plan
 
-Update `registry.json` when entities, official sources, aliases, releases or subscriptions change; retain evidence dates. Query and date boundaries determine stable task IDs, so unchanged jobs resume. Keep the packaged `news-relevance.py` and `collect-global-publisher-news.py` identity helpers synchronized with project scripts when changing guard rules; tests cover common namesakes. The full app's global collector now reads the shared 40-publisher registry and only activates native feeds that passed XML validation; other publishers retain search fallback. Public display limits remain separate from the full research store.
+Update `registry.json` when entities, official sources, aliases, releases or subscriptions change; retain evidence dates. Query and date boundaries determine stable task IDs, so unchanged jobs resume. Keep the packaged `news-relevance.py` and `collect-global-publisher-news.py` identity helpers synchronized with project scripts when changing guard rules; tests cover common namesakes. The full app's global collector now reads the shared 91-publisher registry and only activates native feeds that passed XML validation; other publishers retain search fallback. Public display limits remain separate from the full research store.
 
 This is a public-source research workflow, not a paywall bypass or a licensed data subscription. “Checked” means an auditable attempt; completeness requires primary evidence review and still has source limits.
 
@@ -54,6 +54,18 @@ Company discovery retains English searches and adds the selected operating marke
 
 The 19 October audit checks 321 unique HTTPS website leads across all 359 registry entries. Its public status-only report preserves retrieval failures and unresolved identities. Readable page text is retained privately for editorial review and is never packaged as verified news. The coverage directory shows this audit separately from monthly headline discovery. A website retrieval has no inferred publication or event date.
 
-### Latest completed discovery pass
+### Archived discovery pass — 22 October
 
 The refresh through 22 October 2026 has attempted all 19,580 active-plan requests cumulatively, including English and selected local-language company-month searches, publisher searches, topics, feeds and narrower historical windows. No requests remain unchecked. There are still 10 unavailable requests and 949 capped requests; attempted collection is not verified or exhaustive evidence. Historical attempts from prior cutoff plans are reported separately. Original-source review and macro release lags remain necessary.
+
+### Coverage expansion — 23 October 2026
+
+The registry now contains 91 publisher discovery destinations and 56 topic lanes. Fifty-one additional destinations cover local business reporting in Indonesia, Southeast Asia, India, China, Japan, Korea, Latin America, Africa, MENA, Europe and Oceania. New destinations do not claim working native RSS or full-text access. Eleven language query templates add native-sector and capital terms to eligible publisher searches. Every company with a usable website lead also receives a monthly site-restricted route, separate from direct website retrieval and source review. Product aliases now distinguish marketplace/seller tools and licensed lending entities.
+
+Use `--unsearched-only` to finish new routes before revisiting successful jobs. The expanded plan is larger than the preceding 22 October plan; rely on `results/summary.json` for attempted, pending, capped and failed counts. Do not reuse the older zero-pending completion claim for the new plan. The source-network page publishes these actual counts and all configured destinations, while reviewed company coverage combines the main intelligence feed and global benchmark evidence.
+
+### Completed expanded discovery pass — 23 October 2026
+
+All 32,670 active-plan requests have been attempted cumulatively through 23 October, covering 359 registry entries and all 3,590 English company-month checks plus 3,450 selected local-language checks. The expanded source inventory contains 91 publisher destinations, 53 official/specialist resources, 56 topic lanes and 61 macro-record review routes. All 353 usable website leads have monthly official-domain routes; the six remaining entries need identity/website resolution. There are 102 unavailable requests and 2,400 capped requests. These are request counts, not unique blocked publishers or verified-article totals.
+
+The result contains relevant indexed candidates for 323 entries; 36 still have none. Source-reviewed company records are counted separately using both the main feed and benchmark events. The new source-network view exposes route health and a 20-row filtered table; the research-priority download identifies original-source review work. Seven additional dated source-reviewed developments and three GoTo learning cases were added, with historical discoveries labelled backfill. The supplier/policy/macroeconomic data retains its individual reporting periods; successful discovery does not certify a complete numerical history.

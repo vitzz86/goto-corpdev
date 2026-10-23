@@ -8,9 +8,29 @@ spec=importlib.util.spec_from_file_location('refresh',Path(__file__).with_name('
 REG=json.loads(Path(__file__).with_name('registry.json').read_text())
 class MonitoringTests(unittest.TestCase):
     def test_registry_and_no_unverified_feed_claim(self):
-        self.assertEqual((len(REG['sources']),len(REG['entities']),len(REG['topics']),len(REG['macro'])),(93,359,44,57))
-        self.assertEqual(len(m.GLOBAL.PUBLISHERS),40)
+        self.assertGreaterEqual(len(REG['sources']),143);self.assertEqual(len(REG['entities']),359);self.assertGreaterEqual(len(REG['topics']),56);self.assertGreaterEqual(len(REG['macro']),61)
+        self.assertEqual(len(m.GLOBAL.PUBLISHERS),len(REG['publishers']));self.assertGreaterEqual(len(REG['publishers']),90)
         self.assertIsNone(next(p[2] for p in m.GLOBAL.PUBLISHERS if p[0]=='Reuters'))
+    def test_expanded_routes_keep_source_and_review_boundaries(self):
+        jobs=m.make_tasks(REG,'2026-01-01','2026-01-31')
+        official=[j for j in jobs if j.get('searchPurpose')=='Official-domain discovery']
+        self.assertEqual({j['key'] for j in official},{e['key'] for e in REG['entities'] if m.ROUTES.official_host(e)})
+        self.assertTrue(all(j.get('parentId') and j.get('officialFallback') for j in official))
+        portuguese=next(j for j in jobs if j['key']=='mobiletime.com.br:local:Portuguese:capital-payments')
+        self.assertIn('pagamentos',m.urllib.parse.parse_qs(m.urllib.parse.urlsplit(portuguese['url']).query)['q'][0])
+        self.assertIn('hl=pt-BR',portuguese['url'])
+        self.assertTrue(m.SECTOR_PATTERN.search('Fintech brasileira amplia pagamentos e crédito'))
+        self.assertTrue(m.SECTOR_PATTERN.search('新しい決済サービスが資金調達'))
+        self.assertTrue(m.SECTOR_PATTERN.search('شركة توصيل تحصل على تمويل'))
+    def test_product_aliases_require_the_right_context(self):
+        cases=[('tokopedia-seller-center','Tokopedia and TikTok Shop launch integrated Seller Center',True),('tokopedia-seller-center','Tokopedia has a new chief financial officer',False),('mapan_reksa','Findaya expands GoPay lending in Indonesia',True),('id-express','IDExpress ekspansi layanan pengiriman paket Indonesia',True),('sap-express','Satria Antaran Prima perluas logistik',True)]
+        for key,title,expected in cases:
+            entity=next(e for e in REG['entities'] if e['key']=='ID:'+key)
+            self.assertEqual(m.matches(entity,title),expected,(key,title))
+    def test_benchmark_headlines_need_identity_and_business_context(self):
+        for key,title,expected in [('zeller','Zeller launches cloud POS for Australian merchants',True),('zeller','Cody Zeller signs NBA deal',False),('roadie','UPS Roadie expands parcel delivery network',True),('roadie','Rock band roadie shares tour stories',False),('unico','Unico lança biometria e identidade digital',True)]:
+            entity=next(e for e in REG['entities'] if e['key']=='GB:'+key)
+            self.assertEqual(m.matches(entity,title),expected,(key,title))
     def test_calendar_query_removes_rolling_window(self):
         url=m.search_url('https://news.google.com/rss/search?hl=id&gl=ID&q=old','Jenius bank when:7d','2026-01-01','2026-01-31')
         self.assertIn('before%3A2026-02-01',url);self.assertNotIn('when',url);self.assertIn('hl=id',url)

@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-22T08:19:35.067313+00:00",
+  "checkedAt": "2026-10-23T03:50:20.399192+00:00",
   "cutoff": "2026-10-22",
-  "applicationAsset": "assets/cockpit.253793b84cd5.js",
-  "openingDataGzipBytes": 665432,
+  "applicationAsset": "assets/cockpit.46de2250e63c.js",
+  "openingDataGzipBytes": 677978,
   "registryRows": 359,
   "companyMonthsChecked": 3590,
   "localLanguageChecks": 3450,
@@ -129,7 +129,7 @@
       "previewCounts": {
         "updates": 6,
         "capital": 6,
-        "cases": 6
+        "cases": 7
       },
       "validation": [
         "Desktop dark and 390px mobile light visual review",
@@ -139,6 +139,26 @@
         "No initial download of global archives",
         "Startup, lazy-feed and navigation reconciliation checks"
       ]
+    },
+    "coverageExpansion": {
+      "cutoff": "2026-10-23",
+      "publisherDestinations": 91,
+      "officialAndSpecialistResources": 53,
+      "topicLanes": 56,
+      "macroReviewRoutes": 61,
+      "companyRows": 359,
+      "companyOfficialDomainRoutes": 353,
+      "plannedRequests": 32670,
+      "attemptedRequests": 32670,
+      "uncheckedRequests": 0,
+      "unavailableRequests": 102,
+      "cappedRequests": 2400,
+      "entriesWithIndexedCandidates": 323,
+      "entriesWithoutIndexedCandidates": 36,
+      "newReviewedDevelopments": 7,
+      "newGotoCases": 3,
+      "sourceNetworkUrl": "source-network.html",
+      "evidenceRule": "Discovery is not verification; source access limits and historical publication dates remain explicit."
     }
   }
 }

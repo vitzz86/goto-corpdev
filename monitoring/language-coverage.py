@@ -45,6 +45,8 @@ for country in SPANISH_MARKETS:EDITIONS[country]=('es-419','MX','Spanish')
 ENGLISH_MARKETS={'United States','United Kingdom','Australia','New Zealand','Singapore','South Africa','Nigeria','Ghana','Uganda','Zambia'}
 
 NATIVE_ALIASES={
+ 'jd_food_delivery':['京东外卖'],
+
  'phonepe':['फोनपे'],'paytm':['पेटीएम'],'razorpay':['रेजरपे','रेज़रपे'],
  'swiggy':['स्विगी'],'blinkit':['ब्लिंकिट'],'zomato':['ज़ोमैटो','जोमैटो'],
  'zepto':['ज़ेप्टो','जेप्टो'],'rapido':['रैपिडो'],'ola':['ओला'],

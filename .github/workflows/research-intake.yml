@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       limit:
-        description: Maximum public feed/search requests (1–500)
+        description: Maximum public feed/search requests (1–5000)
         default: '50'
         required: true
         type: string

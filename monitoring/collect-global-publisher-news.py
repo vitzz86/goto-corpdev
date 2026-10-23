@@ -30,13 +30,15 @@ if _registry_path.exists():
  _publisher_registry=json.loads(_registry_path.read_text())['publishers']
  PUBLISHERS=[(s['name'],s['domain'],s.get('feedUrl') if s.get('feedStatus','').startswith('Verified RSS/Atom XML') else None) for s in _publisher_registry]
 ALIASES={
+ 'lulalend':['Lulalend','Lula'],
+
  '99':['99','99Pay','99Taxi'],'99food':['99Food'], 'bank_jago_gopay_tabungan':['Bank Jago','GoPay Tabungan'],
  'gopay_tabungan_by_jago':['GoPay Tabungan'], 'blue_bird':['Blue Bird','Bluebird'],
  'xanh_sm':['Xanh SM','Green SM','GSM'], 'nu':['Nubank','Nu Holdings'],
  'mercado_libre_mercado_envios':['Mercado Libre','MercadoLibre','Mercado Envios','Mercado Envíos'],
  'ual':['Ualá','Uala'], 'didi_food':['DiDi Food','DidiFood'], 'jd_food_delivery':['JD Food Delivery','JD Takeaway','JD.com food'],
  'line_man':['LINE MAN','LINE MAN Wongnai'], 'go':['GO taxi','GO Inc.','GO Inc','GO株式会社'],
- 'up':['Up Bank','Up banking','Up debit'], 'be':['Be Group','beBike','beCar','Be ride-hailing'],
+ 'up':['Up','Up Bank','Up banking','Up debit'], 'be':['Be Group','beBike','beCar','Be ride-hailing'],
  'advance-ai':['ADVANCE.AI','ADVANCE AI'], 'smile_id':['Smile ID','Smile Identity'],
  'gopay_pinjam':['GoPay Pinjam'], 'gopay_merchant':['GoPay Merchant'],
  'blu':['BCA Digital','blu by BCA'], 'menu':['menu delivery','menu food delivery','menu株式会社'],
@@ -58,17 +60,24 @@ ALIASES={
  'swiggy_instamart':['Swiggy Instamart','Instamart'], 'starling_bank':['Starling Bank'],
  'taobao_instant_commerce':['Taobao Instant Commerce','Taobao Shangou','Taobao flash','Taobao instant retail'],
  'uzum_bank':['Uzum Bank'], 'uzum_business':['Uzum Business'], 'uzum_nasiya':['Uzum Nasiya'], 'uzum_tezkor':['Uzum Tezkor'],
- 'revolut_bank_uab':['Revolut Bank'], 'unico':['Unico identity','Unico biometric','Unico IDtech'],
+ 'revolut_bank_uab':['Revolut Bank'], 'unico':['Unico','Unico identity','Unico biometric','Unico IDtech'],
  'dana':['DANA'], 'alva':['ALVA'], 'maxim':['Maxim'], 'astro':['Astro'], 'vida':['VIDA'], 'privy':['Privy'], 'moka':['Moka'],
  'bolt':['Bolt'], 'porter':['Porter'], 'chime':['Chime'], 'gocar':['GoCar'], 'gobox':['GoBox'], 'electrum':['Electrum'],
  'lightspeed':['Lightspeed Commerce','Lightspeed POS','Lightspeed restaurant','Lightspeed retail'],
  'linx':['Linx','Linx retail','Linx POS','Linx payments','Linx Totvs','Linx Stone','Linx software'],
- 'stuart':['Stuart delivery','Stuart courier','Stuart logistics'], 'flink':['Flink delivery','Flink grocery','Flink groceries'],
- 'roadie':['Roadie delivery','Roadie UPS','Roadie logistics','Roadie courier'], 'picnic':['Picnic','Picnic grocery','Picnic groceries','Picnic supermarket'],
- 'zeller':['Zeller payments','Zeller fintech','Zeller business','Zeller terminal'],
+ 'stuart':['Stuart','Stuart delivery','Stuart courier','Stuart logistics'], 'flink':['Flink delivery','Flink grocery','Flink groceries'],
+ 'roadie':['Roadie','Roadie delivery','Roadie UPS','Roadie logistics','Roadie courier'], 'picnic':['Picnic','Picnic grocery','Picnic groceries','Picnic supermarket'],
+ 'zeller':['Zeller','Zeller payments','Zeller fintech','Zeller business','Zeller terminal'],
  'tabby':['Tabby'], 'tamara':['Tamara'], 'tala':['Tala'], 'fairmoney':['FairMoney'], 'nuro':['Nuro'],
 }
 CONTEXT={
+ 'lulalend':r'south.africa|south.african|SME|business.funding|trevor.gosling|working.capital|lulapay',
+
+ 'zeller':r'payment|fintech|eftpos|terminal|banking|australia|australian|merchant|point.of.sale|\bPOS\b',
+ 'stuart':r'delivery|courier|logistic|last.mile|livraison|coursier|entrega|mensajer',
+ 'roadie':r'\bUPS\b|delivery|logistic|courier|last.mile|shipping|parcel',
+ 'unico':r'identity|identidade|biometr|IDtech|verifica|autentica',
+
  'advance-ai':r'advance\.ai|advance intelligence group|advance ai.*(?:kyc|identity|biometric|fintech|fraud)|(?:kyc|biometric|fintech|fraud).*advance ai',
  'ampersand':r'ampersand.*(?:electric|motorcycle|battery|e.mobility)|(?:electric|motorcycle|battery).*ampersand|rwanda|kenya',
  'robinhood':r'thailand|thai|purple ventures|scbx|yip in tsoi|robinhood.*(?:food|delivery|restaurant)',
@@ -136,13 +145,18 @@ CONTEXT={
  'gozem':r'africa|ride.hail|mobility|fintech|delivery|funding',
  'wing':r'drone|delivery|alphabet',
  'roam':r'kenya|kenyan|roam electric|roam motorcycle|africa.*(?:electric|motorcycle)|roam.*(?:electric motorcycle|motorcycle factory)',
- 'up':r'australia|australian|bendigo|ferocia|up bank.*(?:saver|up home|2up|up saver)|up banking.*(?:australia|bendigo)',
+ 'up':r'Up Home|Up Bank|Bendigo|Ferocia|Up banking|Up Saver|Up.*(?:Aussies|Australia|neobank)',
  'be':r'vietnam|vietnamese|be.?bike|be.?car|ride.hail|vpbank|be group.*(?:transport|driver|mobility)',
  'go':r'japan|japanese|tokyo|nikkei|waymo|go inc\.',
  'wave':r'africa|african|senegal|senegalese|dakar|ivory coast|côte d.ivoire|mali|burkina|uganda|wave mobile money',
  'blue_bird':r'indonesia|indonesian|jakarta|taxi|taksi|bali|mybluebird|armada|mobilitas|bandara|blue.?bird.*(?:laba|pendapatan|dividen|rupiah)',
 }
 EXCLUDE={
+ 'lulalend':r'da silva|president|presidente|brazil|brasil|politic',
+
+ 'zeller':r'cody zeller|real estate|zeller realty|basketball|\bNBA\b',
+ 'roadie':r'concert|guitar|musician|touring crew',
+
  'blue_bird':r'school bus|bus sekolah|bluebird bio|blue bird corporation',
  'ampersand':r'ampersand capital partners|ampersand growth equity|ampersand group|ampersand education|ampersand ai|ampersand ai|ampersand.*digital advertising',
  'robinhood':r'robinhood markets|vlad tenev|nasdaq.?hood|stock.trading|brokerage|crypto.trading',
