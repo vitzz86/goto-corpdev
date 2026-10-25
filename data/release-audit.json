@@ -1,29 +1,29 @@
 {
-  "checkedAt": "2026-10-23T15:13:28.742656+07:00",
-  "cutoff": "2026-10-23",
-  "applicationAsset": "assets/cockpit.226ca3b9fb08.js",
-  "openingDataGzipBytes": 687941,
+  "checkedAt": "2026-10-25T13:52:34.621431+07:00",
+  "cutoff": "2026-10-25",
+  "applicationAsset": "assets/cockpit.727ccdda5a8e.js",
+  "openingDataGzipBytes": 688133,
   "registryRows": 359,
   "companyMonthsChecked": 3590,
   "localLanguageChecks": 3450,
   "entriesWithHeadlineCandidates": 323,
   "entriesWithoutIndexedCandidates": 36,
   "collection": {
-    "updatedAt": "2026-10-23T08:10:52.020706+00:00",
-    "through": "2026-10-23",
+    "updatedAt": "2026-10-25T06:42:49.296649+00:00",
+    "through": "2026-10-25",
     "sourceResources": 144,
     "entityRegistryRows": 359,
     "topicQueries": 56,
-    "plannedSearchAndFeedTasks": 30906,
-    "attemptedTasks": 30906,
-    "retainedHistoricalAttempts": 5477,
+    "plannedSearchAndFeedTasks": 31995,
+    "attemptedTasks": 31995,
+    "retainedHistoricalAttempts": 6360,
     "notCheckedTasks": 0,
-    "blockedTasks": 92,
-    "cappedTasks": 2168,
-    "unreviewedDiscoveryRecords": 340228,
-    "candidateRecords": 149471,
-    "quarantinedRecords": 190757,
-    "searchesRequiringNarrowerWindows": 2572,
+    "blockedTasks": 93,
+    "cappedTasks": 2260,
+    "unreviewedDiscoveryRecords": 349888,
+    "candidateRecords": 153774,
+    "quarantinedRecords": 196114,
+    "searchesRequiringNarrowerWindows": 2676,
     "publishedAutomatically": 0,
     "caveat": "Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim."
   },
@@ -44,23 +44,27 @@
   },
   "publicCounts": {
     "global": 271,
-    "macro": 61,
+    "macro": 64,
     "policy": 15,
     "actions": 92,
     "ecosystem": 106,
     "competitors": 63,
     "sentiment": 1388180,
     "deals": 33,
-    "feed": 8529,
-    "research": 262
+    "feed": 8539,
+    "research": 270
   },
   "reviewedAdditions": {
-    "date": "2026-10-23",
+    "date": "2026-10-25",
     "newThisRefresh": [
-      "qashier-gm-launch-20261023",
-      "pine-labs-webxpay-20261022",
-      "airwallex-boost-b2b-20261022",
-      "ojk-reform-implementation-20261022"
+      "bi-m2-september-20261023",
+      "bi-bank-survey-q3-20261022",
+      "goto-27b-llm-launch-20261019",
+      "bluebird-bsi-expo-promo-20261023",
+      "terrapay-kinexys-verification-20261022",
+      "visa-stb-tourism-mou-20261023",
+      "stanchart-zodia-agreements-20261021",
+      "nu-mexico-impact-survey-20261022"
     ]
   },
   "validation": {
@@ -71,7 +75,7 @@
     "valuationReplayPassed": true,
     "newDataProvenanceChecked": true
   },
-  "scope": "Fresh 22–23 October discovery sweep plus selected source-page reviews. Indexed headlines remain unreviewed. Source failures and caps remain visible. Latest official JISDOR displayed is 22 October; 23 October equity/FX quotes are dated intraday snapshots. Workbook, beta and store-review vintages retain their dates.",
+  "scope": "Public news discovery through 25 October plus eight selected primary-source reviews. Market observations and official JISDOR retain 23 October business dates. Headlines remain unreviewed; source caps and access gaps remain visible. Workbook, beta and store-review vintages retained.",
   "buildStatus": "validated",
   "uiUpdate": {
     "change": "News & updates is the first and default Global benchmarks tab. Explicit globalView links retain their selected destination.",
@@ -141,25 +145,24 @@
     }
   },
   "todayRefresh": {
-    "date": "2026-10-23",
+    "date": "2026-10-25",
     "discoveryWindow": [
-      "2026-10-22",
-      "2026-10-23"
+      "2026-10-23",
+      "2026-10-25"
     ],
-    "searchAndFeedRequests": 1430,
-    "additionalDueRequests": 16,
+    "freshSearchAndFeedRequests": 1972,
     "marketObservations": 14,
-    "newReviewedDevelopments": 4,
+    "newReviewedDevelopments": 8,
     "newGotoCaseStudies": 1,
     "officialJisdor": {
-      "date": "2026-10-22",
-      "value": 18047,
+      "date": "2026-10-23",
+      "value": 18069,
       "unit": "IDR per USD"
     },
     "workbookChanged": false,
     "betaHistoryChanged": false,
     "storeReviewsRecollected": false,
-    "retainedHistoricalAttemptRecords": 5477,
-    "evidenceLimit": "Reviewing four original releases/articles does not verify every discovered headline or every company profile."
+    "retainedHistoricalAttemptRecords": 6360,
+    "evidenceLimit": "A completed search plan does not certify complete article verification or exhaustive event coverage."
   }
 }
