@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-25",
+  "asOf": "2026-10-27",
   "counts": {
     "global": {
       "count": 271,
@@ -7,12 +7,12 @@
       "definition": "Global research longlist; includes primary-reviewed profiles, existing cockpit records and candidates. Country links and capital events have separate evidence scopes."
     },
     "macro": {
-      "count": 64,
+      "count": 67,
       "unit": "Indicators",
       "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
     },
     "policy": {
-      "count": 15,
+      "count": 18,
       "unit": "Policy records",
       "definition": "Policy watch entries; effective, proposed and pending statuses remain separate."
     },
@@ -42,18 +42,18 @@
       "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
     },
     "feed": {
-      "count": 8539,
+      "count": 8587,
       "unit": "2026 signal records",
-      "definition": "2,360 curated 2026 records + 6,179 additional archive leads. Archive URLs already in curated records are counted once. 141 curated records are source-reviewed; discovery headlines are not verified events."
+      "definition": "2,409 curated 2026 records + 6,178 additional archive leads. Archive URLs already in curated records are counted once. 153 curated records are source-reviewed; discovery headlines are not verified events."
     },
     "research": {
-      "count": 270,
+      "count": 285,
       "unit": "Library entries",
       "definition": "Distinct report/source entries after duplicate summaries and report links are reconciled. The count includes unreviewed reference entries, not only reviewed PDFs."
     }
   },
   "reconciliation": {
-    "asOf": "2026-10-25",
+    "asOf": "2026-10-27",
     "segments": {
       "ods": [
         "alfagift",
@@ -130,8 +130,8 @@
       "sea"
     ],
     "recentReviewSamples": 12683,
-    "reviewedResearch": 83,
-    "reviewed2026Signals": 141,
+    "reviewedResearch": 98,
+    "reviewed2026Signals": 153,
     "changes": [
       {
         "collection": "Research library",
@@ -156,6 +156,11 @@
       {
         "collection": "Research library",
         "title": "GoTo October EGM: approvals confirmed by official minutes",
+        "reason": "Duplicate report / source entry; reviewed summary takes precedence."
+      },
+      {
+        "collection": "Research library",
+        "title": "The Resistance Test: funding-risk scenario",
         "reason": "Duplicate report / source entry; reviewed summary takes precedence."
       }
     ]

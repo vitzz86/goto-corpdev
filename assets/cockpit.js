@@ -17,10 +17,10 @@ async function startupResponse(url){
 }
 async function loadStartup(){
   if('DecompressionStream' in window){
-    try{const blob=await startupResponse('data/startup-7dc307f13a2b.json.gz');return JSON.parse(await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text())}
+    try{const blob=await startupResponse('data/startup-300e03bf5cfe.json.gz');return JSON.parse(await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text())}
     catch(error){loadingText('Opening compatible research snapshot…')}
   }
-  return JSON.parse(await (await startupResponse('data/startup-7dc307f13a2b.json')).text());
+  return JSON.parse(await (await startupResponse('data/startup-300e03bf5cfe.json')).text());
 }
 const {D,VERIFIED,WORKBOOK}=await loadStartup();
 loadingText('Preparing your decision brief…');
@@ -326,7 +326,7 @@ function vSysBaseline(){
     <tr><td><b>Deal-sourcing agent</b></td><td class="note">Screens targets against the mandate; checks duplication with existing GoTo capability; drafts diligence questions.</td></tr>
     <tr><td><b>Valuation agent</b></td><td class="note">Deterministic models (DCF, comps, SOTP); recomputes when an input changes and logs the delta.</td></tr></tbody></table></div>
    <div class="card"><h3>Guardrails</h3><ul style="margin:0;padding-left:18px"><li>Every number carries a date and a source; reported facts, assumptions and calculations are kept apart.</li><li>Models are deterministic spreadsheets; agents propose input changes, the analyst approves.</li><li>Conflicting sources are shown, not averaged (e.g. 2Q26 profit reported as Rp252bn vs Rp349.5bn attributable).</li><li>Unverified relationships are labelled (e.g. Bintang Kecil, Kopi Kenangan).</li><li>Confidential deal data stays out of public tools.</li></ul>
-   <h3 style="margin-top:14px">This run</h3><p class="note" style="margin:0">Research checked 2026-10-25: ${D.feedTotal||D.feed.length} signals, ${D.research.length} research items, ${E.length} entities, ${D.macro.indicators.length} indicators, ${D.deals.length}+${D.global.length} sourcing candidates, 10 quarterly filings (1Q24-2Q26) extracted and tied.</p></div>
+   <h3 style="margin-top:14px">This run</h3><p class="note" style="margin:0">Research checked 2026-10-27: ${D.feedTotal||D.feed.length} signals, ${D.research.length} research items, ${E.length} entities, ${D.macro.indicators.length} indicators, ${D.deals.length}+${D.global.length} sourcing candidates, 10 quarterly filings (1Q24-2Q26) extracted and tied.</p></div>
   </div>`;
 }
 
@@ -334,7 +334,7 @@ function vSysBaseline(){
 const R={global:vGlobalBenchmarks,sentiment:vSentiment,policy:vPolicy,brief:vBrief,markets:vMarkets,macro:vMacro,financials:vFin,valuation:vVal,ecosystem:vEco,portfolio:vPort,competitors:vComp,deals:vDeals,feed:vFeed,actions:vActions,research:vResearch,ir:vIR};
 const T=Object.fromEntries(VIEWS.flatMap(([,i])=>i));
 let feedRouteGeneration=0;
-async function go(){const generation=++feedRouteGeneration; let v=(location.hash||'#brief').slice(1); if(!R[v]) v='brief'; document.querySelectorAll('section.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v)); document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.v===v)); $('#vt').textContent=T[v]; $('#vs').textContent=SUB[v]+' · research checked 2026-10-25'; if(window.lastCockpitView!==v){window.scrollTo(0,0);window.lastCockpitView=v;} const sec=$('#v-'+v); if(['feed','competitors','ecosystem','portfolio'].includes(v)&&!fullFeedReady){sec.innerHTML='<p role="status">Opening complete signal archive…</p>';try{await ensureFullFeed()}catch(e){if(generation!==feedRouteGeneration)return;sec.innerHTML='<p role="alert">The signal archive could not load.</p><button class="btn" id="retryFeedRoute">Retry archive</button>';$('#retryFeedRoute').onclick=go;return}if(generation!==feedRouteGeneration)return;} if(!sec.dataset.done){R[v](); sec.dataset.done=1;} try{localStorage.setItem('cdv',v);}catch(e){} }
+async function go(){const generation=++feedRouteGeneration; let v=(location.hash||'#brief').slice(1); if(!R[v]) v='brief'; document.querySelectorAll('section.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v)); document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.v===v)); $('#vt').textContent=T[v]; $('#vs').textContent=SUB[v]+' · research checked 2026-10-27'; if(window.lastCockpitView!==v){window.scrollTo(0,0);window.lastCockpitView=v;} const sec=$('#v-'+v); if(['feed','competitors','ecosystem','portfolio'].includes(v)&&!fullFeedReady){sec.innerHTML='<p role="status">Opening complete signal archive…</p>';try{await ensureFullFeed()}catch(e){if(generation!==feedRouteGeneration)return;sec.innerHTML='<p role="alert">The signal archive could not load.</p><button class="btn" id="retryFeedRoute">Retry archive</button>';$('#retryFeedRoute').onclick=go;return}if(generation!==feedRouteGeneration)return;} if(!sec.dataset.done){R[v](); sec.dataset.done=1;} try{localStorage.setItem('cdv',v);}catch(e){} }
 window.addEventListener('hashchange',go);
 document.addEventListener('click',e=>{ const en=e.target.closest('[data-ent]'); if(en&&!e.target.closest('summary')){openEntity(en.dataset.ent);return;} const dl=e.target.closest('[data-deal]'); if(dl){openDeal(+dl.dataset.deal);return;} if(e.target.closest('[data-close]')) $('#drawer').classList.remove('on'); });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') $('#drawer').classList.remove('on'); });

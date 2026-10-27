@@ -1,29 +1,29 @@
 {
-  "checkedAt": "2026-10-25T13:52:34.621431+07:00",
-  "cutoff": "2026-10-25",
-  "applicationAsset": "assets/cockpit.727ccdda5a8e.js",
-  "openingDataGzipBytes": 688133,
+  "checkedAt": "2026-10-27T10:38:28.653136+07:00",
+  "cutoff": "2026-10-27",
+  "applicationAsset": "assets/cockpit.8833ad3f9fcb.js",
+  "openingDataGzipBytes": 674200,
   "registryRows": 359,
   "companyMonthsChecked": 3590,
   "localLanguageChecks": 3450,
-  "entriesWithHeadlineCandidates": 323,
-  "entriesWithoutIndexedCandidates": 36,
+  "entriesWithHeadlineCandidates": 324,
+  "entriesWithoutIndexedCandidates": 35,
   "collection": {
-    "updatedAt": "2026-10-25T06:42:49.296649+00:00",
-    "through": "2026-10-25",
+    "updatedAt": "2026-10-27T03:26:20.261941+00:00",
+    "through": "2026-10-27",
     "sourceResources": 144,
     "entityRegistryRows": 359,
     "topicQueries": 56,
-    "plannedSearchAndFeedTasks": 31995,
-    "attemptedTasks": 31995,
-    "retainedHistoricalAttempts": 6360,
-    "notCheckedTasks": 0,
-    "blockedTasks": 93,
-    "cappedTasks": 2260,
-    "unreviewedDiscoveryRecords": 349888,
-    "candidateRecords": 153774,
-    "quarantinedRecords": 196114,
-    "searchesRequiringNarrowerWindows": 2676,
+    "plannedSearchAndFeedTasks": 16424,
+    "attemptedTasks": 15855,
+    "retainedHistoricalAttempts": 24587,
+    "notCheckedTasks": 569,
+    "blockedTasks": 57,
+    "cappedTasks": 742,
+    "unreviewedDiscoveryRecords": 359827,
+    "candidateRecords": 157122,
+    "quarantinedRecords": 202705,
+    "searchesRequiringNarrowerWindows": 1272,
     "publishedAutomatically": 0,
     "caveat": "Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim."
   },
@@ -44,38 +44,42 @@
   },
   "publicCounts": {
     "global": 271,
-    "macro": 64,
-    "policy": 15,
+    "macro": 67,
+    "policy": 18,
     "actions": 92,
     "ecosystem": 106,
     "competitors": 63,
     "sentiment": 1388180,
     "deals": 33,
-    "feed": 8539,
-    "research": 270
+    "feed": 8587,
+    "research": 285
   },
   "reviewedAdditions": {
-    "date": "2026-10-25",
+    "date": "2026-10-27",
     "newThisRefresh": [
-      "bi-m2-september-20261023",
-      "bi-bank-survey-q3-20261022",
-      "goto-27b-llm-launch-20261019",
-      "bluebird-bsi-expo-promo-20261023",
-      "terrapay-kinexys-verification-20261022",
-      "visa-stb-tourism-mou-20261023",
-      "stanchart-zodia-agreements-20261021",
-      "nu-mexico-impact-survey-20261022"
+      "grab-indonesia-ai-culture-20261026",
+      "wolt-deliveroo-ads-tools-20261021",
+      "wolt-seasonal-order-study-20261026",
+      "phonepe-invest-portfolio-tools-20261019",
+      "mukuru-paymentology-account-card-20261026",
+      "ojk-buyback-extension-20261026",
+      "idx-ftse-classification-comment-20261026",
+      "bi-qris-credit-scoring-plan-20261026",
+      "doordash-instacart-talks-20261026",
+      "bukalapak-q3-adjusted-ebitda-20261026",
+      "brids-resistance-test-20261026",
+      "bmkg-weather-operations-20261026"
     ]
   },
   "validation": {
-    "pythonSuitesPassed": 9,
+    "pythonSuitesPassed": 10,
     "browserChecksPassed": true,
     "coverageCountsReconciled": true,
     "startupBudgetPassed": true,
     "valuationReplayPassed": true,
     "newDataProvenanceChecked": true
   },
-  "scope": "Public news discovery through 25 October plus eight selected primary-source reviews. Market observations and official JISDOR retain 23 October business dates. Headlines remain unreviewed; source caps and access gaps remain visible. Workbook, beta and store-review vintages retained.",
+  "scope": "News discovery through 27 October plus 12 selected original-source reviews, three learning cases, four dated BI payment observations and four broker summaries. 359 overlapping registry rows retain January-October base-month checks. Acquisition talks remain unconfirmed; broker forecasts and policy proposals stay separate from actual decisions. Source limits and unsearched refinements remain visible. Official JISDOR retained at 23 October pending current primary access; stock quotes keep actual session dates.",
   "buildStatus": "validated",
   "uiUpdate": {
     "change": "News & updates is the first and default Global benchmarks tab. Explicit globalView links retain their selected destination.",
@@ -145,24 +149,27 @@
     }
   },
   "todayRefresh": {
-    "date": "2026-10-25",
+    "date": "2026-10-27",
     "discoveryWindow": [
-      "2026-10-23",
-      "2026-10-25"
+      "2026-10-25",
+      "2026-10-27"
     ],
-    "freshSearchAndFeedRequests": 1972,
+    "freshSearchAndFeedRequests": 2087,
     "marketObservations": 14,
-    "newReviewedDevelopments": 8,
-    "newGotoCaseStudies": 1,
+    "newReviewedDevelopments": 12,
+    "newGotoCaseStudies": 3,
+    "newBrokerSummaries": 4,
     "officialJisdor": {
       "date": "2026-10-23",
       "value": 18069,
-      "unit": "IDR per USD"
+      "unit": "IDR per USD",
+      "currentPrimaryAccess": "Unavailable; prior verified observation retained"
     },
     "workbookChanged": false,
     "betaHistoryChanged": false,
     "storeReviewsRecollected": false,
-    "retainedHistoricalAttemptRecords": 6360,
-    "evidenceLimit": "A completed search plan does not certify complete article verification or exhaustive event coverage."
+    "headlineQuality": "Empty, publisher-only and login/privacy stubs excluded from public news samples; raw evidence retained.",
+    "openingCompression": "Zopfli 0.2.3.post1 gzip, 3 iterations; decompressed JSON equals original; compatibility fallback retained",
+    "evidenceLimit": "A completed base company-month search does not certify complete article verification or exhaustive event coverage."
   }
 }
