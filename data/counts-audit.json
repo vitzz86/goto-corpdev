@@ -17,7 +17,7 @@
       "definition": "Policy watch entries; effective, proposed and pending statuses remain separate."
     },
     "actions": {
-      "count": 92,
+      "count": 93,
       "unit": "GoTo action records",
       "definition": "Dated GoTo corporate-action records across the retained history; proposed and completed actions are distinct. Reference entries are not independently verified."
     },

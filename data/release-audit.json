@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-29T12:43:58.755867+00:00",
+  "checkedAt": "2026-10-29T13:12:26.071106+00:00",
   "cutoff": "2026-10-29",
-  "applicationAsset": "assets/cockpit.520ced351f13.js",
-  "openingDataGzipBytes": 692014,
+  "applicationAsset": "assets/cockpit.c7afa7468a0c.js",
+  "openingDataGzipBytes": 692776,
   "registryRows": 359,
   "companyMonthsChecked": 3590,
   "localLanguageChecks": 3450,
@@ -46,7 +46,7 @@
     "global": 271,
     "macro": 68,
     "policy": 18,
-    "actions": 92,
+    "actions": 93,
     "ecosystem": 106,
     "competitors": 63,
     "sentiment": 1388180,
@@ -74,7 +74,8 @@
     "startupBudgetPassed": true,
     "valuationReplayPassed": true,
     "newDataProvenanceChecked": true,
-    "localBrowserPassed": true
+    "localBrowserPassed": true,
+    "corporateActionsTimelinePassed": true
   },
   "scope": "29 October refresh: 1587 current-window public discovery requests across 359 overlapping registry entries; eight selected source-reviewed updates, two GoTo learning cases and nine official GoTo Q3 performance observations. Official JISDOR through 29 October. Market quotes retain actual session dates. Workbook, forecasts, beta and written-review collection retain their separate vintages. Access limits, unchecked refinements and unreviewed headlines remain explicit.",
   "buildStatus": "validated",
@@ -161,5 +162,19 @@
     "storeReviewsRecollected": false,
     "openingCompression": "Lossless Zopfli gzip; identical decompressed JSON; plain fallback retained",
     "evidenceLimit": "Searches and selected reviews do not establish exhaustive article coverage. Q3 cash-flow and balance-sheet normalization remains pending."
+  },
+  "corporateActionsCorrection": {
+    "date": "2026-10-29",
+    "cause": "Reviewed corporate-action news was not routed into the dedicated GoTo action timeline.",
+    "correctedRecord": "goto-capital-update-20261029",
+    "timelineCount": 93,
+    "latestTimelineDate": "2026-10-29",
+    "checks": [
+      "Reviewed daily GoTo actions reach timeline with the same source and status",
+      "Corporate-action sidebar count matches timeline",
+      "Capital filter and desktop/mobile rendering passed",
+      "Other financials, valuation model, market data and feed unchanged"
+    ],
+    "scope": "Publication correction using the previously reviewed 29 October issuer release; not a new transaction or legal completion."
   }
 }
