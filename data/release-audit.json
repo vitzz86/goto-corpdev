@@ -1,29 +1,29 @@
 {
-  "checkedAt": "2026-10-27T10:38:28.653136+07:00",
-  "cutoff": "2026-10-27",
-  "applicationAsset": "assets/cockpit.8833ad3f9fcb.js",
-  "openingDataGzipBytes": 674200,
+  "checkedAt": "2026-10-29T12:43:58.755867+00:00",
+  "cutoff": "2026-10-29",
+  "applicationAsset": "assets/cockpit.520ced351f13.js",
+  "openingDataGzipBytes": 692014,
   "registryRows": 359,
   "companyMonthsChecked": 3590,
   "localLanguageChecks": 3450,
   "entriesWithHeadlineCandidates": 324,
   "entriesWithoutIndexedCandidates": 35,
   "collection": {
-    "updatedAt": "2026-10-27T03:26:20.261941+00:00",
-    "through": "2026-10-27",
+    "updatedAt": "2026-10-29T12:14:57.737097+00:00",
+    "through": "2026-10-29",
     "sourceResources": 144,
     "entityRegistryRows": 359,
     "topicQueries": 56,
-    "plannedSearchAndFeedTasks": 16424,
-    "attemptedTasks": 15855,
-    "retainedHistoricalAttempts": 24587,
-    "notCheckedTasks": 569,
+    "plannedSearchAndFeedTasks": 17752,
+    "attemptedTasks": 16880,
+    "retainedHistoricalAttempts": 25149,
+    "notCheckedTasks": 872,
     "blockedTasks": 57,
-    "cappedTasks": 742,
-    "unreviewedDiscoveryRecords": 359827,
-    "candidateRecords": 157122,
-    "quarantinedRecords": 202705,
-    "searchesRequiringNarrowerWindows": 1272,
+    "cappedTasks": 782,
+    "unreviewedDiscoveryRecords": 369686,
+    "candidateRecords": 161451,
+    "quarantinedRecords": 208235,
+    "searchesRequiringNarrowerWindows": 1483,
     "publishedAutomatically": 0,
     "caveat": "Registry rows overlap. Zero leads, blocked access, unsearched windows and reviewed evidence are different states. No exhaustive completeness claim."
   },
@@ -44,42 +44,39 @@
   },
   "publicCounts": {
     "global": 271,
-    "macro": 67,
+    "macro": 68,
     "policy": 18,
     "actions": 92,
     "ecosystem": 106,
     "competitors": 63,
     "sentiment": 1388180,
     "deals": 33,
-    "feed": 8587,
-    "research": 285
+    "feed": 8612,
+    "research": 291
   },
   "reviewedAdditions": {
-    "date": "2026-10-27",
+    "date": "2026-10-29",
     "newThisRefresh": [
-      "grab-indonesia-ai-culture-20261026",
-      "wolt-deliveroo-ads-tools-20261021",
-      "wolt-seasonal-order-study-20261026",
-      "phonepe-invest-portfolio-tools-20261019",
-      "mukuru-paymentology-account-card-20261026",
-      "ojk-buyback-extension-20261026",
-      "idx-ftse-classification-comment-20261026",
-      "bi-qris-credit-scoring-plan-20261026",
-      "doordash-instacart-talks-20261026",
-      "bukalapak-q3-adjusted-ebitda-20261026",
-      "brids-resistance-test-20261026",
-      "bmkg-weather-operations-20261026"
+      "goto-q3-results-20261029",
+      "goto-guidance-q3-20261029",
+      "goto-capital-update-20261029",
+      "wolt-capital-norway-20261028",
+      "revolut-pragma-production-20261021",
+      "airtel-money-h1-20261026",
+      "neolix-series-e-20261020",
+      "fed-hold-20261028"
     ]
   },
   "validation": {
     "pythonSuitesPassed": 10,
-    "browserChecksPassed": true,
+    "javascriptSuitesPassed": 4,
     "coverageCountsReconciled": true,
     "startupBudgetPassed": true,
     "valuationReplayPassed": true,
-    "newDataProvenanceChecked": true
+    "newDataProvenanceChecked": true,
+    "localBrowserPassed": true
   },
-  "scope": "News discovery through 27 October plus 12 selected original-source reviews, three learning cases, four dated BI payment observations and four broker summaries. 359 overlapping registry rows retain January-October base-month checks. Acquisition talks remain unconfirmed; broker forecasts and policy proposals stay separate from actual decisions. Source limits and unsearched refinements remain visible. Official JISDOR retained at 23 October pending current primary access; stock quotes keep actual session dates.",
+  "scope": "29 October refresh: 1587 current-window public discovery requests across 359 overlapping registry entries; eight selected source-reviewed updates, two GoTo learning cases and nine official GoTo Q3 performance observations. Official JISDOR through 29 October. Market quotes retain actual session dates. Workbook, forecasts, beta and written-review collection retain their separate vintages. Access limits, unchecked refinements and unreviewed headlines remain explicit.",
   "buildStatus": "validated",
   "uiUpdate": {
     "change": "News & updates is the first and default Global benchmarks tab. Explicit globalView links retain their selected destination.",
@@ -149,27 +146,20 @@
     }
   },
   "todayRefresh": {
-    "date": "2026-10-27",
-    "discoveryWindow": [
-      "2026-10-25",
-      "2026-10-27"
-    ],
-    "freshSearchAndFeedRequests": 2087,
+    "date": "2026-10-29",
+    "freshSearchAndFeedRequests": 1587,
+    "newReviewedDevelopments": 8,
+    "newGotoCaseStudies": 2,
+    "q3PerformanceObservations": 9,
     "marketObservations": 14,
-    "newReviewedDevelopments": 12,
-    "newGotoCaseStudies": 3,
-    "newBrokerSummaries": 4,
     "officialJisdor": {
-      "date": "2026-10-23",
-      "value": 18069,
-      "unit": "IDR per USD",
-      "currentPrimaryAccess": "Unavailable; prior verified observation retained"
+      "date": "2026-10-29",
+      "value": 18128
     },
     "workbookChanged": false,
     "betaHistoryChanged": false,
     "storeReviewsRecollected": false,
-    "headlineQuality": "Empty, publisher-only and login/privacy stubs excluded from public news samples; raw evidence retained.",
-    "openingCompression": "Zopfli 0.2.3.post1 gzip, 3 iterations; decompressed JSON equals original; compatibility fallback retained",
-    "evidenceLimit": "A completed base company-month search does not certify complete article verification or exhaustive event coverage."
+    "openingCompression": "Lossless Zopfli gzip; identical decompressed JSON; plain fallback retained",
+    "evidenceLimit": "Searches and selected reviews do not establish exhaustive article coverage. Q3 cash-flow and balance-sheet normalization remains pending."
   }
 }

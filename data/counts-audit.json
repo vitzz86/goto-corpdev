@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-27",
+  "asOf": "2026-10-29",
   "counts": {
     "global": {
       "count": 271,
@@ -7,7 +7,7 @@
       "definition": "Global research longlist; includes primary-reviewed profiles, existing cockpit records and candidates. Country links and capital events have separate evidence scopes."
     },
     "macro": {
-      "count": 67,
+      "count": 68,
       "unit": "Indicators",
       "definition": "Indicator records, each with its own period and evidence status; not all are current observations."
     },
@@ -42,18 +42,18 @@
       "definition": "Unique companies in the analyst screening pipeline; not signed deals, seller intent or confirmed valuations."
     },
     "feed": {
-      "count": 8587,
+      "count": 8612,
       "unit": "2026 signal records",
-      "definition": "2,409 curated 2026 records + 6,178 additional archive leads. Archive URLs already in curated records are counted once. 153 curated records are source-reviewed; discovery headlines are not verified events."
+      "definition": "2,429 curated 2026 records + 6,183 additional archive leads. Archive URLs already in curated records are counted once. 161 curated records are source-reviewed; discovery headlines are not verified events."
     },
     "research": {
-      "count": 285,
+      "count": 291,
       "unit": "Library entries",
       "definition": "Distinct report/source entries after duplicate summaries and report links are reconciled. The count includes unreviewed reference entries, not only reviewed PDFs."
     }
   },
   "reconciliation": {
-    "asOf": "2026-10-27",
+    "asOf": "2026-10-29",
     "segments": {
       "ods": [
         "alfagift",
@@ -130,8 +130,8 @@
       "sea"
     ],
     "recentReviewSamples": 12683,
-    "reviewedResearch": 98,
-    "reviewed2026Signals": 153,
+    "reviewedResearch": 104,
+    "reviewed2026Signals": 161,
     "changes": [
       {
         "collection": "Research library",
@@ -161,6 +161,16 @@
       {
         "collection": "Research library",
         "title": "The Resistance Test: funding-risk scenario",
+        "reason": "Duplicate report / source entry; reviewed summary takes precedence."
+      },
+      {
+        "collection": "Research library",
+        "title": "GoTo Q3: Rp441bn net profit; fintech offsets mobility pressure",
+        "reason": "Duplicate report / source entry; reviewed summary takes precedence."
+      },
+      {
+        "collection": "Research library",
+        "title": "GoTo Q3: Rp441bn net profit; fintech offsets mobility pressure",
         "reason": "Duplicate report / source entry; reviewed summary takes precedence."
       }
     ]
